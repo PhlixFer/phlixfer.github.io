@@ -9,13 +9,15 @@ body {
   padding-left: 80px;
   padding-right: 80px;
   padding-top: 40px;
+  text-align: center;
 }
 
 #body-big {
   font-family: Inter, Helvetica;
   font-size: 18px;
   color: rgb(220,220,220);
-  padding-left: 80px
+  padding-left: 80px;
+  text-align: center;
 }
 
 .navbar {
