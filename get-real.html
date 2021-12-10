@@ -17,7 +17,7 @@
         border-radius: 10px;
         font-size: 18px;
         padding: 10px;
-        margin: 25% 25%;
+        margin: 25% 10%;
         cursor: pointer;
         color: white;
         text-align: center;
@@ -30,6 +30,22 @@
     </style>
   </head>
   <body>
-    <button onclick="alert('You\'ve gotten real!')" class="empty-button">Get Real</button>
+    <button onclick="alert('You\'ve gotten real!')" onclick="getReal()" class="empty-button">Get Real</button>
+
+    <div class="Realify">
+      <img src="/media/get-real-cat.gif" alt="get real cat lol" style="padding:0 20px;">
+    </div>
+
+    <script type="text/javascript">
+      function getReal() {
+        var x = document.getElementById("Realify");
+        if (x.style.display === "none") {
+          x.style.display = "block";
+        } else {
+          x.style.display = "none";
+        }
+      }
+    </script>
+
   </body>
 </html>
