@@ -9,13 +9,11 @@ body {
 #title {
   font-family: Inter, Helvetica;
   font-size: 38px;
-  padding-bottom: 4px;
   color: rgb(220,220,220);
 }
 
 #body-big {
   font-family: Inter, Helvetica;
   font-size: 18px;
-  padding-bottom: 4px;
   color: rgb(220,220,220);
 }
