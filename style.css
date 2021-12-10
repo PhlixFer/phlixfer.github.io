@@ -9,14 +9,17 @@ body {
 #title {
   font-family: Inter, Helvetica;
   font-size: 38px;
-  padding: 60px;
+  padding-left: 60px;
+  padding-top:10px;
+  padding-bottom: 4px;
   color: rgb(220,220,220);
 }
 
 #body-big {
-  font-family Inter, Helvetica;
+  font-family: Inter, Helvetica;
   font-size: 18px;
   padding-left: 60px;
-  padding-top: 12px;
+  padding-top: 4px;
+  padding-bottom: 4px;
   color: rgb(220,220,220);
 }
