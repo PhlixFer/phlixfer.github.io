@@ -1,5 +1,5 @@
 body {
-  background-color: rgb(30,30,30);
+  background-color: rgb(20,15,76);
   padding-left: 80px;
   padding-right: 80px;
   padding-top: 20px;
@@ -19,16 +19,20 @@ body {
 }
 
 #navbar {
-  font-family: Inter, Helvetica;
-  font-weight: normal;
-  font-size: 18px;
-  color: rgb(220,220,220);
   list-style-type: none;
   margin: 0;
   padding: 0;
   position: static;
+  background-color: rgb(30,30,30);
+  overflow-x: hidden;
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  backdrop-filter: blur(20px) saturate(180%);
 }
 
 #navbar-item {
+  font-family: Inter, Helvetica;
+  font-weight: normal;
+  font-size: 18px;
+  color: rgb(220,220,220);
   display: inline;
 }
