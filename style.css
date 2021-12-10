@@ -2,3 +2,9 @@ h1 {
   font-family: Inter, Helvetica;
   font-size: 38px;
 }
+
+#title {
+  font-family: Inter, Helvetica;
+  font-size: 38px;
+  padding: 40px;
+}
