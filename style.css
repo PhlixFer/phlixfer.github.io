@@ -1,10 +1,22 @@
-h1 {
-  font-family: Inter, Helvetica;
-  font-size: 38px;
+* {
+  padding: 60px
+}
+
+body {
+  background-color: rgb(30,30,30);
 }
 
 #title {
   font-family: Inter, Helvetica;
   font-size: 38px;
-  padding: 40px;
+  padding: 60px;
+  color: rgb(220,220,220);
+}
+
+#body-big {
+  font-family Inter, Helvetica;
+  font-size: 18px;
+  padding-left: 60px;
+  padding-top: 12px;
+  color: rgb(220,220,220);
 }
