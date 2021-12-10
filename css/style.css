@@ -8,8 +8,7 @@ body {
   color: rgb(220,220,220);
   padding-left: 80px;
   padding-right: 80px;
-  padding-top: 20px;
-  padding-bottom: 40px;
+  padding-top: 40px;
 }
 
 #body-big {
@@ -19,7 +18,14 @@ body {
   padding-left: 80px
 }
 
-#navbar {
+.navbar {
+  background-color: rgba(30,30,30,.9);
+  overflow: hidden;
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  backdrop-filter: blur(20px) saturate(180%);
+}
+
+#navbar-list {
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -29,10 +35,6 @@ body {
   top: 0;
   left: 0;
   right: 0;
-  background-color: rgba(30,30,30,.8);
-  overflow: hidden;
-  -webkit-backdrop-filter: blur(20px) saturate(180%);
-  backdrop-filter: blur(20px) saturate(180%);
 }
 
 #navbar-item {
@@ -47,4 +49,8 @@ body {
   text-align: center;
   padding: 10px;
   color: rgb(220,220,220);
+}
+
+#navbar-text:hover {
+  color: #fff;
 }
