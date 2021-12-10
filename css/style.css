@@ -31,9 +31,13 @@ body {
 }
 
 #navbar-item {
+  display: inline;
+}
+
+#navbar-text {
   font-family: Inter, Helvetica;
   font-weight: normal;
   font-size: 18px;
+  text-decoration: none;
   color: rgb(220,220,220);
-  display: inline;
 }
