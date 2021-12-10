@@ -17,3 +17,18 @@ body {
   font-size: 18px;
   color: rgb(220,220,220);
 }
+
+#navbar {
+  font-family: Inter, Helvetica;
+  font-weight: normal;
+  font-size: 18px;
+  color: rgb(220,220,220);
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  position: static;
+}
+
+#navbar-item {
+  display: inline;
+}
