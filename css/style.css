@@ -19,13 +19,6 @@ body {
 }
 
 .navbar {
-  background-color: rgba(30,30,30,.9);
-  overflow: hidden;
-  -webkit-backdrop-filter: blur(20px) saturate(180%);
-  backdrop-filter: blur(20px) saturate(180%);
-}
-
-#navbar-list {
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -35,6 +28,18 @@ body {
   top: 0;
   left: 0;
   right: 0;
+  background-color: rgba(30,30,30,.9);
+  overflow: hidden;
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  backdrop-filter: blur(20px) saturate(180%);
+}
+
+#navbar-list {
+  display: flex;
+  list-style-type: none;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 4px;
 }
 
 #navbar-item {
@@ -47,7 +52,7 @@ body {
   font-size: 18px;
   text-decoration: none;
   text-align: center;
-  padding: 10px;
+  padding: 20px;
   color: rgb(220,220,220);
 }
 
