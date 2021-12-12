@@ -1,0 +1,12 @@
+#icons {
+  max-width: 100px;
+}
+
+#contacts_list {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+#contacts_item {
+  margin: 20px;
+}
