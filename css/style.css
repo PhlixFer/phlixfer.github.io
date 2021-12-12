@@ -7,7 +7,7 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --bg-col: rgb(30,30,30) ;
+    --bg-col: rgb(40,40,40) ;
     --main-txt-col: rgb(229,229,229);
   }
 }
