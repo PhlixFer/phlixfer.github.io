@@ -1,11 +1,23 @@
-body {
-  background-color: #282828;
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg-col: rgb(245,245,245) ;
+    --main-txt-col: rgb(77,77,77);
+  }
 }
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-col: rgb(30,30,30) ;
+    --main-txt-col: rgb(229,229,229);
+  }
+}
+
+body { background-color: var(--bg-col); }
 
 #title {
   font-family: Inter, Helvetica;
   font-size: 38px;
-  color: rgb(220,220,220);
+  color: var(--main-txt-col);
   /* padding-left: 80px; */
   /* padding-right: 80px; */
   padding-top: 40px;
@@ -15,9 +27,10 @@ body {
 #body-big {
   font-family: Inter, Helvetica;
   font-size: 18px;
-  color: rgb(220,220,220);
+  color: var(--main-txt-col);
   /*padding-left: 80px;*/
   text-align: center;
+  line-height: 1.5;
 }
 
 .navbar {
@@ -55,7 +68,7 @@ body {
   text-decoration: none;
   text-align: center;
   padding: 20px;
-  color: rgb(220,220,220);
+  color: var(--main-txt-col);
   transition-duration: 0.4s;
 }
 
