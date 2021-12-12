@@ -1,7 +1,7 @@
 #icons {
   width: 100%;
   max-width: 100px;
-  margin: 0 40px;
+  margin: 20px 40px;
   filter: saturate(0%);
   transition-duration: .4s;
   transition-timing-function: ease;
