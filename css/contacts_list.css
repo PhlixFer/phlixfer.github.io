@@ -5,8 +5,10 @@
 #contacts_list {
   display: flex;
   flex-wrap: nowrap;
+  margin: auto;
 }
 
 #contacts_item {
   margin: 20px;
+  list-style: none;
 }
