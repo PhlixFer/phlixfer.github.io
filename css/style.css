@@ -68,7 +68,7 @@ body { background-color: var(--bg-col); }
   text-decoration: none;
   text-align: center;
   padding: 20px;
-  color: var(--main-txt-col);
+  color: rgb(245,245,245);
   transition-duration: 0.4s;
 }
 
