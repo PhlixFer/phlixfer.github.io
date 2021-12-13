@@ -68,10 +68,10 @@ body { background-color: var(--bg-col); }
   text-decoration: none;
   text-align: center;
   padding: 20px;
-  color: rgb(245,245,245);
+  color: rgb(128,128,128);
   transition-duration: 0.4s;
 }
 
 #navbar-text:hover {
-  color: #fff;
+  color: rgb(245,245,245);
 }
