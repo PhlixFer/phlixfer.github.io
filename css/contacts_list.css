@@ -21,7 +21,7 @@
 }
 
 #icons:hover {
-  filter: saturate(100%) drop-shadow(0 10px 20px rgba(0, 0, 0, var(drop-shadow-col)););
+  filter: saturate(100%) drop-shadow(0 10px 10px var(--drop-shadow-col));
   transform: translateY(-10px);
   max-width: 110px;
 }
