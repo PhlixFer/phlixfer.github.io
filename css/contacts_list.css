@@ -15,7 +15,7 @@
   width: 100%;
   max-width: 100px;
   margin: 20px 40px;
-  filter: saturate(0%) drop-shadow(0 0 0 #000);
+  filter: saturate(0%) drop-shadow(0 0 0 var(--drop-shadow-col));
   transition-duration: .4s;
   transition-timing-function: ease;
 }
