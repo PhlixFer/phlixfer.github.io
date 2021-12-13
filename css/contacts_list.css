@@ -1,13 +1,13 @@
 
 @media (prefers-color-scheme: light) {
   :root {
-    --drop-shadow-col: rgba(0, 0, 0, 0.3);
+    --drop-shadow-col: rgba(0, 0, 0, 0.2);
   }
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --drop-shadow-col: rgba(0, 0, 0, 0.5);
+    --drop-shadow-col: rgba(0, 0, 0, 0.4);
   }
 }
 
@@ -21,7 +21,7 @@
 }
 
 #icons:hover {
-  filter: saturate(100%) drop-shadow(0 10px 10px var(--drop-shadow-col));
+  filter: saturate(100%) drop-shadow(0 5px 10px var(--drop-shadow-col));
   transform: translateY(-10px);
   max-width: 110px;
 }
