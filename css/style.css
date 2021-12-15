@@ -65,7 +65,7 @@ body { background-color: var(--bg-col); }
 #navbar-text {
   font-family: Inter, Helvetica;
   font-weight: normal;
-  font-size: 18px;
+  font-size: 16px;
   text-decoration: none;
   text-align: center;
   padding: 20px;
