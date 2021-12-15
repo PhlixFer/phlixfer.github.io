@@ -68,31 +68,3 @@ body { background-color: var(--bg-col); }
   transform: translateY(-5px);
   filter: drop-shadow(0 5px 5px rgba(0, 0, 0, 0.4));
 }
-
-#navbar-list {
-  padding: 0;
-  display: flex;
-  list-style-type: none;
-  justify-content: center;
-  flex-wrap: wrap;
-  margin: 4px;
-}
-
-#navbar-item {
-  display: inline;
-}
-
-#navbar-text {
-  font-family: Inter, Helvetica;
-  font-weight: normal;
-  font-size: 16px;
-  text-decoration: none;
-  text-align: center;
-  padding: 20px;
-  color: rgb(128,128,128);
-  transition-duration: 0.4s;
-}
-
-#navbar-text:hover {
-  color: rgb(245,245,245);
-}
