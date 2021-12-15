@@ -12,10 +12,14 @@
   }
 }
 
+:root {
+  --main-font-family: Inter, Helvetica;
+}
+
 body { background-color: var(--bg-col); }
 
 #title {
-  font-family: Inter, Helvetica;
+  font-family: var(--main-font-family);
   font-size: 38px;
   color: var(--main-txt-col);
   /* padding-left: 80px; */
@@ -25,7 +29,7 @@ body { background-color: var(--bg-col); }
 }
 
 #body-big {
-  font-family: Inter, Helvetica;
+  font-family: var(--main-font-family);
   font-size: 18px;
   color: var(--main-txt-col);
   /*padding-left: 80px;*/
