@@ -18,10 +18,10 @@
   text-decoration: none;
   text-align: center;
   padding: 20px;
-  color: rgb(128,128,128);
+  color: rgba(245,245,245,.5);
   transition-duration: 0.4s;
 }
 
 #navbar-text:hover {
-  color: rgb(245,245,245);
+  color: rgba(245,245,245,1);
 }
