@@ -54,10 +54,9 @@ body { background-color: var(--bg-col); }
 }
 
 #main-buttons-centered {
-  display: block;
   width: 20%;
   height: 48px;
-  margin: auto;
+  margin: 0 40%;
   background-color: rgb(60, 179, 113);
   border-style: none;
   border-radius: 10px;
