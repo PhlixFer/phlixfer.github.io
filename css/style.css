@@ -32,7 +32,7 @@ body { background-color: var(--bg-col); }
   font-family: var(--main-font-family);
   font-size: 18px;
   color: var(--main-txt-col);
-  padding: 0 calc(100vw - 30vw);
+  padding: 0 calc(50vw - 30vw);
   text-align: center;
   line-height: 1.5;
 }
