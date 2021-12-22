@@ -56,13 +56,13 @@
 
     <button onclick="alert('You\'ve gotten real!'), getReal()" class="empty-button" class="body-big">Get Real</button>
 
-    <div class="Realify" style="display:none;">
+    <div id="Realify" style="display:none;">
       <img src="/media/get-real-cat.gif" alt="get real cat lol" style="margin: 50px 41%;width: calc(498px / 2);border-radius: 10px;filter: drop-shadow(0 10px 20px rgba(0,0,0,.4));">
     </div>
 
     <script>
     function getReal() {
-      var x = document.getElementByClass("Realify");
+      var x = document.getElementById()"Realify");
       if (x.style.display === "none") {
         x.style.display = "block";
       } else {
