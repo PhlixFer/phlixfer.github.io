@@ -17,7 +17,7 @@
       .empty-button {
         border: none;
         display: block;
-        width: 50%;
+        wclassth: 50%;
         height: 64px;
         background-color: rgb(252,100,77);
         border-radius: 10px;
@@ -44,25 +44,25 @@
   <body>
     <!-- the navbar -->
     <div class="navbar">
-      <ul id="navbar-list">
-        <li id="navbar-item"><a id="navbar-text" href="https://phlixfer.github.io/">Home</a></li>
-        <li id="navbar-item"><a id="navbar-text" href="visuals">Visuals</a></li>
-        <li id="navbar-item"><a id="navbar-text" href="music">Music</a></li>
-        <li id="navbar-item"><a id="navbar-text" href="contact">Contact</a></li>
-        <li id="navbar-item"><a id="navbar-text" href="about">About</a></li>
-        <li id="navbar-item"><a id="navbar-text" href="get-real">Get real</a></li>
+      <ul class="navbar-list">
+        <li class="navbar-item"><a class="navbar-text" href="https://phlixfer.github.io/">Home</a></li>
+        <li class="navbar-item"><a class="navbar-text" href="visuals">Visuals</a></li>
+        <li class="navbar-item"><a class="navbar-text" href="music">Music</a></li>
+        <li class="navbar-item"><a class="navbar-text" href="contact">Contact</a></li>
+        <li class="navbar-item"><a class="navbar-text" href="about">About</a></li>
+        <li class="navbar-item"><a class="navbar-text" href="get-real">Get real</a></li>
       </ul>
     </div>
 
-    <button onclick="alert('You\'ve gotten real!'), getReal()" class="empty-button" id="body-big">Get Real</button>
+    <button onclick="alert('You\'ve gotten real!'), getReal()" class="empty-button" class="body-big">Get Real</button>
 
-    <div id="Realify" style="display:none;">
-      <img src="/media/get-real-cat.gif" alt="get real cat lol" style="margin: 50px 41%;width: calc(498px / 2);border-radius: 10px;filter: drop-shadow(0 10px 20px rgba(0,0,0,.4));">
+    <div class="Realify" style="display:none;">
+      <img src="/media/get-real-cat.gif" alt="get real cat lol" style="margin: 50px 41%;wclassth: calc(498px / 2);border-radius: 10px;filter: drop-shadow(0 10px 20px rgba(0,0,0,.4));">
     </div>
 
     <script>
     function getReal() {
-      var x = document.getElementById("Realify");
+      var x = document.getElementByclass("Realify");
       if (x.style.display === "none") {
         x.style.display = "block";
       } else {

@@ -11,7 +11,7 @@
   }
 }
 
-#icons {
+.icons {
   width: 100%;
   max-width: 100px;
   margin: 20px 20px;
@@ -20,13 +20,13 @@
   transition-timing-function: ease;
 }
 
-#icons:hover {
+.icons:hover {
   filter: saturate(100%) drop-shadow(0 5px 10px var(--drop-shadow-col));
   transform: translateY(-10px);
   max-width: 110px;
 }
 
-#contacts_list {
+.contacts_list {
   display: flex;
   flex-wrap: nowrap;
   justify-content: center;
@@ -34,7 +34,7 @@
   padding: 0;
 }
 
-#contacts_item {
+.contacts_item {
   margin: 20px;
   list-style: none;
 }

@@ -14,7 +14,7 @@
   z-index: 9999;
 }
 
-#navbar-list {
+.navbar-list {
   padding: 0;
   display: flex;
   list-style-type: none;
@@ -23,11 +23,11 @@
   margin: 7px;
 }
 
-#navbar-item {
+.navbar-item {
   display: inline;
 }
 
-#navbar-text {
+.navbar-text {
   font-family: Inter, Helvetica;
   font-weight: normal;
   font-size: 16px;
@@ -38,6 +38,6 @@
   transition-duration: 0.4s;
 }
 
-#navbar-text:hover {
+.navbar-text:hover {
   color: rgba(245,245,245,1);
 }
