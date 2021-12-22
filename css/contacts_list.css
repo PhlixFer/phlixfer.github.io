@@ -15,13 +15,13 @@
   width: 100%;
   max-width: 100px;
   margin: 20px 20px;
-  filter: saturate(0%) drop-shadow(0 0 0 var(--drop-shadow-col));
+  filter: saturate(0%) drop-shadow(0 0 0 var(--drop-shadow-col)) brightness(80%);
   transition-duration: .4s;
   transition-timing-function: ease;
 }
 
 .icons:hover {
-  filter: saturate(100%) drop-shadow(0 5px 10px var(--drop-shadow-col));
+  filter: saturate(100%) drop-shadow(0 5px 10px var(--drop-shadow-col)) brightness(100%);
   transform: translateY(-10px);
   max-width: 110px;
 }
