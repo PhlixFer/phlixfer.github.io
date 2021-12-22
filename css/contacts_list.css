@@ -14,7 +14,7 @@
 .icons {
   width: 100%;
   max-width: 100px;
-  margin: 20px 20px;
+  margin: 0;
   filter: saturate(0%) drop-shadow(0 0 0 var(--drop-shadow-col)) brightness(80%);
   transition-duration: .4s;
   transition-timing-function: ease;
