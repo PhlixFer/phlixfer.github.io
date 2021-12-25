@@ -26,7 +26,7 @@
   max-width: 110px;
 }
 
-.contacts_list {
+.contacts-list {
   display: flex;
   flex-wrap: nowrap;
   justify-content: center;
@@ -34,7 +34,7 @@
   padding: 0;
 }
 
-.contacts_item {
+.contacts-item {
   margin: 20px;
   list-style: none;
 }
