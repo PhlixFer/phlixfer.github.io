@@ -10,17 +10,30 @@
     <link rel="icon" href="/media/favicon.ico">
     <title>PhlixFer</title>
     <style media="screen">
-      .artwork {
-        max-width: 380px;
-        position: relative;
-        border-radius: 10px;
-        filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.5));
-      }
-      .artwork-container {
-        margin-top: 40px;
-        margin-left: calc(50vw - 36vw);
-        margin-right: calc(50vw - 36vw);
-      }
+    :root {--resize-amount:0px;}
+    .artwork {
+      max-width: 380px;
+      position: relative;
+      border-radius: 10px;
+      filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.5));
+      transition-duration: .8s;
+      transition-timing-function: ease;
+    }
+    .artwork.a:hover {
+      transform: translateX(-10px);
+    }
+    .artwork.b:hover {
+      transform: translateX(10px);
+    }
+    .artwork.c:hover {
+      transform: translateY(-10px);
+      --resize-amount:4px;
+    }
+    .artwork-container {
+      margin-top: 40px;
+      margin-left: calc(50vw - 36vw);
+      margin-right: calc(50vw - 36vw);
+    }
     </style>
   </head>
   <body>
@@ -40,9 +53,9 @@
     <p class="body-big">Hi! I’m Phlixfer! You may also know me as Madame Flower from everywhere else. <br> I’m a musician and visual artist based in [redacted] and I make <i>very</i> messy art. <br> You can see more examples of my work on Twitter or in the Visuals/Music tabs!</p>
 
     <div class="artwork-container">
-      <img src="/media/ley_lines.jpeg" alt="Ley Lines" class="artwork" style="z-index:1;float:left;top:40px;">
-      <img src="/media/will_of_the_winding_forest.jpeg" alt="Will of the Winding Forest" class="artwork" style="z-index:2;float:right;top:80px;">
-      <img src="/media/liquid_heart.jpeg" alt="Liquid Heart" class="artwork" style="max-width:420px;z-index:3;top:-380px;left:-80px;">
+      <img src="/media/ley_lines.jpeg" alt="Ley Lines" class="artwork a" style="z-index:1;float:left;top:40px;">
+      <img src="/media/will_of_the_winding_forest.jpeg" alt="Will of the Winding Forest" class="artwork b" style="z-index:2;float:right;top:80px;">
+      <img src="/media/liquid_heart.jpeg" alt="Liquid Heart" class="artwork c" style="max-width:calc(420px + var(--resize-amount));z-index:3;top:-380px;left:calc(-80px - calc(var(--resize-amount) / 2));">
     </div>
 
     <button type="button" name="commission" class="main-buttons-centered">Want to commission me?</button>
