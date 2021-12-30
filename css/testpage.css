@@ -67,7 +67,7 @@ li.title {
   font-weight: bold;
   font-size: 13px;
   position: relative;
-  top: -3px;
+  top: -67px;
   color: rgba(248,248,248,.8);
   width: 103px;
   margin: 0 0 0 calc(calc(var(--window-height) / 2) - 103px);
