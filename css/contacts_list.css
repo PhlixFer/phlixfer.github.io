@@ -28,13 +28,13 @@
 
 .contacts-list {
   display: flex;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   justify-content: center;
   margin: 0;
   padding: 0;
 }
 
 .contacts-item {
-  margin: 20px;
+  margin: 0 20px;
   list-style: none;
 }
