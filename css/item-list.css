@@ -2,7 +2,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin: 20px calc(50vw - 30vw);
+  margin: 40px calc(50vw - 30vw);
   padding: 0;
   list-style: none;
 }
