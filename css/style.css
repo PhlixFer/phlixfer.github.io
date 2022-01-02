@@ -43,7 +43,7 @@ body { background-color: var(--bg-col); }
   margin: 0 42%;
   background-color: rgb(60, 179, 113);
   border-style: none;
-  border-radius: 50px;
+  border-radius: 10px;
   font-family: Inter, Helvetica;
   font-size: 15px;
   color: var(--main-txt-col);
