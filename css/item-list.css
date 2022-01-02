@@ -1,0 +1,22 @@
+.pic-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 20px calc(50vw - 30vw);
+  padding: 0;
+}
+
+.pic-item {
+  max-width: 240px;
+  max-height: 240px;
+  object-fit: cover;
+  border-radius: 10px;
+  filter: drop-shadow(0 0 0 rgba(0, 0, 0, 0.5));
+}
+
+.pic-item:hover {
+  max-width: 242px;
+  max-width: 242px;
+  transform: translateY(-1px);
+  filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.5););
+}
