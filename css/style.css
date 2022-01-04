@@ -32,7 +32,7 @@ body { background-color: var(--bg-col); }
   font-family: var(--main-font-family);
   font-size: 15px;
   color: var(--main-txt-col);
-  padding: 0 calc(50vw - 30vw);
+  padding: 0 calc(50vw - 40vw);
   text-align: center;
   line-height: 1.5;
 }
@@ -56,4 +56,18 @@ body { background-color: var(--bg-col); }
 .main-buttons-centered:hover {
   transform: translateY(-2px);
   box-shadow: 0 5px 5px rgba(0, 0, 0, 0.4);
+}
+
+.warning {
+  background-color: rgba(18, 18, 18, 0.75);
+  border-width: 2px;
+  border-color: rgba(245, 245, 245, 0.25);
+  border-radius: 10px;
+  width: 100%;
+  margin-bottom: 20px;
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  .warning {display:block;}
 }
