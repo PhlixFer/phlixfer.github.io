@@ -59,22 +59,24 @@
 @media screen and (max-width: 600px) {
   .navbar-item {display: none;}
   .navbar-text {display: none;}
+  .navbar-list {flex-direction: column;}
   .borgor-menu {display: block;margin-top: 4px;}
 }
 
 /* active small navbar */
 @media screen and (max-width: 600px) {
-  .navbar .smol {
+  .navbar.smol {
     height: 290px;
   }
-  .navbar-item .smol {
+  .navbar-item.smol {
     display: block;
     margin-bottom: 16px;
   }
-  .navbar-text .smol {
+  .navbar-text.smol {
     display: block;
     text-align: left;
     padding-left: 48px;
     font-size: 18px;
   }
+  .borgor-menu {margin-top: 8px;}
 }
