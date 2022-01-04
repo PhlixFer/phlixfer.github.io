@@ -1,6 +1,6 @@
 function borgorMenu() {
 
-  var x = getElementById('navbar');
+  var x = document.getElementById('navbar');
 
   // idk how to javascript so here's some yanderedev-level looping
 
