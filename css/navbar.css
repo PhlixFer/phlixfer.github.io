@@ -59,7 +59,7 @@
 @media screen and (max-width: 600px) {
   .navbar-item {display: none;}
   .navbar-text {display: none;}
-  .borgor-menu {display: block;}
+  .borgor-menu {display: block;margin-top: 4px;}
 }
 
 /* active small navbar */
