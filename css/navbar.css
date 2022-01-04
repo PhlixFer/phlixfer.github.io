@@ -12,6 +12,7 @@
   -webkit-backdrop-filter: blur(20px) saturate(180%);
   backdrop-filter: blur(20px) saturate(180%);
   z-index: 9999;
+  transition-duration: 0.4s;
 }
 
 .navbar-list {
@@ -27,6 +28,18 @@
   display: inline;
 }
 
+.borgor-menu {
+  display: none;
+  width: 16px;
+  opacity: 50%;
+  position: relative;
+  float: left;
+  margin-top: 16px;
+  margin-left: 16px;
+  margin-bottom: 0;
+  transition-duration: 0.4s;
+}
+
 .navbar-text {
   font-family: Inter, Helvetica;
   font-weight: normal;
@@ -40,4 +53,28 @@
 
 .navbar-text:hover {
   color: rgba(245,245,245,1);
+}
+
+/* idle small navbar */
+@media screen and (max-width: 600px) {
+  .navbar-item {display: none;}
+  .navbar-text {display: none;}
+  .borgor-menu {display: block;}
+}
+
+/* active small navbar */
+@media screen and (max-width: 600px) {
+  .navbar .smol {
+    height: 290px;
+  }
+  .navbar-item .smol {
+    display: block;
+    margin-bottom: 16px;
+  }
+  .navbar-text .smol {
+    display: block;
+    text-align: left;
+    padding-left: 48px;
+    font-size: 18px;
+  }
 }
