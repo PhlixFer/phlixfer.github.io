@@ -46,7 +46,7 @@
 
 /* idle small navbar */
 @media screen and (max-width: 600px) {
-  .navbar a.borgor-menu {display: block;margin-top: 4px;}
+  .navbar a.borgor-container {display: block;margin-top: 4px;}
   .navbar a {display: none;}
   .navbar {justify-content: left;}
   .borgor-menu {display: block;}
@@ -64,7 +64,7 @@
     text-align: left;
     margin-left: 36px;
   }
-  .navbar.smol a.borgor-menu {
+  .navbar.smol a.borgor-container {
     margin-left: 24px;
     margin-top: 16px;
     margin-bottom: 16px;

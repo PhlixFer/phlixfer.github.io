@@ -12,10 +12,10 @@ function borgorMenu() {
 
   var x = document.getElementById('borgor-icon');
 
-  if (x.className == "borgor-menu") {
+  if (x.className == "borgor-container") {
     x.className += " smol";
   } else {
-    x.className = "borgor-menu";
+    x.className = "borgor-container";
   }
 
 }
