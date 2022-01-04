@@ -13,19 +13,10 @@
   backdrop-filter: blur(20px) saturate(180%);
   z-index: 9999;
   transition-duration: 0.4s;
-}
-
-.navbar-list {
-  padding: 0;
   display: flex;
-  list-style-type: none;
   justify-content: center;
   flex-wrap: wrap;
   margin: 7px;
-}
-
-.navbar-item {
-  display: inline;
 }
 
 .borgor-menu {
@@ -57,9 +48,7 @@
 
 /* idle small navbar */
 @media screen and (max-width: 600px) {
-  .navbar-item {display: none;}
   .navbar-text {display: none;}
-  .navbar-list {flex-direction: column;}
   .borgor-menu {display: block;margin-top: 4px;}
 }
 
@@ -67,10 +56,7 @@
 @media screen and (max-width: 600px) {
   .navbar.smol {
     height: 290px;
-  }
-  .navbar-item.smol {
-    display: block;
-    margin-bottom: 16px;
+    flex-direction: column;
   }
   .navbar-text.smol {
     display: block;
