@@ -59,7 +59,7 @@
 /* active small navbar */
 @media screen and (max-width: 600px) {
   .navbar.smol {
-    height: 300px;
+    height: 320px;
     flex-direction: column;
     justify-content: left;
   }
