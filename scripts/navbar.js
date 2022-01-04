@@ -1,4 +1,4 @@
-function hamborgMenu() {
+function borgorMenu() {
 
   var x = getElementById('navbar');
 
