@@ -10,20 +10,12 @@ function borgorMenu() {
     x.className = "navbar";
   }
 
-  var x = document.getElementById('navbar-item');
+  var x = document.getElementById('borgor-icon');
 
-  if (x.className == "navbar-item") {
+  if (x.className == "borgor-menu") {
     x.className += " smol";
   } else {
-    x.className = "navbar-item";
-  }
-
-  var x = document.getElementById('navbar-text');
-
-  if (x.className == "navbar-text") {
-    x.className += " smol";
-  } else {
-    x.className = "navbar-text";
+    x.className = "borgor-menu";
   }
 
 }

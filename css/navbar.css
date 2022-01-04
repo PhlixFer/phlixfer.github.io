@@ -30,7 +30,7 @@
   transition-duration: 0.4s;
 }
 
-.navbar-text {
+.navbar a:not(:first-child) {
   font-family: Inter, Helvetica;
   font-weight: normal;
   font-size: 15px;
@@ -47,21 +47,16 @@
 
 /* idle small navbar */
 @media screen and (max-width: 600px) {
-  .navbar-text {display: none;}
-  .borgor-menu {display: block;margin-top: 4px;}
+  .navbar a .borgor-menu {display: block;margin-top: 4px;}
+  .navbar a {display: none;}
 }
 
 /* active small navbar */
 @media screen and (max-width: 600px) {
-  .navbar.smol {
+  .navbar .smol {
     height: 290px;
     flex-direction: column;
   }
-  .navbar-text.smol {
-    display: block;
-    text-align: left;
-    padding-left: 48px;
-    font-size: 18px;
-  }
-  .borgor-menu {margin-top: 8px;}
+
+  .borgor-menu .smol {margin-top: 8px;}
 }
