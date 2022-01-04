@@ -38,9 +38,10 @@ body { background-color: var(--bg-col); }
 }
 
 .main-buttons-centered {
-  width: 16%;
+  width: 180px;
   height: 32px;
-  margin: 0 42%;
+  display: block;
+  margin: 0 auto;
   background-color: rgb(60, 179, 113);
   border-style: none;
   border-radius: 10px;
