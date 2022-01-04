@@ -47,6 +47,7 @@
 @media screen and (max-width: 600px) {
   .navbar a.borgor-icon {display: block;margin-top: 4px;}
   .navbar a {display: none;}
+  .navbar {justify-content: left;}
   .borgor-menu {display: block;}
 }
 
@@ -57,10 +58,15 @@
     flex-direction: column;
     justify-content: left;
   }
+  .navbar.smol a {
+    display: block;
+    text-align: left;
+    margin-left: 36px;
+  }
   .navbar.smol a.borgor-icon {
     margin-left: 24px;
     margin-top: 16px;
     margin-bottom: 16px;
   }
-  .borgor-menu .smol {margin: 0;}
+  .borgor-menu.smol {margin: 0;}
 }
