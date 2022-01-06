@@ -1,70 +1,35 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" dir="ltr">
   <head>
-    <meta name="theme-color" content="#202020">
+    <meta charset="utf-8">
+    <meta name="theme-color" content="#2C2C2C">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="/css/navbar.css">
-    <link rel="stylesheet" href="/fonts/Inter Web/inter.css">
-    <script src="/scripts/navbar.js"></script>
-    <link rel="icon" href="/media/favicon.svg">
-    <link rel="icon" href="/media/favicon.ico">
-    <title>About | PhlixFer</title>
-    <style media="screen">
-    :root {--resize-amount:0px;}
-    .artwork {
-      max-width: 380px;
-      position: relative;
-      border-radius: 10px;
-      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
-      transition-duration: .8s;
-      transition-timing-function: ease;
-    }
-    .artwork.a:hover {
-      transform: translateX(-30px) translateY(-10px) rotateZ(-2deg);
-      max-width: 390px;
-    }
-    .artwork.b:hover {
-      transform: translateX(30px) translateY(-10px) rotateZ(2deg);
-      max-width: 390px;
-    }
-    .artwork.c:hover {
-      transform: translateY(-10px);
-      --resize-amount:4px;
-    }
-    .artwork-container {
-      margin-top: 40px;
-      margin-left: calc(50vw - 36vw);
-      margin-right: calc(50vw - 36vw);
-      height: 600px;
-    }
-    </style>
+    <link rel="stylesheet" href="fonts/Inter Web/inter.css">
+    <link rel="stylesheet" href="css/master.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="icon" href="media/favicon.svg">
+    <link rel="icon" href="media/favicon.ico">
+    <script src="scripts/mobilify.js" charset="utf-8" defer></script>
+    <title>Phlixfer</title>
   </head>
   <body>
-    <!-- the navbar -->
     <div class="navbar" id="navbar">
-      <a href="javascript:void(0);" onclick="borgorMenu()" id="borgor-icon" class="borgor-container">
-        <img src="/media/hamborgor_menu_closed.svg" class="borgor-menu">
+      <a href="javascript:void(0);" class="borgor-menu" onclick="borgorMenu()">
+        <img src="media/hamborgor_menu_closed.svg">
       </a>
-      <a class="navbar-text" href="/">Home</a>
-      <a class="navbar-text" href="visuals">Visuals</a>
-      <a class="navbar-text" href="music">Music</a>
-      <a class="navbar-text" href="contact">Contact</a>
-      <a class="navbar-text" href="about">About</a>
-      <a class="navbar-text" href="get-real">Get Real</a>
+      <a href="/">Home</a>
+      <a href="visuals">Visuals</a>
+      <a href="music">Music</a>
+      <a href="contact">Contact</a>
+      <a href="about">About</a>
+      <a href="get-real">Get Real</a>
     </div>
 
-    <h1 class="title">About Me!</h1>
-    <p class="body-big">Hi! I’m Phlixfer! You may also know me as Madame Fleur from everywhere else. <br> I’m a musician and visual artist based in [redacted] and I make <i>very</i> messy art. <br> You can see more examples of my work on Twitter or in the Visuals/Music tabs!</p>
+    <h1 class="text-title-1">hi, i'm Phlixfer!</h1>
+    <p class="text-body-1">i'm a 15 y/o musician and visual artist based in <i>outer space</i>. You can find examples of my work on my Twitter account or in the visuals/music pages!</p>
 
-    <div class="artwork-container">
-      <img src="/media/art_pics/ley_lines.jpeg" alt="Ley Lines" class="artwork a" style="z-index:1;float:left;top:40px;">
-      <img src="/media/art_pics/will_of_the_winding_forest.jpeg" alt="Will of the Winding Forest" class="artwork b" style="z-index:2;float:right;top:80px;">
-      <img src="/media/art_pics/liquid_heart.jpeg" alt="Liquid Heart" class="artwork c" style="max-width:calc(420px + var(--resize-amount));z-index:3;top:-380px;left:calc(-80px - calc(var(--resize-amount) / 2));">
-    </div>
-
-    <a href="commissions">
-      <button type="button" name="commission" class="main-buttons-centered">Want to commission me?</button>
+    <a href="about" style="text-decoration: none;display: contents;">
+      <button type="button" name="button-redirect" class="default-button-big">Want to commission me?</button>
     </a>
 
   </body>

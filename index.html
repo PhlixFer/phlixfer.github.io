@@ -1,44 +1,38 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" dir="ltr">
   <head>
-    <meta name="theme-color" content="#202020">
+    <meta charset="utf-8">
+    <meta name="theme-color" content="#2C2C2C">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="/css/navbar.css">
-    <link rel="stylesheet" href="/fonts/Inter Web/inter.css">
-    <script src="/scripts/navbar.js"></script>
-    <link rel="icon" href="/media/favicon.svg">
-    <link rel="icon" href="/media/favicon.ico">
-    <title>Home | PhlixFer</title>
+    <link rel="stylesheet" href="fonts/Inter Web/inter.css">
+    <link rel="stylesheet" href="css/master.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="icon" href="media/favicon.svg">
+    <link rel="icon" href="media/favicon.ico">
+    <script src="scripts/mobilify.js" charset="utf-8" defer></script>
+    <title>Phlixfer</title>
   </head>
   <body>
-    <!-- the navbar -->
     <div class="navbar" id="navbar">
-      <a href="javascript:void(0);" onclick="borgorMenu()" id="borgor-icon" class="borgor-container">
-        <img src="/media/hamborgor_menu_closed.svg" class="borgor-menu">
+      <a href="javascript:void(0);" class="borgor-menu" onclick="borgorMenu()">
+        <img src="media/hamborgor_menu_closed.svg">
       </a>
-      <a class="navbar-text" href="/">Home</a>
-      <a class="navbar-text" href="visuals">Visuals</a>
-      <a class="navbar-text" href="music">Music</a>
-      <a class="navbar-text" href="contact">Contact</a>
-      <a class="navbar-text" href="about">About</a>
-      <a class="navbar-text" href="get-real">Get Real</a>
+      <a href="/">Home</a>
+      <a href="visuals">Visuals</a>
+      <a href="music">Music</a>
+      <a href="contact">Contact</a>
+      <a href="about">About</a>
+      <a href="get-real">Get Real</a>
     </div>
 
-    <div class="warning">
-      <p class="body-big">hey, it looks like you're on mobile! so here's a warning: pages beyond this one are <i>very</i> broken on mobile. sooo... you've been warned!</p>
-    </div>
+    <h1 class="text-title-1">hi there uwu</h1>
+    <p class="text-body-1">this is my website! this will be the playground for all my web things :D</p>
 
-    <h1 class="title">hi there uwu</h1>
-    <p class="body-big">this is my website! it'll be a playground for all the mess that is my stuff :P</p>
+    <a href="about" style="text-decoration: none;display: contents;">
+      <button type="button" name="button-redirect" class="default-button-big">"Who are you?"</button>
+    </a>
 
-    <div style="margin: 40px 0 0 0;">
-      <a href="about" style="text-decoration: none;">
-        <button type="button" name="about-button" class="main-buttons-centered">"Who are you?"</button>
-      </a>
-    </div>
+    <iframe allow="autoplay *; encrypted-media *; fullscreen *" frameborder="0" height="450" style="width:100%;max-width:660px;overflow:hidden;background:transparent;" class="apple-music-embed" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/kh/album/youth-ep/1474112842"></iframe>
 
-    <!-- featured song/ep/lp -->
-    <iframe allow="autoplay *; encrypted-media *; fullscreen *" frameborder="0" height="450" style="width:100%;max-width:660px;overflow:hidden;background:transparent;padding-top:50px;display:block;margin:auto;filter: drop-shadow(0 10px 20px rgba(0,0,0,.4));" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/kh/album/youth-ep/1474112842"></iframe>
   </body>
 </html>

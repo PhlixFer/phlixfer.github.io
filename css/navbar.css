@@ -1,77 +1,68 @@
 .navbar {
-  margin: 0;
-  padding: 0;
-  position: fixed;
-  width: 100%;
-  height: 36px;
+  background-color: rgba(48, 48, 48, 0.8);
+  -webkit-backdrop-filter: blur(30px) saturate(180%);
+  backdrop-filter: blur(30px) saturate(180%);
+  height: 48px;
+  position: absolute;
   top: 0;
   left: 0;
-  right: 0;
-  background-color: rgba(30,30,30,.9);
-  overflow: hidden;
-  -webkit-backdrop-filter: blur(20px) saturate(180%);
-  backdrop-filter: blur(20px) saturate(180%);
-  z-index: 9999;
-  transition-duration: 0.4s;
+  width: 100%;
+  margin: 0;
+  padding: 0;
   display: flex;
   justify-content: center;
-  flex-wrap: nowrap;
-}
-
-.borgor-menu {
-  display: none;
-  width: 16px;
-  opacity: 50%;
-  position: relative;
-  float: left;
-  margin-top: 8px;
-  margin-left: 16px;
   transition-duration: 0.4s;
 }
 
-.borgor-container {
-  transition-duration: .4s;
-}
-
-.navbar a:not(:first-child) {
-  font-family: Inter, Helvetica;
-  font-weight: normal;
+.navbar a {
+  font-family: Inter;
   font-size: 15px;
+  font-weight: 400;
+  margin-top: 16px;
+  margin-bottom: 32px;
+  color: var(--main-text-col);
+  opacity: 50%;
   text-decoration: none;
-  text-align: center;
-  padding: 8px 16px;
-  color: rgba(245,245,245,.5);
+  margin-left: 10px;
+  margin-right: 10px;
   transition-duration: 0.4s;
 }
 
-.navbar-text:hover {
-  color: rgba(245,245,245,1);
+.navbar .borgor-menu {margin: 0; display: none;}
+
+.navbar a:hover {
+  opacity: 100%;
 }
 
-/* idle small navbar */
-@media screen and (max-width: 600px) {
-  .navbar a.borgor-container {display: block;margin-top: 4px;}
-  .navbar a {display: none;}
-  .navbar {justify-content: left;}
-  .borgor-menu {display: block;}
+/* mobile navbar styling */
+
+.navbar.mobile {
+  justify-content: right;
+  border-radius: 0 0 10px 10px;
 }
 
-/* active small navbar */
-@media screen and (max-width: 600px) {
-  .navbar.smol {
-    height: 320px;
-    flex-direction: column;
-    justify-content: left;
-  }
-  .navbar.smol a {
-    display: block;
-    text-align: left;
-    margin-left: 36px;
-  }
-  .navbar.smol a.borgor-container {
-    margin-left: 24px;
-    margin-top: 24px;
-    margin-bottom: 16px;
-  }
-  .borgor-menu.smol {margin: 0;}
+.navbar.mobile a:not(:first-child) {
+  display: block;
+  margin: 0 0 16px 38px;
+  opacity: 0%;
+  transition-duration: 0s;
+  transition-delay: 0s;
 }
+
+.navbar.mobile .borgor-menu {display: block;float: left;}
+
+/* active mobile navbar styling */
+
+.navbar.mobile.active {
+  height: 280px;
+  flex-direction: column;
+}
+
+.navbar.mobile.active a {
+  display: block;
+  opacity: 50%;
+  transition-delay: 0.2s;
+  transition-duration: 0.4s;
+}
+
+.navbar.mobile.active a:hover {opacity: 100%;transition-delay:0s;}

@@ -2,76 +2,54 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <meta name="theme-color" content="#202020">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="/css/navbar.css">
-    <link rel="stylesheet" href="/fonts/Inter Web/inter.css">
-    <script src="/scripts/navbar.js"></script>
-    <link rel="icon" href="/media/favicon.svg">
-    <link rel="icon" href="/media/favicon.ico">
-    <title>Get Real</title>
-    <style>
-      body {
-        background-color: #282828;
-      }
-      .empty-button {
-        border: none;
-        display: block;
-        width: 180px;
-        height: 36px;
-        background-color: rgb(60, 179, 113);
+    <meta name="theme-color" content="#2C2C2C">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="fonts/Inter Web/inter.css">
+    <link rel="stylesheet" href="css/master.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="icon" href="media/favicon.svg">
+    <link rel="icon" href="media/favicon.ico">
+    <script src="scripts/mobilify.js" charset="utf-8" defer></script>
+    <title>Phlixfer</title>
+    <style media="screen">
+      .real-pic {
+        width: 100%;
+        max-width: 240px;
         border-radius: 10px;
-        font-size: 15px;
-        padding: 10px;
         margin-left: auto;
         margin-right: auto;
-        margin-top: 180px;
-        cursor: pointer;
-        color: #FFF;
-        text-align: center;
-        transition-duration: 0.2s;
-      }
-
-      .empty-button:hover {
-        transform: translateY(-2px);
-      }
-
-      .empty-button:active {
-        transform: translateY(0px);
-        background-color: rgb(75,183,124);
+        margin-top: 32px;
       }
     </style>
   </head>
   <body>
-    <!-- the navbar -->
     <div class="navbar" id="navbar">
-      <a href="javascript:void(0);" onclick="borgorMenu()" id="borgor-icon" class="borgor-container">
-        <img src="/media/hamborgor_menu_closed.svg" class="borgor-menu">
+      <a href="javascript:void(0);" class="borgor-menu" onclick="borgorMenu()">
+        <img src="media/hamborgor_menu_closed.svg">
       </a>
-      <a class="navbar-text" href="/">Home</a>
-      <a class="navbar-text" href="visuals">Visuals</a>
-      <a class="navbar-text" href="music">Music</a>
-      <a class="navbar-text" href="contact">Contact</a>
-      <a class="navbar-text" href="about">About</a>
-      <a class="navbar-text" href="get-real">Get Real</a>
+      <a href="/">Home</a>
+      <a href="visuals">Visuals</a>
+      <a href="music">Music</a>
+      <a href="contact">Contact</a>
+      <a href="about">About</a>
+      <a href="get-real">Get Real</a>
     </div>
 
-    <button onclick="alert('You\'ve gotten real!'), getReal()" class="empty-button" class="body-big">Get Real</button>
+    <button type="button" name="button-redirect" class="default-button-big" onclick="getReal()" style="margin-top: 80px;">get real</button>
 
-    <div id="Realify" style="display:none;">
-      <img src="/media/get-real-cat.gif" alt="get real cat lol" style="position: relative;display: flex;margin-top: 50px;margin-left: auto;margin-right: auto;width: 250px;border-radius: 10px;box-shadow: 0 10px 20px rgba(0,0,0,.4);">
-    </div>
+    <img src="media/get-real-cat.gif" alt="get real meow" id="real-pic" class="real-pic" style="display: none">
 
-    <script>
-    function getReal() {
-      var x = document.getElementById("Realify");
-      if (x.style.display === "none") {
-        x.style.display = "block";
-      } else {
-        x.style.display = "none";
+    <script type="text/javascript">
+      function getReal() {
+        var x = document.getElementById('real-pic');
+        if (x.style.display === 'none') {
+          x.style.display = 'block';
+          alert('you\'ve gotten real!')
+        } else {
+          x.style.display = 'none';
+          alert('you\'ve de-real-ed yourself 😔');
+        }
       }
-    }
     </script>
 
   </body>
