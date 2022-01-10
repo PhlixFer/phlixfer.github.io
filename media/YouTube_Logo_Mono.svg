@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 600 600" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+    <g transform="matrix(1,0,0,1,-4200,-700)">
+        <g id="YouTube_Logo_Mono" transform="matrix(1,0,0,1,700,700)">
+            <rect x="3500" y="0" width="600" height="600" style="fill:none;"/>
+            <g transform="matrix(3.20603,0,0,3.20603,3761.05,241.576)">
+                <path d="M0,36.446L0,0L31.562,18.223L0,36.446ZM70.353,-11.018C68.955,-16.244 64.839,-20.361 59.612,-21.758C50.138,-24.297 12.148,-24.297 12.148,-24.297C12.148,-24.297 -25.841,-24.297 -35.315,-21.758C-40.542,-20.361 -44.658,-16.244 -46.055,-11.018C-48.594,-1.544 -48.594,18.223 -48.594,18.223C-48.594,18.223 -48.594,37.99 -46.055,47.464C-44.658,52.69 -40.542,56.807 -35.315,58.204C-25.841,60.743 12.148,60.743 12.148,60.743C12.148,60.743 50.138,60.743 59.612,58.204C64.839,56.807 68.955,52.69 70.353,47.464C72.891,37.99 72.891,18.223 72.891,18.223C72.891,18.223 72.891,-1.544 70.353,-11.018" style="fill:rgb(217,217,217);fill-rule:nonzero;"/>
+            </g>
+        </g>
+    </g>
+</svg>
