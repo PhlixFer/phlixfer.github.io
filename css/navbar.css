@@ -45,8 +45,8 @@
 
 .navbar.mobile a:not(:first-child) {
   display: block;
-  margin: 0 0 16px 38px;
   opacity: 0%;
+  margin: 0 0 16px 0;
   transition-duration: 0s;
   transition-delay: 0s;
 }
@@ -60,9 +60,10 @@
   flex-direction: column;
 }
 
-.navbar.mobile.active a {
+.navbar.mobile.active a:not(:first-child) {
   display: block;
   opacity: 50%;
+  margin: 0 0 16px 38px;
   transition-delay: 0.2s;
   transition-duration: 0.4s;
 }
