@@ -29,6 +29,59 @@
   transition-duration: 0.4s;
 }
 
+/* navbar icons */
+
+.navbar-icon-container {
+  height: 28px;
+  width: 28px;
+  border-radius: 10px;
+  padding: 4px 8px;
+  background-color: #F8F8F800;
+  transition-duration: .4s;
+}
+
+.navbar-icon-container:hover {
+  width: 162px;
+  background-color: #F8F8F8;
+}
+
+.navbar-icon {
+  width: 100%;
+  max-width: 28px;
+  transition-duration: .4s;
+  margin-right: 8px;
+  float: left;
+}
+
+.navbar-icon-container:hover img {
+  filter: invert();
+}
+
+.navbar-icon-text {
+  margin: 5px;
+  margin-left: 0;
+  height: 28px;
+  text-decoration: none;
+  font-family: Inter, Helvetica;
+  font-weight: 400;
+  font-size: 15px;
+  color: #282828;
+  opacity: 0;
+  transition-duration: .2s;
+  transition-delay: .4s;
+}
+
+.navbar-icon-container:hover p {
+  opacity: 100%;
+  transition-delay: 0;
+}
+
+.navbar-icon-container a {
+  text-decoration: none;
+}
+
+/* --------------- */
+
 .borgor-container {
   transition-duration: .4s;
 }
