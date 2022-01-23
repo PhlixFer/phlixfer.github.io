@@ -1,14 +1,14 @@
 :root {
   --main-text-col: #f5f5f5;
   --body-col: #181818;
-  --price-list-path: media/Price_list_dark.svg
+  --navbar-col: rgba(48, 48, 48, 0.8);
 }
 
 @media (prefers-color-scheme: light) {
   :root {
     --main-text-col: #121212;
     --body-col: #f5f5f5;
-    --price-list-path: media/Price_list_light.svg
+    --navbar-col: rgba(225, 225, 225, 0.8);
   }
 }
 
