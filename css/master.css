@@ -154,7 +154,7 @@ body {
   background-repeat: no-repeat;
   height: 240px;
   width: 228px;
-  margin: 20px auto;
+  margin: 40px auto;
 }
 
 @media (prefers-color-scheme: light) {
