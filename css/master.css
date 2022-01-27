@@ -55,7 +55,7 @@ body {
   font-family: Inter;
   font-size: 15px;
   font-weight: 400;
-  color: var(--main-text-col);
+  color: rgb(245, 245, 245);
   cursor: pointer;
   border: none;
   text-decoration: none;
