@@ -2,6 +2,7 @@
   --main-text-col: #f5f5f5;
   --body-col: #181818;
   --navbar-col: rgba(48, 48, 48, 0.8);
+  --table-col: rgb(64, 64, 64);
 }
 
 @media (prefers-color-scheme: light) {
@@ -9,6 +10,7 @@
     --main-text-col: #121212;
     --body-col: #f5f5f5;
     --navbar-col: rgba(225, 225, 225, 0.8);
+    --table-col: rgb(200, 200, 200);
   }
 }
 
@@ -149,12 +151,56 @@ body {
   margin-top: 4px;
 }
 
-.price-list {
+/* .price-list {
   background: url(../media/Price_list_dark.svg);
   background-repeat: no-repeat;
   height: 250px;
   width: 237.5px;
   margin: 40px auto;
+} */
+
+.price-table {
+  width: 260px;
+  display: block;
+  margin: auto;
+  border-radius: 10px;
+  border-width: 2px;
+  border-color: var(--table-col);
+  border-style: solid;
+}
+
+.list-header {
+  height: 32px;
+  margin: 0;
+  background-color: var(--table-col);
+  display: grid;
+  grid-template-columns: 60% auto;
+  border-radius: 5px 5px 0 0;
+}
+
+.list-text {
+  font-family: Inter;
+  font-size: 15px;
+  font-weight: 400;
+  text-align: center;
+  padding: 6px;
+  margin: 0;
+  color: var(--main-text-col);
+  text-decoration: none;
+  list-style: none;
+}
+
+.list-body {
+  display: grid;
+  grid-template-columns: 60% auto;
+  /* border: 2px solid rgba(64, 64, 64); */
+}
+
+.list-body ul {
+  padding: 0;
+  margin: 0;
+  margin-top: 4px;
+  margin-bottom: 6px;
 }
 
 @media (prefers-color-scheme: light) {
