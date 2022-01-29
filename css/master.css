@@ -155,7 +155,7 @@ body {
   width: 260px;
   display: block;
   margin: auto;
-  border-radius: 10px;
+  border-radius: 16px;
   border-width: 2px;
   border-color: var(--table-col);
   border-style: solid;
@@ -167,7 +167,7 @@ body {
   background-color: var(--table-col);
   display: grid;
   grid-template-columns: 60% auto;
-  border-radius: 5px 5px 0 0;
+  border-radius: 14px 14px 0 0;
 }
 
 .list-text {
