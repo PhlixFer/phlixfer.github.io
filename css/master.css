@@ -151,14 +151,6 @@ body {
   margin-top: 4px;
 }
 
-/* .price-list {
-  background: url(../media/Price_list_dark.svg);
-  background-repeat: no-repeat;
-  height: 250px;
-  width: 237.5px;
-  margin: 40px auto;
-} */
-
 .price-table {
   width: 260px;
   display: block;
@@ -201,10 +193,4 @@ body {
   margin: 0;
   margin-top: 4px;
   margin-bottom: 6px;
-}
-
-@media (prefers-color-scheme: light) {
-  .price-list {
-    background: url(../media/Price_list_light.svg);
-  }
 }
