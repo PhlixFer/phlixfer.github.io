@@ -43,6 +43,7 @@
   width: 40px;
   margin-top: 8px;
   transition-duration: .3s;
+  display: block;
 }
 .navbar-icon-container:hover {
   background-color: #FF5E5B;
@@ -78,6 +79,12 @@
 }
 .navbar-icon-container:hover img {
   opacity: 100%;
+}
+
+@media screen and (max-width: 750px) {
+  .navbar-icon-container {
+    display: none;
+  }
 }
 
 /* mobile navbar styling */
