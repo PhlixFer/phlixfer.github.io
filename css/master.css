@@ -67,6 +67,10 @@ body {
   transform: translateY(-2px);
 }
 
+.apple-music-container {
+  margin: 0 20px;
+}
+
 .apple-music-embed {
   margin-left: auto;
   margin-right: auto;
