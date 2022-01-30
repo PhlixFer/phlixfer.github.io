@@ -25,6 +25,8 @@ body {
   font-weight: 600;
   text-align: center;
   margin-top: 70px;
+  margin-left: 20px;
+  margin-right: 20px;
   color: var(--main-text-col);
 }
 
