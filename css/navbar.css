@@ -30,7 +30,7 @@
   transition-duration: 0.4s;
 }
 
-.navbar .borgor-menu {margin: 0; display: none;}
+.navbar .borgor-menu {margin: 0; opacity: 100%; display: none;}
 
 .navbar a:hover {
   opacity: 100%;
@@ -81,13 +81,13 @@
 
   .navbar.active a:not(:first-child) {
     display: block;
-    opacity: 50%;
+    opacity: 100%;
     margin: 0 0 16px 38px;
     transition-delay: 0.2s;
     transition-duration: 0.4s;
   }
 
-  .navbar.active a:hover {opacity: 100%;transition-delay:0s;}
+  /* .navbar.active a:hover {opacity: 100%;transition-delay:0s;} */
 
 }
 
