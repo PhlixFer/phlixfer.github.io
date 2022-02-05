@@ -320,8 +320,7 @@ h1 {
 
 .img-frame {
   height: 60vh;
-  margin-left: 20px;
-  margin-bottom: 20px;
+  margin: 10px;
   border-radius: 20px;
   transition-duration: .4s;
 }
