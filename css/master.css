@@ -311,7 +311,7 @@ h1 {
 /* add image boxes */
 
 .img-container {
-  margin: 40px;
+  margin: 40px auto;
   margin-bottom: 80px;
   display: flex;
   flex-wrap: wrap;
@@ -323,18 +323,17 @@ h1 {
   margin-left: 20px;
   margin-bottom: 20px;
   border-radius: 20px;
+  transition-duration: .4s;
+}
+
+.img-frame:hover {
+  transform: translateY(-4px);
 }
 
 @media screen and (max-width: 750px) {
   .img-frame {
-    height: auto;
+    height: initial;
     width: 80vw;
     margin-left: 0;
-  }
-}
-
-@media screen and (max-width: 1000px) {
-  .img-frame {
-    height: 50vh;
   }
 }
