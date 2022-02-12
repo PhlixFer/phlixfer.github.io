@@ -187,22 +187,28 @@ h1 {
 /* price list styling */
 
 .price-table {
-  width: 260px;
+  width: 320px;
   display: block;
   margin: auto;
-  border-radius: 16px;
+  border-radius: 20px;
   border-width: 2px;
   border-color: var(--table-col);
   border-style: solid;
 }
 
+@media screen and (max-width: 500px) {
+  .price-table {
+    width: calc(100vw - 40px);
+  }
+}
+
 .list-header {
-  height: 32px;
+  height: 48px;
   margin: 0;
   background-color: var(--table-col);
   display: grid;
   grid-template-columns: 60% auto;
-  border-radius: 14px 14px 0 0;
+  border-radius: 18px 18px 0 0;
 }
 
 .list-text {
@@ -210,8 +216,8 @@ h1 {
   font-size: 15px;
   font-weight: 400;
   text-align: center;
-  padding: 6px;
-  margin: 0;
+  padding: 0px;
+  margin: 15px;
   color: var(--main-text-col);
   text-decoration: none;
   list-style: none;
