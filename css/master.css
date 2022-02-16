@@ -74,6 +74,7 @@ h1 {
   margin: 32px auto 32px auto;
   cursor: pointer;
   border: none;
+  box-shadow: 0 0 0 #3DC3787f;
   text-decoration: none;
   transition-duration: 0.4s;
 }
@@ -81,6 +82,7 @@ h1 {
 .default-button-big:hover {
   background-color: #4cce84;
   transform: translateY(-2px);
+  box-shadow: 0 5px 10px #3DC3787f;
 }
 
 .apple-music-container {
