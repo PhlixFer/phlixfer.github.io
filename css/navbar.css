@@ -91,7 +91,7 @@
 
 @media screen and (max-width: 750px) {
   .navbar {
-    justify-content: right;
+    justify-content: left;
     border-radius: 0 0 10px 10px;
   }
 
