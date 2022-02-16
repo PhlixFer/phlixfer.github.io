@@ -71,13 +71,7 @@ h1 {
   width: -webkit-fit-content;
   width: fit-content;
   padding: 8px 16px;
-  margin: auto;
-  margin-top: 32px;
-  margin-bottom: 32px;
-  font-family: Inter;
-  font-size: 15px;
-  font-weight: 400;
-  color: rgb(245, 245, 245);
+  margin: 32px auto 32px auto;
   cursor: pointer;
   border: none;
   text-decoration: none;
