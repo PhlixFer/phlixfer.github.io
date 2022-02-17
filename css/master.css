@@ -203,7 +203,7 @@ h1 {
   margin: 0;
   background-color: var(--table-col);
   display: grid;
-  grid-template-columns: 60% auto;
+  grid-template-columns: 57% auto;
   border-radius: 18px 18px 0 0;
 }
 
@@ -221,7 +221,7 @@ h1 {
 
 .list-body {
   display: grid;
-  grid-template-columns: 60% auto;
+  grid-template-columns: 57% auto;
   /* border: 2px solid rgba(64, 64, 64); */
 }
 
