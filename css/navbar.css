@@ -13,6 +13,22 @@
   justify-content: center;
   z-index: 99;
   transition-duration: 0.4s;
+  transform: translateY(-48px);
+
+  animation-name: navbar-slide-in;
+  animation-duration: 1s;
+  animation-delay: 2s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes navbar-slide-in {
+  0% {
+    transform: translateY(-48px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
 }
 
 .navbar a {

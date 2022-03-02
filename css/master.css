@@ -178,11 +178,48 @@ h1 {
 
 /* elements */
 
+.homepage-menu {
+  opacity: 0;
+  transform: translateY(20px);
+
+  animation-name: subtitle-pop-in;
+  animation-duration: 1.3s;
+  animation-fill-mode: forwards;
+  animation-delay: .7s;
+}
+
+@keyframes subtitle-pop-in {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 100%;
+    transform: translateY(0);
+  }
+}
+
 .main-title-container {
   width: 90vw;
   margin: auto;
   margin-top: 22vh;
 
+  animation-name: title-pop-in;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+  transform: translateY(10px);
+}
+
+@keyframes title-pop-in {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 100%;
+    transform: translateY(0);
+  }
 }
 
 @media screen and (max-width: 800px) {
