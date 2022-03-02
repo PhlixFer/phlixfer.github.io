@@ -4,7 +4,7 @@
   animation-delay: 2s;
   animation-timing-function: ease-in-out;
   animation-fill-mode: forwards;
-  transform: translateY(-48px) !important;
+  transform: translateY(-48px);
 }
 
 @keyframes navbar-slide-in {
