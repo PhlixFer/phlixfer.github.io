@@ -99,6 +99,8 @@ h1 {
   text-decoration: none;
 }
 
+/* buttons */
+
 .default-button-big {
   display: block;
   background-color: #3DC378;
@@ -134,6 +136,8 @@ h1 {
   max-width: 80%;
   margin: 8px auto 16px;
 }
+
+/* elements */
 
 .apple-music-container {
   margin: 0 20px;
