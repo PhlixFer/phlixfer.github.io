@@ -43,6 +43,31 @@ h1 {
   color: var(--main-text-col);
 }
 
+.big-title {
+  font-size: 16vw;
+  font-weight: 1000;
+  text-align: center;
+  color: transparent;
+  background-clip: text;
+  background-image: url(../media/abstract_background.png);
+  background-position: center;
+  background-size: 100%;
+}
+
+.big-title-shadow {
+  margin-top: -20.5vw;
+  filter: blur(10px);
+  opacity: 30%;
+  mix-blend-mode: screen;
+}
+
+@media screen and (max-width: 500px) {
+  .big-title-shadow {
+    margin-top: -24vw;
+    filter: blur(5px);
+  }
+}
+
 .text-title-1 {
   font-family: Inter;
   font-size: 28px;
@@ -138,6 +163,19 @@ h1 {
 }
 
 /* elements */
+
+.main-title-container {
+  width: 90vw;
+  margin: auto;
+  margin-top: 22vh;
+
+}
+
+@media screen and (max-width: 800px) {
+  .main-title-container {
+    margin-top: 40vh;
+  }
+}
 
 .apple-music-container {
   margin: 0 20px;
