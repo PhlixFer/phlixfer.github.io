@@ -52,6 +52,20 @@ h1 {
   background-image: url(../media/abstract_background.png);
   background-position: center;
   background-size: 100%;
+  background-repeat: repeat;
+  animation-name: sliding-horizontally;
+  animation-duration: 120s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes sliding-horizontally {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 90vw 0;
+  }
 }
 
 .big-title-shadow {
