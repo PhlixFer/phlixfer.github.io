@@ -55,14 +55,13 @@
 
     <script type="text/javascript">
 const elements = ["#anim-1", "#anim-2", ".navbar"];
-$(document).ready(function() {
-   // Stuff to do as soon as the DOM is ready
-   console.log("page loaded!");
-   elements.forEach((item, i) => {
-     var $elem = $(item);
-     $elem.removeClass("paused");
-   });
-});
+window.onload = function() {
+  console.log("page loaded!");
+  elements.forEach((item, i) => {
+    var $elem = $(item);
+    $elem.removeClass("paused");
+  });
+}
     </script>
 
   </body>
