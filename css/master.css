@@ -134,7 +134,7 @@ h1 {
 
 .default-button-big {
   display: block;
-  background-color: #3DC378;
+  background-color: #3DC378E6;
   border-radius: 10px;
   height: fit-content;
   width: fit-content;
@@ -154,7 +154,8 @@ h1 {
 }
 
 .default-button-big:hover {
-  background-color: #4cce84;
+  /* background-color: #4cce84; */
+  background-color: #3DC378ff;
   transform: translateY(-2px);
   box-shadow: 0 5px 10px #3DC3787f;
 }
