@@ -14,7 +14,7 @@
     <title>Phlixfer</title>
   </head>
   <body>
-    <div class="navbar" id="navbar">
+    <div class="navbar paused" id="navbar">
       <a href="javascript:void(0);" class="borgor-menu" onclick="borgorMenu()">
         <img src="media/hamborgor_menu_closed.svg">
       </a>
@@ -32,12 +32,12 @@
       </div>
     </div>
 
-    <div class="main-title-container">
+    <div class="main-title-container paused" id="anim-1">
       <h1 class="big-title">PHLIXFER</h1>
       <h1 class="big-title big-title-shadow">PHLIXFER</h1>
     </div>
 
-    <div class="homepage-menu">
+    <div class="homepage-menu paused" id="anim-2">
       <!-- <h1 class="text-title-1">hi there.</h1> -->
       <p class="text-body-1">hi there.</p>
       <div class="button-grid">
@@ -52,6 +52,18 @@
     <!-- <div class="apple-music-container">
       <iframe allow="autoplay *; encrypted-media *; fullscreen *" frameborder="0" height="450" style="width:100%;max-width:660px;overflow:hidden;background:transparent;" class="apple-music-embed" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/kh/album/footpaths/1578011686"></iframe>
     </div> -->
+
+    <script type="text/javascript">
+const elements = ["#anim-1", "#anim-2", ".navbar"];
+$(document).ready(function() {
+   // Stuff to do as soon as the DOM is ready
+   console.log("page loaded!");
+   elements.forEach((item, i) => {
+     var $elem = $(item);
+     $elem.removeClass("paused");
+   });
+});
+    </script>
 
   </body>
 </html>
