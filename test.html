@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="theme-color" content="#222222">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/master.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/test.css">
+    <link rel="icon" href="media/favicon.svg">
+    <link rel="icon" href="media/favicon.ico">
+    <script src="scripts/mobilify.js" charset="utf-8" defer></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="scripts/if-visible.js" charset="utf-8"></script>
+    <title>Test Page (Secret) | Phlixfer</title>
+  </head>
+  <body>
+    <div class="navbar" id="navbar">
+      <a href="javascript:void(0);" class="borgor-menu" onclick="borgorMenu()">
+        <img src="media/hamborgor_menu_closed.svg">
+      </a>
+      <a href="/">Home</a>
+      <a href="visuals">Visuals</a>
+      <a href="music">Music</a>
+      <a href="contact">Contact</a>
+      <a href="about">About</a>
+      <a href="get-real">Get Real</a>
+      <div class="navbar-icon-container">
+        <a href="https://ko-fi.com/phlixfer" target="_blank" class="navbar-icon">
+          <img src="media/Ko-fi_Logo_Mono.svg">
+          <p>Buy me a coffee!</p>
+        </a>
+      </div>
+    </div>
+
+    <h1 class="text-title-1">hi there!</h1>
+
+    <div style="height:1200px"></div>
+
+    <div class="text-body-1" id="scroll-item">
+      hi there uwu lkajdsflkajd
+    </div>
+
+    <div class="panel-container-margins">
+      <div class="panel-container">
+        <div class="panel-red panel-anim" id="panel">
+          <h1 class="panel-title">Test!</h1>
+          <p class="panel-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. At in tellus integer feugiat. Dignissim convallis aenean et tortor at risus viverra. Nunc mattis enim ut tellus elementum sagittis vitae. Nunc faucibus a pellentesque sit amet porttitor eget dolor. Dictum varius duis at consectetur lorem. Et magnis dis parturient montes nascetur ridiculus mus mauris vitae. Lorem dolor sed viverra ipsum nunc aliquet.</p>
+        </div>
+    </div>
+
+    <script>
+const ids = ["#scroll-item", "#panel"];
+var $window = $(window);
+// var $elem = $("#scroll-item");
+
+$(document).on("scroll", function () {
+
+  // loop over each element
+  ids.forEach((item, i) => {
+    var $elem = $(item);
+
+    // check if item is text or panel
+    if (item === "#scroll-item") {
+      if (isScrolledIntoView($elem, $window)) {
+      $elem.text('hi there uwu asdlkfjalsdkf');
+    } else {
+      $elem.text('hi there uwu lkajdsflkajd')
+    }
+  } else {
+    if (isScrolledIntoView($elem, $window)) {
+    $elem.addClass("play");
+  } else {
+    $elem.removeClass("play");
+  }
+  }
+  });
+  });
+    </script>
+
+    <!-- <script>
+var $window = $(window);
+var $elem = $("#panel");
+$(document).on("scroll", function () {
+  if (isScrolledIntoView($elem, $window)) {
+  $elem.addClass('play');
+} else {
+  $elem.removeClass('play');
+}
+});
+    </script> -->
+  </body>
+</html>

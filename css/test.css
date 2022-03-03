@@ -1,0 +1,28 @@
+.panel-anim {
+  opacity: 0;
+  transform: translateX(-40px);
+
+  animation-name: slide-in-left;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-play-state: paused;
+}
+
+.play {
+  animation-play-state: running;
+}
+
+@keyframes slide-in-left {
+  0% {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  100% {
+    opacity: 100%;
+    transform: translateY(0);;
+  }
+}
+
+.panel-container-margins {
+  margin-bottom: 80px;
+}
