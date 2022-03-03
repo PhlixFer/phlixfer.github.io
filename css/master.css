@@ -43,7 +43,7 @@ h1 {
   color: var(--main-text-col);
 }
 
-.big-title {
+/* .big-title {
   font-size: 16vw;
   font-weight: 1000;
   text-align: center;
@@ -53,26 +53,38 @@ h1 {
   background-position: center;
   background-size: 100%;
   background-repeat: repeat;
-  /* animation-name: sliding-horizontally;
+  animation-name: sliding-horizontally;
   animation-duration: 120s;
   animation-delay: .4s;
   animation-iteration-count: infinite;
-  animation-timing-function: linear; */
+  animation-timing-function: linear;
+} */
+
+.big-title {
+  width: 100%;
+  mask:url(../media/big_title.svg);
+  mask-repeat: no-repeat;
+  mask-position: 0 30%;
+  mask-size: 100%;
+  position: relative;
 }
 
 .big-title-shadow {
-  margin-top: -20.5vw;
-  filter: blur(10px);
+  /* margin-top: -29.5vw; */
+  top: -29.5vw;
+  mask:url(../media/big_title_shadow.svg);
+  mask-repeat: no-repeat;
+  mask-size: 100%;
   opacity: 30%;
   mix-blend-mode: screen;
 }
 
-@media screen and (max-width: 500px) {
+/* @media screen and (max-width: 500px) {
   .big-title-shadow {
-    margin-top: -24vw;
-    filter: blur(5px);
+    margin-top: -31vw;
   }
-}
+} */
+
 
 .text-title-1 {
   font-family: Inter;
@@ -174,7 +186,7 @@ h1 {
 .loading-ellipse {
   opacity: 50%;
   position: absolute;
-  width: 100vw;
+  width: calc(100vw - 48px);
   animation-name: loading-opacity-pulse;
   animation-iteration-count: infinite;
   animation-duration: 1s;
@@ -192,8 +204,11 @@ h1 {
 
 .main-title-container {
   width: 90vw;
+  height: 28vw;
   margin: auto;
-  margin-top: 22vh;
+  margin-top: 20vh;
+
+  overflow: hidden;
 
   animation-name: title-pop-in;
   animation-duration: 2s;
@@ -205,7 +220,7 @@ h1 {
 
 @media screen and (max-width: 800px) {
   .main-title-container {
-    margin-top: 38vh;
+    margin-top: 36vh;
   }
 }
 
