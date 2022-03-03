@@ -171,6 +171,15 @@ h1 {
 
 /* elements */
 
+.loading-ellipse {
+  opacity: 50%;
+  position: absolute;
+  width: 100vw;
+  animation-name: loading-opacity-pulse;
+  animation-iteration-count: infinite;
+  animation-duration: 1s;
+}
+
 .homepage-menu {
   opacity: 0;
   transform: translateY(20px);
@@ -503,7 +512,28 @@ h1 {
   animation-play-state: paused;
 }
 
+.transparent {
+  opacity: 0;
+  transition-duration: .3s;
+}
+
+.hidden {
+  display: none;
+}
+
 /* keyframes */
+
+@keyframes loading-opacity-pulse {
+  0% {
+    opacity: 50%;
+  }
+  50% {
+    opacity: 100%;
+  }
+  100% {
+    opacity: 50%;
+  }
+}
 
 @keyframes subtitle-pop-in {
   0% {

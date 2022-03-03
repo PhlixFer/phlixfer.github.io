@@ -32,6 +32,10 @@
       </div>
     </div>
 
+    <div class="loading-screen" id="loading-screen">
+      <h1 class="text-title-1 loading-ellipse" id="loading-ellipse">...</h1>
+    </div>
+
     <div class="main-title-container paused" id="anim-1">
       <h1 class="big-title">PHLIXFER</h1>
       <h1 class="big-title big-title-shadow">PHLIXFER</h1>
@@ -55,12 +59,22 @@
 
     <script type="text/javascript">
 const elements = ["#anim-1", "#anim-2", ".navbar"];
+loadingScreen = document.getElementById('loading-screen');
+loadingElip = document.getElementById('loading-ellipse');
+
+function hideEllipse() {
+  loadingElip.className = "loading-ellipse hidden";
+}
+
 window.onload = function() {
   console.log("page loaded!");
   elements.forEach((item, i) => {
     var $elem = $(item);
     $elem.removeClass("paused");
   });
+  loadingScreen.className = "loading-screen transparent";
+  setTimeout(hideEllipse(), 1000);
+  // loadingElip.className = "loading-ellipse hidden";
 }
     </script>
 
