@@ -64,18 +64,21 @@ loadingElip = document.getElementById('loading-ellipse');
 
 function hideEllipse() {
   loadingElip.className = "loading-ellipse hidden";
+  console.log("hidden the ellipse");
 }
 
-window.onload = function() {
+function loadPage() {
   console.log("page loaded!");
   elements.forEach((item, i) => {
     var $elem = $(item);
     $elem.removeClass("paused");
   });
   loadingScreen.className = "loading-screen transparent";
-  setTimeout(hideEllipse(), 1000);
-  // loadingElip.className = "loading-ellipse hidden";
 }
+
+setTimeout(hideEllipse, 3000);
+setTimeout(loadPage, 2000);
+
     </script>
 
   </body>
