@@ -40,8 +40,14 @@
       <!-- <h1 class="big-title" id="mask">PHLIXFER</h1>
       <h1 class="big-title big-title-shadow">PHLIXFER</h1> -->
 
-      <video src="media/background_gradients.mov" autoplay loop class="big-title"></video>
-      <video src="media/background_gradients.mov" autoplay loop class="big-title big-title-shadow"></video>
+      <video autoplay muted loop class="big-title" type="video/webm">
+        <source src="media/background_gradients.webm" type="video/webm">
+        <source src="media/background_gradients.mp4" type="video/mp4">
+      </video>
+      <video autoplay muted loop class="big-title big-title-shadow" type="video/webm">
+        <source src="media/background_gradients.webm" type="video/webm">
+        <source src="media/background_gradients.mp4" type="video/mp4">
+      </video>
     </div>
 
     <div class="homepage-menu paused" id="anim-2">
@@ -70,17 +76,15 @@ function hideEllipse() {
   console.log("hidden the ellipse");
 }
 
-function loadPage() {
+window.onload = function() {
   console.log("page loaded!");
   elements.forEach((item, i) => {
     var $elem = $(item);
     $elem.removeClass("paused");
   });
   loadingScreen.className = "loading-screen transparent";
-}
-
-setTimeout(hideEllipse, 3000);
-setTimeout(loadPage, 2000);
+  setTimeout(hideEllipse, 1000);
+};
 
     </script>
 
