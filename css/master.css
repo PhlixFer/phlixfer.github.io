@@ -509,6 +509,7 @@ h1 {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  transition-duration: 1s;
 }
 
 .img-frame {

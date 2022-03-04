@@ -9,6 +9,7 @@
     <link rel="icon" href="media/favicon.svg">
     <link rel="icon" href="media/favicon.ico">
     <script src="scripts/mobilify.js" charset="utf-8" defer></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
     <title>Visuals | Phlixfer</title>
   </head>
   <body>
@@ -33,7 +34,11 @@
     <h1 class="text-title-1">visuals that i'm really proud of :><sup><a href="#footnote-1" class="text-title-1" style="text-align: left;padding: 0;text-decoration: none;margin: 0;font-size: 15px;">1</a></sup></h1>
     <a href="commissions" class="default-button-big text-body-1">commission me!</a>
 
-    <div class="img-container">
+    <div class="loading-screen" id="loading-screen">
+      <h1 class="text-title-1 loading-ellipse" id="loading-ellipse">...</h1>
+    </div>
+
+    <div class="img-container transparent" id="img-container">
       <img src="media/art_pics/toon_heart.jpg" alt="Toon Heart" class="img-frame" style="box-shadow: 0 0 20px rgba(202,210,240,.5);">
       <img src="media/art_pics/liquid_heart.jpeg" alt="Liquid Heart" class="img-frame" style="box-shadow: 0 0 20px rgba(115,225,249,.5);">
       <img src="media/art_pics/will_of_the_winding_forest.jpeg" alt="Will of the Winding Forest" class="img-frame" style="box-shadow: 0 0 20px rgba(20,37,40,.5);">
@@ -51,6 +56,24 @@
         </li>
       </ol>
     </footer>
+
+    <script>
+    var imgContainer = document.getElementById("img-container");
+    var loadingScreen = document.getElementById('loading-screen');
+    var loadingElip = document.getElementById('loading-ellipse');
+
+    function hideEllipse() {
+      loadingElip.className = "loading-ellipse hidden";
+      console.log("hidden the ellipse");
+    }
+
+    window.onload = function() {
+      imgContainer.className = "img-container";
+
+      loadingScreen.className = "loading-screen transparent";
+      setTimeout(hideEllipse, 1000);
+    };
+    </script>
 
   </body>
 </html>
