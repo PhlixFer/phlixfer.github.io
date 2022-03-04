@@ -67,24 +67,24 @@
     </div> -->
 
     <script type="text/javascript">
-const elements = ["#anim-1", "#anim-2", ".navbar"];
-loadingScreen = document.getElementById('loading-screen');
-loadingElip = document.getElementById('loading-ellipse');
+      const elements = ["#anim-1", "#anim-2", ".navbar"];
+      loadingScreen = document.getElementById('loading-screen');
+      loadingElip = document.getElementById('loading-ellipse');
 
-function hideEllipse() {
-  loadingElip.className = "loading-ellipse hidden";
-  console.log("hidden the ellipse");
-}
+      function hideEllipse() {
+        loadingElip.className = "loading-ellipse hidden";
+        console.log("hidden the ellipse");
+      }
 
-window.onload = function() {
-  console.log("page loaded!");
-  elements.forEach((item, i) => {
-    var $elem = $(item);
-    $elem.removeClass("paused");
-  });
-  loadingScreen.className = "loading-screen transparent";
-  setTimeout(hideEllipse, 1000);
-};
+      window.onload = function() {
+        console.log("page loaded!");
+        elements.forEach((item, i) => {
+          var $elem = $(item);
+          $elem.removeClass("paused");
+        });
+        loadingScreen.className = "loading-screen transparent";
+        setTimeout(hideEllipse, 1000);
+      };
 
     </script>
 
