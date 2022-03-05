@@ -71,16 +71,14 @@
   margin: 0 !important;
 }
 
-.navbar-icon img {
-  margin: 4px;
-  margin-left: 6px;
+.navbar-icon svg {
+  margin: 0 4px 0 7px;
   width: 26px;
   float: left;
-  filter: drop-shadow(0 1px 2px #0000007f);
   opacity: 80%;
   transition-duration: .2s;
 }
-.navbar-icon-container:hover img {
+.navbar-icon-container:hover svg {
   opacity: 100%;
 }
 
