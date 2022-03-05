@@ -7,6 +7,8 @@
   --table-col: rgb(64, 64, 64);
   --audio-box-col: #f0f0f0;
   --audio-box-text: #121212;
+  --main-big-button-col: #3DC378E6;
+  --main-big-button-opaque-col: #3DC378ff;
 }
 
 @media (prefers-color-scheme: light) {
@@ -17,6 +19,8 @@
     --table-col: rgb(200, 200, 200);
     --audio-box-col: #3c3c3c;
     --audio-box-text: #f5f5f5;
+    --main-big-button-col: #4fdd8de6;
+    --main-big-button-opaque-col: #4fdd8dff;
   }
 }
 
@@ -153,7 +157,7 @@ h1 {
 
 .default-button-big {
   display: block;
-  background-color: #3DC378E6;
+  background-color: var(--main-big-button-col);
   border-radius: 10px;
   height: fit-content;
   width: fit-content;
@@ -174,7 +178,7 @@ h1 {
 
 .default-button-big:hover {
   /* background-color: #4cce84; */
-  background-color: #3DC378ff;
+  background-color: var(--main-big-button-opaque-col);
   transform: translateY(-2px);
   box-shadow: 0 5px 10px #3DC3787f;
 }

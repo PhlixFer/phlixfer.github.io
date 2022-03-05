@@ -50,6 +50,15 @@
   width: 170px;
 }
 
+@media (prefers-color-scheme: light) {
+  .navbar-icon-container {
+    background-color: #ff6d6b00 !important;
+  }
+  .navbar-icon-container:hover {
+    background-color: #ff6d6b !important;
+  }
+}
+
 .navbar-icon-container p {
   text-align: left;
   padding-top: 8px;
