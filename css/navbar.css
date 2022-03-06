@@ -136,6 +136,7 @@
   .navbar.active {
     height: 280px;
     flex-direction: column;
+    box-shadow: 0 20px 40px #00000033;
   }
 
   .navbar.active a:not(:first-child) {
