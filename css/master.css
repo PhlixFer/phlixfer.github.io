@@ -206,6 +206,7 @@ h1 {
 .homepage-menu {
   opacity: 0;
   transform: translateY(20px);
+  margin: 16px 0 0 0;
 
   animation-name: subtitle-pop-in;
   animation-duration: 1s;
@@ -217,7 +218,7 @@ h1 {
   width: 90vw;
   height: 28vw;
   margin: auto;
-  margin-top: 20vh;
+  margin-top: calc(50vh - 18vw);
 
   overflow: hidden;
 
@@ -229,9 +230,9 @@ h1 {
   transform: translateY(10px);
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-height: 400px) {
   .main-title-container {
-    margin-top: 36vh;
+    margin-top: 0;
   }
 }
 
