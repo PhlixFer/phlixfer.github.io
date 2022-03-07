@@ -79,7 +79,7 @@ h1 {
 
 .big-title-shadow {
   /* margin-top: -29.5vw; */
-  top: -29.5vw;
+  top: -29vw;
   mask:url(../media/big_title_shadow.svg);
   -webkit-mask:url(../media/big_title_shadow.svg);
   mask-repeat: no-repeat;
@@ -88,6 +88,8 @@ h1 {
   -webkit-mask-size: 100%;
   opacity: 30%;
   mix-blend-mode: screen;
+  filter: blur(10px);
+  -webkit-filter: blur(10px);
 }
 
 /* @media screen and (max-width: 500px) {
