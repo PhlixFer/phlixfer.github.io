@@ -83,6 +83,7 @@
   opacity: 80%;
   transition-duration: .2s;
 }
+
 .navbar-icon-container:hover svg {
   opacity: 100%;
 }
@@ -91,13 +92,13 @@
   stroke: var(--main-text-col) !important;
 }
 
+/* mobile navbar styling */
+
 @media screen and (max-width: 750px) {
   .navbar-icon-container {
     display: none;
   }
 }
-
-/* mobile navbar styling */
 
 @media screen and (max-width: 750px) {
   .navbar {
@@ -110,10 +111,9 @@
 
   .navbar a:not(:first-child) {
     display: block;
-    opacity: 0%;
-    margin: 0 0 16px 0;
+    margin: 0 0 16px 32px;
     transition-duration: .4s;
-    transition-delay: .3s;
+    transition-delay: .1s;
   }
 
   .navbar .borgor-menu {display: block;float: left;}
@@ -147,7 +147,7 @@
   .navbar.active a:not(:first-child) {
     display: block;
     opacity: 100%;
-    margin: 0 0 16px 38px;
+    margin: 0 0 16px 32px;
   }
 
   /* .navbar.active a:hover {opacity: 100%;transition-delay:0s;} */
