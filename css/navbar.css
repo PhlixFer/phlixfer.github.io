@@ -87,6 +87,10 @@
   opacity: 100%;
 }
 
+.HYPE_document path {
+  stroke: var(--main-text-col) !important;
+}
+
 @media screen and (max-width: 750px) {
   .navbar-icon-container {
     display: none;
