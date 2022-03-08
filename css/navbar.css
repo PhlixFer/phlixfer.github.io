@@ -30,7 +30,7 @@
   transition-duration: 0.4s;
 }
 
-.navbar .borgor-menu {margin: 0; opacity: 50%; display: none; width: 48px;}
+.navbar .borgor-menu {margin: 0; opacity: 50%; display: none; width: 64px;}
 
 .navbar a:hover {
   opacity: 100%;
@@ -104,6 +104,7 @@
     justify-content: left;
     flex-direction: column;
     border-radius: 0 0 10px 10px;
+    height: 64px;
     overflow: hidden;
   }
 
@@ -138,7 +139,7 @@
 
 @media screen and (max-width: 750px) {
   .navbar.active {
-    height: 280px;
+    height: 300px;
     flex-direction: column;
     box-shadow: 0 20px 40px #00000033;
   }
