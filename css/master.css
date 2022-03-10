@@ -127,16 +127,6 @@ h1 {
   color: var(--main-text-col);
 }
 
-.text-header-audio-box {
-  font-family: Inter;
-  font-size: 19px;
-  font-weight: 500;
-  text-align: left;
-  margin: 0;
-  margin-bottom: 0;
-  color: var(--audio-box-text);
-}
-
 .text-body-1 {
   font-family: Inter;
   font-size: 15px;
@@ -254,11 +244,23 @@ h1 {
   display: block;
 }
 
+/* audio box things */
+
+.text-header-audio-box {
+  font-family: Inter;
+  font-size: 19px;
+  font-weight: 500;
+  text-align: left;
+  margin: 0;
+  color: var(--audio-box-text);
+}
+
 .text-body-audio-box {
   font-family: Inter;
   font-size: 15px;
   font-weight: 400;
   text-align: left;
+  height: 86px;
   margin: 0;
   margin-bottom: 10px;
   color: var(--audio-box-text);
@@ -266,34 +268,46 @@ h1 {
 }
 
 .audio-box {
-  height: 100px;
+  height: 150px;
   width: 100%;
   max-width: 600px;
   padding: 10px;
   margin: 15px auto;
-  border-radius: 14px;
+  border-radius: 18px;
   background-color: var(--audio-box-col);
 }
 
 .audio-art {
-  width: 100px;
-  height: 100px;
+  width: 150px;
+  height: 150px;
   margin-right: 10px;
-  border-radius: 5px;
+  border-radius: 10px;
   float: left;
   clear: right;
   box-shadow: 0 2px 2px #0000003f;
 }
 
 .audio-embed {
-  width: calc(100% - 110px);
-  border-radius: 5px;
+  width: calc(100% - 160px);
+  border-radius: 10px;
   height: 31px;
+  box-shadow: 0 2px 2px #0000003f;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 700px) {
+  .text-body-audio-box {
+    height: 36px;
+  }
   .audio-box {
     max-width: calc(100vw - 40px);
+    height: 100px;
+  }
+  .audio-embed {
+    width: calc(100% - 110px);
+  }
+  .audio-art {
+    width: 100px;
+    height: 100px;
   }
 }
 
