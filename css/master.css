@@ -66,8 +66,8 @@ h1 {
 
 .big-title {
   width: 100%;
-  mask:url(../media/big_title.svg);
-  -webkit-mask:url(../media/big_title.svg);
+  mask:url(../media/big-title.svg);
+  -webkit-mask:url(../media/big-title.svg);
   mask-repeat: no-repeat;
   -webkit-mask-repeat: no-repeat;
   mask-position: 0 30%;
@@ -80,8 +80,8 @@ h1 {
 .big-title-shadow {
   /* margin-top: -29.5vw; */
   top: -29vw;
-  mask:url(../media/big_title_shadow.svg);
-  -webkit-mask:url(../media/big_title_shadow.svg);
+  mask:url(../media/big-title-shadow.svg);
+  -webkit-mask:url(../media/big-title-shadow.svg);
   mask-repeat: no-repeat;
   -webkit-mask-repeat: no-repeat;
   mask-size: 100%;
