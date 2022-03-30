@@ -1,0 +1,61 @@
+:root {
+  --sb-col: #e5e5e5;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --sb-col: #2b2b2b;
+  }
+}
+
+.sb {
+  width: 100px;
+  height: 100px;
+  margin: 0 10px 0 10px;
+  cursor: pointer;
+  background-color: var(--sb-col);
+  transition-duration: .4s;
+}
+
+.sb:hover {
+  transform: scale(1.05) translateY(-2px);
+}
+
+.sb-twitter {mask: url(../media/twitter-logo-mono.svg)}
+
+.sb-twitter:hover {background-color: #1D9BF0}
+
+.sb-mail {mask: url(../media/mail-icon-mono.svg)}
+
+.sb-mail:hover {background-color: tomato}
+
+.sb-insta {mask: url(../media/instagram-logo-mono.svg)}
+
+.sb-insta:hover {background-color: coral}
+
+.sb-youtube {mask: url(../media/youtube-logo-mono.svg)}
+
+.sb-youtube:hover {background-color: crimson}
+
+.sb-twitch {mask: url(../media/twitch-logo-mono.svg)}
+
+.sb-twitch:hover {background-color: #9146FF}
+
+.sb-kofi {mask: url(../media/kofi-logo-mono.svg)}
+
+.sb-kofi:hover {background-color: #13C3FF}
+
+.sb-patreon {mask: url(../media/patreon-logo-mono.svg)}
+
+.sb-patreon:hover {background-color: #FF424D}
+
+.sb-linktree {mask: url(../media/linktree-logo-mono.svg)}
+
+.sb-linktree:hover {background-color: mediumseagreen}
+
+@media screen and (max-width: 800px) {
+  .sb {
+    width: 90px;
+    height: 90px;
+  }
+}
