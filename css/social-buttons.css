@@ -1,10 +1,10 @@
 :root {
-  --sb-col: #e5e5e5;
+  --sb-col: #e5e5e5d8;
 }
 
 @media (prefers-color-scheme: light) {
   :root {
-    --sb-col: #2b2b2b;
+    --sb-col: #2b2b2bd3;
   }
 }
 
