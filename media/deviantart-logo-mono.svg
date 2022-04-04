@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 600 600" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+    <g transform="matrix(1,0,0,1,-6300,-700)">
+        <g id="deviantart-logo-mono" transform="matrix(1,0,0,1,2800,700)">
+            <rect x="3500" y="0" width="600" height="600" style="fill:none;"/>
+            <g id="polygon8" transform="matrix(1.85375,0,0,1.85375,3682.75,110.639)">
+                <path d="M37.1,204.3L40.9,200.6L58.4,167.2L63.9,163.5L126.5,163.5L126.5,112.4L92.1,112.4L89,108.7L126.5,37.2L126.5,0L89.3,0L85.6,3.7L68.1,37.2L62.6,40.9L0,40.9L0,91.9L34.4,91.9L37.5,95.6L0,167.2L0,204.3L37.1,204.3Z" style="fill:rgb(217,217,217);fill-rule:nonzero;"/>
+            </g>
+        </g>
+    </g>
+</svg>
