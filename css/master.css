@@ -660,10 +660,11 @@ h1 {
   border: solid 1px #ff1a554c;
   color: tomato;
   border-radius: 6px;
-  padding: 2px;
-  max-width: 60px;
+  padding: 1px 5px;
+  width: fit-content;
   margin: 8px auto 0 auto;
   transition-duration: .3s;
+  font-size: 12px;
 }
 
 /* vanity classes */
