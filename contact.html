@@ -56,8 +56,11 @@
         <div class="modal-grid">
           <div class="">
             <p style="font-weight:bold;">My username</p>
-            <div class="sb-modal sb-discord-username" style="margin:auto"></div>
+            <div class="sb-modal sb-discord-username" onclick="copyUsername()"></div>
             <p><i>phlixfer#3924</i></p>
+            <div class="success-alert text-body-1 transparent" id="successAlert">
+              copied!
+            </div>
           </div>
 
           <div class="">
@@ -74,7 +77,9 @@
 
     <script type="text/javascript">
       modalBackground = document.getElementById('modalBackground');
-      modalPanel = document.getElementById('modalPanel')
+      modalPanel = document.getElementById('modalPanel');
+
+      successAlert = document.getElementById('successAlert');
 
       function closeModal() {
         console.log("modal closed!");
@@ -85,6 +90,12 @@
         console.log("modal opened!");
         modalBackground.className = "modal-bg modal-bg-shown";
         modalPanel.className = "modal-panel animated";
+      }
+
+      function copyUsername() {
+        navigator.clipboard.writeText("phlixfer#3924");
+        successAlert.className = "success-alert text-body-1";
+        setTimeout(() => {successAlert.className = "success-alert text-body-1 transparent"}, 2000);
       }
     </script>
 

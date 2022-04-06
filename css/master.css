@@ -653,6 +653,19 @@ h1 {
   }
 }
 
+/* success alert */
+
+.success-alert {
+  background-color: #ff1a553f;
+  border: solid 1px #ff1a554c;
+  color: tomato;
+  border-radius: 6px;
+  padding: 2px;
+  max-width: 60px;
+  margin: 8px auto 0 auto;
+  transition-duration: .3s;
+}
+
 /* vanity classes */
 
 .paused {

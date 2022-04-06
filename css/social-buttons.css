@@ -73,11 +73,17 @@
   margin: auto;
   background-color: var(--sb-col);
   display: block;
+  cursor: pointer;
+  opacity: 70%;
+  transition-duration: .3s;
+}
+
+.sb-modal:hover {
+  opacity: 100%;
 }
 
 .sb-discord-server {
   mask: url(../media/icons/link-icon-mono.svg);
-  cursor: pointer;
 }
 
 .sb-discord-username {
