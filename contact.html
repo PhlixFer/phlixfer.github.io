@@ -51,6 +51,43 @@
       </div>
     </div>
 
+    <div class="modal-bg" id="modalBackground">
+      <div class="modal-panel paused" id="modalPanel">
+        <div class="modal-grid">
+          <div class="">
+            <p style="font-weight:bold;">My username</p>
+            <div class="sb-modal sb-discord-username" style="margin:auto"></div>
+            <p><i>phlixfer#3924</i></p>
+          </div>
+
+          <div class="">
+            <p style="font-weight:bold;">Join my Discord server!</p>
+            <a href="https://discord.gg/Q5P6t4jeam" target="_blank" class="sb-modal sb-discord-server"></a>
+            <p>the flower place</p>
+          </div>
+        </div>
+        <div class="modal-close text-body-1" onclick="closeModal()">
+          <p>Close</p>
+        </div>
+      </div>
+    </div>
+
+    <script type="text/javascript">
+      modalBackground = document.getElementById('modalBackground');
+      modalPanel = document.getElementById('modalPanel')
+
+      function closeModal() {
+        console.log("modal closed!");
+        modalBackground.className = "modal-bg";
+        modalPanel.className = "modal-panel";
+      }
+      function openModal() {
+        console.log("modal opened!");
+        modalBackground.className = "modal-bg modal-bg-shown";
+        modalPanel.className = "modal-panel animated";
+      }
+    </script>
+
     <h1 class="text-title-1">wanna get in touch?</h1>
     <p class="text-body-1">you can find me on any of the platforms below!</p>
 
@@ -92,6 +129,8 @@
       <a href="https://linktr.ee/phlixfer" target="_blank" class="sb sb-linktree"></a>
       <a href="https://phlixfer.tumblr.com" target="_blank" class="sb sb-tumblr"></a>
       <a href="https://www.deviantart.com/phlixfer" target="_blank" class="sb sb-deviantart"></a>
+      <!-- <a href="https://discord.gg/Q5P6t4jeam" target="_blank" class="sb sb-discord"></a> -->
+      <div class="sb sb-discord" onclick="openModal()"></div>
     </div>
 
   </body>

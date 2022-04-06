@@ -2,9 +2,9 @@
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg width="100%" height="100%" viewBox="0 0 600 600" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
     <g transform="matrix(1,0,0,1,-2800,-700)">
-        <g id="Patreon_Logo_Mono" transform="matrix(1,0,0,1,-700,700)">
+        <g id="patreon-logo-mono" transform="matrix(1,0,0,1,-700,700)">
             <rect x="3500" y="0" width="600" height="600" style="fill:none;"/>
-            <path d="M3635.5,474.76L3697.73,474.76L3697.73,134.92L3635.5,134.92L3635.5,474.76ZM3862.43,134.921C3792.15,134.921 3734.97,192.152 3734.97,262.503C3734.97,332.641 3792.15,389.704 3862.43,389.704C3932.5,389.704 3989.5,332.641 3989.5,262.503C3989.5,192.152 3932.5,134.921 3862.43,134.921Z" style="fill:#f5f5f5;"/>
+            <path d="M3635.5,474.76L3697.73,474.76L3697.73,134.92L3635.5,134.92L3635.5,474.76ZM3862.43,134.921C3792.15,134.921 3734.97,192.152 3734.97,262.503C3734.97,332.641 3792.15,389.704 3862.43,389.704C3932.5,389.704 3989.5,332.641 3989.5,262.503C3989.5,192.152 3932.5,134.921 3862.43,134.921Z" style="fill:rgb(217,217,217);"/>
         </g>
     </g>
 </svg>
