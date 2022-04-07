@@ -656,6 +656,7 @@ h1 {
 /* success alert */
 
 .success-alert {
+  position: absolute;
   background-color: #ff1a553f;
   border: solid 1px #ff1a554c;
   color: tomato;
@@ -665,6 +666,7 @@ h1 {
   margin: 8px auto 0 auto;
   transition-duration: .3s;
   font-size: 12px;
+  left: 20%;
 }
 
 /* vanity classes */
