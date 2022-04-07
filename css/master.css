@@ -158,10 +158,10 @@ h1 {
 .default-button-big {
   display: block;
   background-color: var(--main-big-button-col);
-  border-radius: 10px;
+  border-radius: 7px;
   height: fit-content;
   width: fit-content;
-  padding: 8px 16px;
+  padding: 5px 9px;
   margin: 16px auto 32px auto;
   cursor: pointer;
   border: none;
