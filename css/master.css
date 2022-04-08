@@ -269,7 +269,7 @@ h1 {
   text-decoration: none;
 }
 
-.audio-box {
+.audio-box-grid {
   height: 150px;
   width: 100%;
   max-width: 600px;
@@ -277,12 +277,13 @@ h1 {
   margin: 15px auto;
   border-radius: 18px;
   background-color: var(--audio-box-col);
+  display: grid;
+  grid-template-columns: 160px auto;
 }
 
 .audio-art {
   width: 150px;
   height: 150px;
-  margin-right: 10px;
   border-radius: 10px;
   float: left;
   clear: right;
@@ -290,22 +291,22 @@ h1 {
 }
 
 .audio-embed {
-  width: calc(100% - 160px);
+  width: 100%;
   border-radius: 10px;
   height: 31px;
   box-shadow: 0 2px 2px #0000003f;
+  position: relative;
+  bottom: 0;
 }
 
 @media screen and (max-width: 700px) {
   .text-body-audio-box {
     height: 36px;
   }
-  .audio-box {
+  .audio-box-grid {
     max-width: calc(100vw - 40px);
     height: 100px;
-  }
-  .audio-embed {
-    width: calc(100% - 110px);
+    grid-template-columns: 110px auto;
   }
   .audio-art {
     width: 100px;
