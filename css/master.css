@@ -574,7 +574,7 @@ h1 {
 .img-frame {
   height: 60vh;
   margin: 10px;
-  border-radius: 20px;
+  border-radius: 16px;
   transition-duration: .4s;
 }
 
