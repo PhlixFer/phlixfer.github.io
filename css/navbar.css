@@ -39,17 +39,17 @@
 
 .navbar-icon-container {
   background-color: #FF5E5B00;
-  border-radius: 10px;
-  height: 34px;
+  border-radius: 7px;
+  height: 30px;
   width: 40px;
-  margin-top: 8px;
+  margin-top: 10px;
   transition-duration: .3s;
   display: block;
   overflow: hidden;
 }
 .navbar-icon-container:hover {
   background-color: #FF5E5B;
-  width: 170px;
+  width: 160px;
 }
 
 @media (prefers-color-scheme: light) {
@@ -63,9 +63,9 @@
 
 .navbar-icon-container p {
   text-align: left;
-  padding-top: 8px;
+  padding-top: 6px;
   opacity: 0%;
-  width: 170px;
+  width: 160px;
   transition-duration: .3s;
 }
 
@@ -78,7 +78,7 @@
 }
 
 .navbar-icon svg {
-  margin: 0 4px 0 7px;
+  margin: 0 4px 0 4px;
   width: 26px;
   float: left;
   opacity: 80%;
