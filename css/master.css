@@ -5,8 +5,7 @@
   --body-col: #181818;
   --navbar-col: rgba(36, 36, 36, 0.8);
   --table-col: rgb(48, 48, 48);
-  --audio-box-col: #f0f0f0;
-  --audio-box-text: #121212;
+  --audio-box-col: #222222;
   --main-big-button-col: #3DC378E6;
   --main-big-button-opaque-col: #3DC378ff;
   --modal-panel-col: #24242499;
@@ -18,8 +17,7 @@
     --body-col: #f5f5f5;
     --navbar-col: rgba(225, 225, 225, 0.8);
     --table-col: rgb(220, 220, 220);
-    --audio-box-col: #3c3c3c;
-    --audio-box-text: #f5f5f5;
+    --audio-box-col: #e5e5e5;
     --main-big-button-col: #4fdd8de6;
     --main-big-button-opaque-col: #4fdd8dff;
     --modal-panel-col: #ffffff7f;
@@ -254,7 +252,7 @@ h1 {
   font-weight: 500;
   text-align: left;
   margin: 0;
-  color: var(--audio-box-text);
+  color: var(--main-text-col);
 }
 
 .text-body-audio-box {
@@ -265,7 +263,7 @@ h1 {
   height: 86px;
   margin: 0;
   margin-bottom: 10px;
-  color: var(--audio-box-text);
+  color: var(--main-text-col);
   text-decoration: none;
 }
 
@@ -311,6 +309,12 @@ h1 {
   .audio-art {
     width: 100px;
     height: 100px;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .audio-embed {
+    width: auto;
   }
 }
 
