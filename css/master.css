@@ -175,6 +175,21 @@ h1 {
   transition-duration: 0.4s;
 }
 
+.default-button-big-with-icon {
+  overflow: auto;
+  text-align: center;
+  padding-left: 6px;
+  line-height: 30px;
+  background-color: #ff6347e6;
+}
+
+.default-button-big-with-icon svg {
+  height: 30px;
+  float: left;
+  clear: right;
+  padding-right: 3px;
+}
+
 .inline-button-big {
   margin: 0;
   margin-bottom: 10px;
@@ -186,6 +201,11 @@ h1 {
   background-color: var(--main-big-button-opaque-col);
   transform: translateY(-2px);
   box-shadow: 0 5px 10px #3DC3787f;
+}
+
+.default-button-big-with-icon:hover {
+  background-color: #ff6347;
+  box-shadow: 0 5px 10px #ff63477f;
 }
 
 .button-grid {
