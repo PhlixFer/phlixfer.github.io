@@ -9,6 +9,13 @@
   --main-big-button-col: #3DC378E6;
   --main-big-button-opaque-col: #3DC378ff;
   --modal-panel-col: #24242499;
+  --font-families: 'Inter', sans-serif;
+}
+
+@supports (font-variation-settings: normal) {
+  :root {
+    --font-families: 'Inter var', sans-serif;
+  }
 }
 
 @media (prefers-color-scheme: light) {
@@ -30,7 +37,7 @@ body {
 }
 
 p {
-  font-family: Inter;
+  font-family: var(--font-families);
   font-size: 15px;
   font-weight: 400;
   text-align: center;
@@ -39,7 +46,7 @@ p {
 }
 
 h1 {
-  font-family: Inter;
+  font-family: var(--font-families);
   font-size: 28px;
   font-weight: 600;
   text-align: left;
@@ -100,7 +107,7 @@ h1 {
 
 
 .text-title-1 {
-  font-family: Inter;
+  font-family: var(--font-families);
   font-size: 28px;
   font-weight: 600;
   text-align: center;
@@ -117,7 +124,7 @@ h1 {
 }
 
 .text-header-1 {
-  font-family: Inter;
+  font-family: var(--font-families);
   font-size: 19px;
   font-weight: 500;
   text-align: center;
@@ -128,7 +135,7 @@ h1 {
 }
 
 .text-body-1 {
-  font-family: Inter;
+  font-family: var(--font-families);
   font-size: 15px;
   font-weight: 400;
   text-align: center;
@@ -140,7 +147,7 @@ h1 {
 }
 
 .text-body-left {
-  font-family: Inter;
+  font-family: var(--font-families);
   font-size: 15px;
   font-weight: 400;
   text-align: left;
@@ -247,7 +254,7 @@ h1 {
 /* audio box things */
 
 .text-header-audio-box {
-  font-family: Inter;
+  font-family: var(--font-families);
   font-size: 19px;
   font-weight: 500;
   text-align: left;
@@ -256,7 +263,7 @@ h1 {
 }
 
 .text-body-audio-box {
-  font-family: Inter;
+  font-family: var(--font-families);
   font-size: 15px;
   font-weight: 400;
   text-align: left;
@@ -367,14 +374,14 @@ h1 {
   height: 80px;
   background-color: rgb(32, 32, 32);
   /* text styling */
-  font-family: Inter;
+  font-family: var(--font-families);
   font-size: 11px;
   font-weight: 400;
   text-align: left;
   color: rgb(110, 110, 110);
 }
 .footer p {
-  font-family: Inter;
+  font-family: var(--font-families);
   font-size: 11px;
   font-weight: 400;
   text-align: left;
@@ -415,7 +422,7 @@ h1 {
 }
 
 .text-header-list {
-  font-family: Inter;
+  font-family: var(--font-families);
   font-size: 18px;
   font-weight: 500;
   text-align: left;
@@ -424,7 +431,7 @@ h1 {
 }
 
 .text-body-list {
-  font-family: Inter;
+  font-family: var(--font-families);
   font-size: 15px;
   font-weight: 400;
   text-align: left;
@@ -460,7 +467,7 @@ h1 {
 }
 
 .list-text {
-  font-family: Inter;
+  font-family: var(--font-families);
   font-size: 15px;
   font-weight: 400;
   text-align: center;
