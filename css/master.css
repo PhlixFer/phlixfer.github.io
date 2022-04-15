@@ -2,8 +2,8 @@
 
 :root {
   --main-text-col: #f5f5f5;
-  --body-col: #181818;
-  --navbar-col: rgba(36, 36, 36, 0.8);
+  --body-col: #121212;
+  --navbar-col: rgba(32, 32, 32, .9);
   --table-col: rgb(48, 48, 48);
   --audio-box-col: #222222;
   --main-big-button-col: #3DC378E6;
