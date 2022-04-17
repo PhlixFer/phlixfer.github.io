@@ -1,10 +1,10 @@
-// functions for setting theme-color according to 
+// functions for setting theme-color according to
 
 function activateLightMode() {
   document.querySelector('meta[name="theme-color"]').setAttribute("content", "#e5e5e5");
 }
 function activateDarkMode() {
-  document.querySelector('meta[name="theme-color"]').setAttribute("content", "#222222");
+  document.querySelector('meta[name="theme-color"]').setAttribute("content", "#1f1f1f");
 }
 
 // check if color scheme is light and set conditional to execute the proper function accordingly
