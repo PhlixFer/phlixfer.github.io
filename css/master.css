@@ -606,7 +606,8 @@ h1 {
 }
 
 .img-frame {
-  height: 60vh;
+  height: 60vw;
+  max-height: 440px;
   margin: 10px;
   border-radius: 16px;
   transition-duration: .4s;
