@@ -599,16 +599,17 @@ h1 {
 .img-container {
   margin: 40px auto;
   margin-bottom: 80px;
-  display: flex;
-  flex-wrap: wrap;
+  width: calc(100% - 40px);
+  display: grid;
+  grid-template-columns: auto auto;
+  column-gap: 20px;
   justify-content: center;
   transition-duration: 1s;
 }
 
 .img-frame {
-  height: 60vw;
-  max-height: 440px;
-  margin: 10px;
+  width: 100%;
+  margin-bottom: 20px;
   border-radius: 16px;
   transition-duration: .4s;
 }
@@ -617,12 +618,9 @@ h1 {
   transform: translateY(-4px);
 }
 
-@media screen and (max-width: 750px) {
-  .img-frame {
-    height: initial;
-    width: 80vw;
-    margin-left: 0;
-    margin-right: 0;
+@media screen and (max-width: 600px) {
+  .img-container {
+    grid-template-columns: auto;
   }
 }
 
