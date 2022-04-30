@@ -602,15 +602,15 @@ h1 {
   width: calc(100% - 40px);
   display: grid;
   grid-template-columns: auto auto;
-  column-gap: 20px;
+  column-gap: 16px;
   justify-content: center;
   transition-duration: 1s;
 }
 
 .img-frame {
   width: 100%;
-  margin-bottom: 20px;
-  border-radius: 16px;
+  margin-bottom: 16px;
+  border-radius: 20px;
   transition-duration: .4s;
 }
 
