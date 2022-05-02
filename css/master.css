@@ -449,21 +449,30 @@ h2 {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  max-width: 800px;
+  max-width: 1000px;
   margin: 0 auto;
 }
 
 .commission-item-box {
-  padding: 10px 24px 24px 12px;
+  padding: 10px 12px;
   margin: 0 16px 16px 0;
   width: fit-content;
-  max-width: 220px;
-  height: 70px;
+  max-width: 260px;
+  height: fit-content;
+  min-height: 80px;
+  display: grid;
+  grid-template-columns: auto auto;
+  column-gap: 10px;
 }
 
-/* .commission-item-box:not(:last-child) {
-  margin-right: 16px;
-} */
+.commission-item-box img {
+  width: 90px;
+  height: 100%;
+}
+
+.commission-item-box:last-child {
+  margin-right: 0;
+}
 
 .commission-item-box .text-header {
   text-align: left;
