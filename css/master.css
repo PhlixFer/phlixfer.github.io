@@ -449,6 +449,8 @@ h2 {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 .commission-item-box {
@@ -456,7 +458,7 @@ h2 {
   margin: 0 16px 16px 0;
   width: fit-content;
   max-width: 220px;
-  height: fit-content;
+  height: 70px;
 }
 
 /* .commission-item-box:not(:last-child) {
