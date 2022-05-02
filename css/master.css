@@ -481,36 +481,6 @@ h2 {
 
 .faq-container .text-body {text-align: left;margin: 0;}
 
-/* .faq-container {
-  width: calc(100% - 100px);
-  max-width: 600px;
-  padding: 50px;
-  margin-top: 0;
-  padding-top: 0;
-  list-style: none;
-  margin-left: auto;
-  margin-right: auto;
-  display: block;
-}
-
-.text-header-list {
-  font-family: var(--font-families);
-  font-size: 18px;
-  font-weight: 500;
-  text-align: left;
-  color: var(--main-text-col);
-  margin-bottom: 4px;
-}
-
-.text-body-list {
-  font-family: var(--font-families);
-  font-size: 15px;
-  font-weight: 400;
-  text-align: left;
-  color: var(--main-text-col);
-  margin-top: 4px;
-} */
-
 /* price list styling */
 
 .price-table {
