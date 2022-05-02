@@ -1,21 +1,24 @@
 @import url('https://rsms.me/inter/inter.css');
 
+@supports (font-variation-settings: normal) {
+  :root {
+    --font-families: 'Inter var', sans-serif;
+  }
+}
+
 :root {
   --main-text-col: #f5f5f5;
   --body-col: #121212;
   --navbar-col: rgba(32, 32, 32, .9);
   --table-col: rgb(48, 48, 48);
-  --audio-box-col: #222222;
+  --box-col: #222222;
   --main-big-button-col: #3DC378E6;
   --main-big-button-opaque-col: #3DC378ff;
   --modal-panel-col: #24242499;
   --font-families: 'Inter', sans-serif;
 }
-
-@supports (font-variation-settings: normal) {
-  :root {
-    --font-families: 'Inter var', sans-serif;
-  }
+.outlined-box {
+  --outline-col: #ffffff32;
 }
 
 @media (prefers-color-scheme: light) {
@@ -24,10 +27,13 @@
     --body-col: #f5f5f5;
     --navbar-col: rgba(225, 225, 225, 0.8);
     --table-col: rgb(220, 220, 220);
-    --audio-box-col: #e5e5e5;
+    --box-col: #e5e5e5;
     --main-big-button-col: #4fdd8de6;
     --main-big-button-opaque-col: #4fdd8dff;
     --modal-panel-col: #ffffff7f;
+  }
+  .outlined-box {
+    --outline-col: #00000032;
   }
 }
 
@@ -222,6 +228,23 @@ h2 {
 
 /* elements */
 
+.box {
+  height: 150px;
+  width: 100%;
+  max-width: 600px;
+  margin: 16px auto;
+  border-radius: 10px;
+  background-color: var(--box-col);
+}
+
+.outlined-box {
+  width: 100%;
+  max-width: 300px;
+  height: 200px;
+  border: solid 1px var(--outline-col);
+  border-radius: 10px;
+}
+
 .loading-ellipse {
   opacity: 50%;
   position: absolute;
@@ -298,13 +321,8 @@ h2 {
 }
 
 .audio-box-grid {
-  height: 150px;
-  width: 100%;
-  max-width: 600px;
+  border-radius: 18px!important;
   padding: 10px;
-  margin: 15px auto;
-  border-radius: 18px;
-  background-color: var(--audio-box-col);
   display: grid;
   grid-template-columns: 160px auto;
 }
@@ -415,24 +433,55 @@ h2 {
 
 }
 
-.commission-info-columns {
-  display: grid;
-  grid-template-columns: auto auto;
-  width: 80vw;
-  margin: 0 auto 0 auto;
+.commission-info {
+  margin: 16px auto 80px auto;
+  max-width: calc(100% - 160px);
 }
 
-@media screen and (max-width: 800px) {
-  .commission-info-columns {
-    grid-template-columns: auto;
-    width: 100%;
-    margin: 0 auto 0 auto;
+@media screen and (max-width: 700px) {
+  .commission-info {
+    margin-bottom: 20px;
+    max-width: calc(100% - 80px);
   }
+}
+
+.commission-item-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.commission-item-box {
+  padding: 10px 24px 24px 12px;
+  margin: 0 16px 16px 0;
+  width: fit-content;
+  max-width: 220px;
+  height: fit-content;
+}
+
+/* .commission-item-box:not(:last-child) {
+  margin-right: 16px;
+} */
+
+.commission-item-box .text-header {
+  text-align: left;
+  margin: 0;
+}
+
+.commission-item-box .text-body {
+  text-align: left;
+  margin: 0;
 }
 
 /* faq list styling */
 
-.faq-container {
+.faq-container {margin-bottom: 12px;}
+
+.faq-container .text-header {text-align: left;margin: 0;}
+
+.faq-container .text-body {text-align: left;margin: 0;}
+
+/* .faq-container {
   width: calc(100% - 100px);
   max-width: 600px;
   padding: 50px;
@@ -460,7 +509,7 @@ h2 {
   text-align: left;
   color: var(--main-text-col);
   margin-top: 4px;
-}
+} */
 
 /* price list styling */
 
