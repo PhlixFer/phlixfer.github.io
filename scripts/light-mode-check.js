@@ -1,7 +1,7 @@
 // functions for setting theme-color according to
 
 function activateLightMode() {
-  document.querySelector('meta[name="theme-color"]').setAttribute("content", "#fdfdfd");
+  document.querySelector('meta[name="theme-color"]').setAttribute("content", "#f6f6f6");
 }
 function activateDarkMode() {
   document.querySelector('meta[name="theme-color"]').setAttribute("content", "#212121");
