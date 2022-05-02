@@ -9,7 +9,7 @@
 :root {
   --main-text-col: #f5f5f5;
   --body-col: #121212;
-  --navbar-col: rgba(32, 32, 32, .9);
+  --navbar-col: rgba(40, 40, 40, .7);
   --table-col: rgb(48, 48, 48);
   --box-col: #222222;
   --main-big-button-col: #3DC378E6;
@@ -25,7 +25,7 @@
   :root {
     --main-text-col: #121212;
     --body-col: #f5f5f5;
-    --navbar-col: rgba(225, 225, 225, 0.8);
+    --navbar-col: rgba(255, 255, 255, 0.8);
     --table-col: rgb(220, 220, 220);
     --box-col: #e5e5e5;
     --main-big-button-col: #4fdd8de6;
