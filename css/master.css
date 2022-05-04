@@ -645,9 +645,9 @@ h2 {
   transition-duration: .4s;
 }
 
-.img-frame:hover {
+/* .img-frame:hover {
   transform: translateY(-4px);
-}
+} */
 
 @media screen and (max-width: 600px) {
   .img-container {
