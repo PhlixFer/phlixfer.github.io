@@ -423,12 +423,9 @@ h2 {
 }
 .footer li {
   font-size: 12px;
+  line-height: 4px;
   text-align: left;
   color: rgb(110, 110, 110);
-}
-
-.footnote-list {
-
 }
 
 .commission-info {
