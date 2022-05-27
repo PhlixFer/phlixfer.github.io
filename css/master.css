@@ -51,6 +51,15 @@ p {
   color: var(--main-text-col);
 }
 
+p a {
+  color: var(--main-text-col);
+}
+
+p a:hover {
+  text-decoration: none;
+  opacity: 80%
+}
+
 h1 {
   font-family: var(--font-families);
   font-size: 28px;
