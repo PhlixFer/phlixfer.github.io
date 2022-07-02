@@ -145,6 +145,15 @@ h2 {
   }
 }
 
+.text-title-3 {
+  font-size: 24px;
+  font-weight: 600;
+  text-align: center;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  color: var(--main-text-col);
+}
+
 .text-header {
   font-size: 20px;
   font-weight: 600;
@@ -488,13 +497,13 @@ h2 {
   margin: 0;
 }
 
-/* faq list styling */
+/* question list styling */
 
-.faq-container {margin-bottom: 12px;}
+.question-container {margin-bottom: 12px;}
 
-.faq-container .text-header {text-align: left;margin: 0;}
+.question-container .text-header {text-align: left;margin: 0;}
 
-.faq-container .text-body {text-align: left;margin: 0;}
+.question-container .text-body {text-align: left;margin: 0;}
 
 /* price list styling */
 
