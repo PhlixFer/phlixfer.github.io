@@ -448,6 +448,7 @@ h2 {
 
 .commission-info {
   margin: 16px auto 80px auto;
+  padding: 0 180px;
   max-width: calc(100% - 160px);
 }
 
