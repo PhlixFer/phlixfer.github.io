@@ -11,15 +11,13 @@
   --body-col: #121212;
   --navbar-col: rgba(40, 40, 40, .7);
   --table-col: rgb(48, 48, 48);
-  --box-col: #222222;
+  --box-lvl-1-col: #181818;
   --main-big-button-col: #3DC378E6;
   --main-big-button-opaque-col: #3DC378ff;
   --modal-panel-col: #24242499;
   --font-families: 'Inter', sans-serif;
 }
-.outlined-box {
-  --outline-col: #ffffff32;
-}
+
 
 @media (prefers-color-scheme: light) {
   :root {
@@ -27,13 +25,10 @@
     --body-col: #f0f0f0;
     --navbar-col: rgba(246, 246, 246, 0.72);
     --table-col: rgb(220, 220, 220);
-    --box-col: #e5e5e5;
+    --box-lvl-1-col: #e5e5e5;
     --main-big-button-col: #4fdd8de6;
     --main-big-button-opaque-col: #4fdd8dff;
     --modal-panel-col: #ffffff7f;
-  }
-  .outlined-box {
-    --outline-col: #00000032;
   }
 }
 
@@ -251,16 +246,8 @@ h2 {
   width: 100%;
   max-width: 600px;
   margin: 16px auto;
-  border-radius: 10px;
-  background-color: var(--box-col);
-}
-
-.outlined-box {
-  width: 100%;
-  max-width: 300px;
-  height: 200px;
-  border: solid 1px var(--outline-col);
-  border-radius: 10px;
+  border-radius: 13px;
+  background-color: var(--box-lvl-1-col);
 }
 
 .loading-ellipse {
@@ -468,7 +455,7 @@ h2 {
 }
 
 .commission-item-box {
-  padding: 10px 12px;
+  padding: 20px;
   margin: 0 16px 16px 0;
   width: fit-content;
   max-width: 260px;
