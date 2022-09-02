@@ -15,7 +15,7 @@
   --main-big-button-col: #3DC378E6;
   --main-big-button-opaque-col: #3DC378ff;
   --modal-panel-col: #24242499;
-  --font-families: 'Inter', sans-serif;
+  --font-families: system-ui, 'Inter', sans-serif;
 }
 
 
