@@ -244,6 +244,19 @@ h2 {
 
 /* elements */
 
+.cool-music-container {
+  position: absolute;
+  top: 100vh;
+  width: 100%;
+}
+
+.cool-music-subcontainer {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  align-items: center;
+}
+
 .box {
   height: 150px;
   width: 100%;
