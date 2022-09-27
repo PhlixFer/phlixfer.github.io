@@ -2,7 +2,7 @@
 
 @supports (font-variation-settings: normal) {
   :root {
-    --font-families: 'Inter var', sans-serif;
+    --font-families: system-ui, 'Inter var', sans-serif;
   }
 }
 
@@ -15,7 +15,6 @@
   --main-big-button-col: #3DC378E6;
   --main-big-button-opaque-col: #3DC378ff;
   --modal-panel-col: #24242499;
-  --font-families: system-ui, 'Inter', sans-serif;
 }
 
 
