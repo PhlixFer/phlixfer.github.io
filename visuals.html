@@ -61,24 +61,103 @@
     <div class="loading-screen" id="loading-screen">
       <h1 class="text-title loading-ellipse" id="loading-ellipse">...</h1>
     </div>
-
     <div class="img-container transparent" id="img-container">
-      <div class="">
-        <img src="media/art-pics/twistoid.jpg" alt="Twistoid" class="img-frame" style="box-shadow: 0 0 20px #171717">
-        <img src="media/art-pics/toon-heart.jpg" alt="Toon Heart" class="img-frame" style="box-shadow: 0 0 20px rgba(202,210,240,.5);">
-        <img src="media/art-pics/liquid-heart.jpeg" alt="Liquid Heart" class="img-frame" style="box-shadow: 0 0 20px rgba(115,225,249,.5);">
-        <img src="media/art-pics/will-of-the-winding-forest.jpeg" alt="Will of the Winding Forest" class="img-frame" style="box-shadow: 0 0 20px rgba(20,37,40,.5);">
-        <img src="media/art-pics/gay-crystals.jpg" alt="Gay Crystals" class="img-frame" style="box-shadow: 0 0 20px rgba(36,35,41,.5);">
-        <img src="media/art-pics/Flora_Lined_Metropolis.jpg" alt="Twistoid" class="img-frame" style="box-shadow: 0 0 20px #976621">
-      </div>
-      <div class="">
-        <img src="media/art-pics/radical-shapes-1.jpg" alt="Twistoid" class="img-frame" style="box-shadow: 0 0 20px #141626">
-        <img src="media/art-pics/growing-pains.jpeg" alt="Growing Pains" class="img-frame" style="box-shadow: 0 0 20px rgba(31,31,23,.5);">
-        <img src="media/art-pics/someone-elses-far-away.jpg" alt="Twistoid" class="img-frame" style="box-shadow: 0 0 20px #1E201F">
-        <img src="media/art-pics/goddess-of-the-hunt.jpg" alt="Goddess of the Hunt" class="img-frame" style="box-shadow: 0 0 20px rgba(88,81,135,.5);">
-        <img src="media/art-pics/ley-lines.jpeg" alt="Ley Lines" class="img-frame" style="box-shadow: 0 0 20px rgba(25,46,128,.5);">
-        <img src="media/art-pics/1984-Macintosh.jpeg" alt="Macintosh" class="img-frame" style="box-shadow: 0 0 20px rgba(132,104,227,.5);">
-      </div>
+      <div class="img-container-column" id="img-container-column-1"></div>
+      <div class="img-container-column" id="img-container-column-2"></div>
+      <script type="text/javascript">
+        const images = [
+          {
+            filename: 'twistoid.jpg',
+            shadowCol: '#171717',
+            alt: 'Twistoid',
+          },
+          {
+            filename: 'radical-shapes-1.jpg',
+            shadowCol: '#141626',
+            alt: 'Radical Shapes'
+          },
+          {
+            filename: 'toon-heart.jpg',
+            shadowCol: '#CAD2F0',
+            alt: 'Toon Heart',
+          },
+          {
+            filename: 'growing-pains.jpeg',
+            shadowCol: '#1F1F17',
+            alt: 'Growing Pains',
+          },
+          {
+            filename: 'liquid-heart.jpeg',
+            shadowCol: '#73E1F9',
+            alt: 'Liquid Heart',
+          },
+          {
+            filename: 'someone-elses-far-away.jpg',
+            shadowCol: '#1E201F',
+            alt: 'Someone Else\'s Far Away',
+          },
+          {
+            filename: 'will-of-the-winding-forest.jpeg',
+            shadowCol: '#142528',
+            alt: 'Will of the Winding Forest',
+          },
+          {
+            filename: 'goddess-of-the-hunt.jpg',
+            shadowCol: '#585187',
+            alt: 'Goddess of the Hunt',
+          },
+          {
+            filename: 'gay-crystals.jpg',
+            shadowCol: '#242329',
+            alt: 'Gay Crystals',
+          },
+          {
+            filename: 'ley-lines.jpeg',
+            shadowCol: '#192E80',
+            alt: 'Ley Lines',
+          },
+          {
+            filename: 'Flora_Lined_Metropolis.jpg',
+            shadowCol: '#976621',
+            alt: 'Flora Lined Metropolis',
+          },
+          {
+            filename: '1984-Macintosh.jpeg',
+            shadowCol: '#8468E3',
+            alt: 'Macintosh 1984',
+          },
+        ];
+
+        function imgFrame(element, filename, shadowCol, alt) {
+          element.src = 'media/art-pics/' + filename;
+          element.alt = alt;
+          // element.style.boxShadow = '0 0 20px' + shadowCol;
+          element.style.opacity = '0%';
+          element.classList.add('img-frame');
+        }
+
+        var constant = 0;
+
+        images.forEach((item)=>{
+          let img = document.createElement("img");
+          let div = document.createElement("div");
+          imgFrame(img, item.filename, item.shadowCol, item.alt);
+          div.classList.add('img-frame-container');
+          div.appendChild(img);
+          div.style.backgroundImage = 'url(media/art-pics/'+item.filename+')';
+          if ( constant % 2 == 0) {
+            img.onload = function() {
+              document.getElementById("img-container-column-1").appendChild(div);
+            }
+          } else {
+            img.onload = function() {
+              document.getElementById("img-container-column-2").appendChild(div);
+            }
+          }
+          
+          constant += 1;
+        })
+      </script>
     </div>
 
     <footer class="footer">

@@ -15,6 +15,7 @@
   --main-big-button-col: #3DC378E6;
   --main-big-button-opaque-col: #3DC378ff;
   --modal-panel-col: #24242499;
+  --image-outline-col: rgba(255, 255, 255, 0.1);
 }
 
 
@@ -28,6 +29,7 @@
     --main-big-button-col: #4fdd8de6;
     --main-big-button-opaque-col: #4fdd8dff;
     --modal-panel-col: #ffffff7f;
+    --image-outline-col: rgba(0, 0, 0, 0.1);
   }
 }
 
@@ -644,21 +646,39 @@ h2 {
 /* add image boxes */
 
 .img-container {
-  margin: 40px auto;
-  margin-bottom: 80px;
-  width: calc(100% - 40px);
+  margin: 40px 20px 80px 20px;
+  width: calc(100% - 60px);
   display: grid;
-  grid-template-columns: auto auto;
-  column-gap: 16px;
-  justify-content: center;
-  transition-duration: 1s;
+  flex-direction: column;
+  grid-template-columns: 50% 50%;
+  grid-column-gap: 20px;
+}
+
+.img-container-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.img-frame-container {
+  box-shadow: 0 0 0 1px var(--image-outline-col) inset;
+  background-size: cover;
+  border-radius: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  padding: 1px;
 }
 
 .img-frame {
   width: 100%;
-  margin-bottom: 14px;
   border-radius: 20px;
-  transition-duration: .4s;
+}
+
+#img-container-column-1 {
+  animation: 1s ease-in-out images-in-from-left;
+}
+
+#img-container-column-2 {
+  animation: 1s ease-in-out images-in-from-right;
 }
 
 /* .img-frame:hover {
@@ -668,6 +688,22 @@ h2 {
 @media screen and (max-width: 600px) {
   .img-container {
     grid-template-columns: auto;
+  }
+}
+
+@keyframes images-in-from-left {
+  0% {
+    transform: translateX(-150px);
+  }
+  100% {
+  }
+}
+
+@keyframes images-in-from-right {
+  0% {
+    transform: translateX(150px);
+  }
+  100% {
   }
 }
 
