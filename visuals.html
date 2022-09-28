@@ -68,91 +68,89 @@
         const images = [
           {
             filename: 'twistoid.jpg',
-            shadowCol: '#171717',
             alt: 'Twistoid',
+            aspectRatio: 1.0,
           },
           {
             filename: 'radical-shapes-1.jpg',
-            shadowCol: '#141626',
-            alt: 'Radical Shapes'
+            alt: 'Radical Shapes',
+            aspectRatio: 0.6666666667,
           },
           {
             filename: 'toon-heart.jpg',
-            shadowCol: '#CAD2F0',
             alt: 'Toon Heart',
+            aspectRatio: 1.25,
           },
           {
             filename: 'growing-pains.jpeg',
-            shadowCol: '#1F1F17',
             alt: 'Growing Pains',
+            aspectRatio: 1.0,
           },
           {
             filename: 'liquid-heart.jpeg',
-            shadowCol: '#73E1F9',
             alt: 'Liquid Heart',
+            aspectRatio: 1.0,
           },
           {
             filename: 'someone-elses-far-away.jpg',
-            shadowCol: '#1E201F',
             alt: 'Someone Else\'s Far Away',
+            aspectRatio: 1.25,
           },
           {
             filename: 'will-of-the-winding-forest.jpeg',
-            shadowCol: '#142528',
             alt: 'Will of the Winding Forest',
+            aspectRatio: 1.0,
           },
           {
             filename: 'goddess-of-the-hunt.jpg',
-            shadowCol: '#585187',
             alt: 'Goddess of the Hunt',
+            aspectRatio: 1.25,
           },
           {
             filename: 'gay-crystals.jpg',
-            shadowCol: '#242329',
             alt: 'Gay Crystals',
+            aspectRatio: 1.0,
           },
           {
             filename: 'ley-lines.jpeg',
-            shadowCol: '#192E80',
             alt: 'Ley Lines',
+            aspectRatio: 1.25,
           },
           {
             filename: 'Flora_Lined_Metropolis.jpg',
-            shadowCol: '#976621',
             alt: 'Flora Lined Metropolis',
+            aspectRatio: 1.25,
           },
           {
             filename: '1984-Macintosh.jpeg',
-            shadowCol: '#8468E3',
             alt: 'Macintosh 1984',
+            aspectRatio: 1.0,
           },
         ];
 
-        function imgFrame(element, filename, shadowCol, alt) {
-          element.src = 'media/art-pics/' + filename;
-          element.alt = alt;
-          // element.style.boxShadow = '0 0 20px' + shadowCol;
-          element.style.opacity = '0%';
+        function imgFrame(element, filename, aspectRatio) {
           element.classList.add('img-frame');
+          element.style.backgroundImage = 'url(media/art-pics/'+filename+')';
+          element.style.paddingTop = aspectRatio * 100 + '%';
         }
 
         var constant = 0;
 
         images.forEach((item)=>{
-          let img = document.createElement("img");
           let div = document.createElement("div");
-          imgFrame(img, item.filename, item.shadowCol, item.alt);
-          div.classList.add('img-frame-container');
-          div.appendChild(img);
-          div.style.backgroundImage = 'url(media/art-pics/'+item.filename+')';
+          let h1 = document.createElement("h1");
+
+          imgFrame(div, item.filename, item.aspectRatio);
+
+          h1.textContent = item.alt;
+          h1.className = 'text-image-header';
+
+          div.appendChild(h1);
+
           if ( constant % 2 == 0) {
-            img.onload = function() {
-              document.getElementById("img-container-column-1").appendChild(div);
-            }
+            document.getElementById("img-container-column-1").appendChild(div);
           } else {
-            img.onload = function() {
-              document.getElementById("img-container-column-2").appendChild(div);
-            }
+            document.getElementById("img-container-column-2").appendChild(div);
           }
           
           constant += 1;
