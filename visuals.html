@@ -138,14 +138,14 @@
 
         images.forEach((item)=>{
           let div = document.createElement("div");
-          let h1 = document.createElement("h1");
+          let h2 = document.createElement("h2");
 
           imgFrame(div, item.filename, item.aspectRatio);
 
-          h1.textContent = item.alt;
-          h1.className = 'text-image-header';
+          h2.textContent = item.alt;
+          h2.className = 'text-image-header';
 
-          div.appendChild(h1);
+          div.appendChild(h2);
 
           if ( constant % 2 == 0) {
             document.getElementById("img-container-column-1").appendChild(div);
