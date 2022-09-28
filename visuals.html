@@ -62,8 +62,8 @@
       <h1 class="text-title loading-ellipse" id="loading-ellipse">...</h1>
     </div>
     <div class="img-container transparent" id="img-container">
-      <div class="img-container-column" id="img-container-column-1"></div>
-      <div class="img-container-column" id="img-container-column-2"></div>
+      <div class="img-container-column paused" id="img-container-column-1"></div>
+      <div class="img-container-column paused" id="img-container-column-2"></div>
       <script type="text/javascript">
         const images = [
           {
@@ -167,21 +167,25 @@
     </footer>
 
     <script>
-    var imgContainer = document.getElementById("img-container");
-    var loadingScreen = document.getElementById('loading-screen');
-    var loadingElip = document.getElementById('loading-ellipse');
+      const elements = ['#img-container-column-1', '#img-container-column-2']
+      var imgContainer = document.getElementById("img-container");
+      var loadingScreen = document.getElementById('loading-screen');
+      var loadingElip = document.getElementById('loading-ellipse');
 
-    function hideEllipse() {
-      loadingElip.className = "loading-ellipse hidden";
-      console.log("hidden the ellipse");
-    }
+      function hideEllipse() {
+        loadingElip.className = "loading-ellipse hidden";
+        console.log("hidden the ellipse");
+      }
 
-    window.onload = function() {
-      imgContainer.className = "img-container";
-
-      loadingScreen.className = "loading-screen transparent";
-      setTimeout(hideEllipse, 1000);
-    };
+      window.onload = function() {
+        imgContainer.className = "img-container";
+        elements.forEach((item, i) => {
+          var $elem = $(item);
+          $elem.removeClass("paused");
+        });
+        loadingScreen.className = "loading-screen transparent";
+        setTimeout(hideEllipse, 1000);
+      };
     </script>
 
   </body>
