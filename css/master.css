@@ -666,6 +666,7 @@ h2 {
   margin-bottom: 20px;
   display: flex;
   padding: 1px;
+  animation: 1s ease-in-out image-margin-zoom;
 }
 
 .img-frame {
@@ -688,6 +689,15 @@ h2 {
 @media screen and (max-width: 600px) {
   .img-container {
     grid-template-columns: auto;
+  }
+}
+
+@keyframes image-margin-zoom {
+  0% {
+    margin-bottom: 80px;
+  }
+  100% {
+    margin-bottom: 20px;
   }
 }
 
