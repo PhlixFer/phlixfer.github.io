@@ -704,6 +704,7 @@ h2 {
 @media screen and (max-width: 600px) {
   .img-container {
     grid-template-columns: auto;
+    width: calc(100% - 40px);
   }
 }
 
