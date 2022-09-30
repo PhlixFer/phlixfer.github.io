@@ -175,6 +175,7 @@ h2 {
 }
 
 .text-image-header {
+  color: #f5f5f5 !important;
   font-stretch: ultra-condensed;
   height: 22px;
   width: 100%;
