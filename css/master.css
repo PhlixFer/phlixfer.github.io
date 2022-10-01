@@ -663,16 +663,19 @@ h2 {
 
 .img-container {
   margin: 40px 20px 80px 20px;
-  width: calc(100% - 60px);
-  display: grid;
-  flex-direction: column;
+  width: calc(100% - 40px);
+  display: flex;
+  flex-direction: row;
   grid-template-columns: 50% 50%;
   grid-column-gap: 20px;
+  justify-content: center;
 }
 
 .img-container-column {
   display: flex;
   flex-direction: column;
+  width: 100%;
+  max-width: 960px;
 }
 
 .img-frame {
@@ -705,8 +708,7 @@ h2 {
 
 @media screen and (max-width: 600px) {
   .img-container {
-    grid-template-columns: auto;
-    width: calc(100% - 40px);
+    flex-direction: column;
   }
 }
 
