@@ -477,7 +477,7 @@ h2 {
 }
 
 .commission-item-box {
-  padding: 20px;
+  padding: 10px 40px 10px 10px;
   margin: 0 16px 16px 0;
   width: fit-content;
   max-width: 260px;
@@ -486,6 +486,12 @@ h2 {
   display: grid;
   grid-template-columns: auto auto;
   column-gap: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.commission-item-box div {
+  padding-bottom: 8px;
 }
 
 .commission-item-box img {
