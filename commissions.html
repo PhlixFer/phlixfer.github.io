@@ -68,51 +68,66 @@
       <h2 class="text-title-3">Pricing</h2>
       <p class="text-body">Pricing varies by complexity of the project(s)</p>
 
-      <div class="commission-item-grid">
-        <div class="box commission-item-box">
-          <div>
-            <h2 class="text-header">Motion Graphics</h2>
-            <p class="text-body">
-              Starting €129 + €19 per minute of animation
-            </p>
-          </div>
-          <img src="media/icons/mograph-icon.svg">
-        </div>
-        <div class="box commission-item-box">
-          <div>
-            <h2 class="text-header">Still/Design</h2>
-            <p class="text-body">Starting €99</p>
-          </div>
-          <img src="media/icons/stills-icon.svg">
-        </div>
-        <div class="box commission-item-box">
-          <div>
-            <h2 class="text-header">Photo Editing</h2>
-            <p class="text-body">Starting €9 per image</p>
-          </div>
-          <img src="media/icons/photo-editing-icon.svg">
-        </div>
-        <div class="box commission-item-box">
-          <div>
-            <h2 class="text-header">Video Editing</h2>
-            <p class="text-body">Starting €69 + €12 every hour of footage</p>
-          </div>
-          <img src="media/icons/video-editing-icon.svg">
-        </div>
-        <div class="box commission-item-box">
-          <div>
-            <h2 class="text-header">Music for Media</h2>
-            <p class="text-body">Starting €169</p>
-          </div>
-          <img src="media/icons/music-icon.svg">
-        </div>
-        <div class="box commission-item-box">
-          <div>
-            <h2 class="text-header">Commercial License<sup><a class="text-body" style="font-size:12px;" href="#footnote-1"> 1</a></sup><sup><a class="text-body" style="font-size:12px;" href="#footnote-2"> 2</a></sup></h2>
-            <p class="text-body">€499 per year</p>
-          </div>
-          <img src="media/icons/commercial-lic-icon.svg">
-        </div>
+      <div class="commission-item-grid" id="comm-item-grid">
+        <script type="text/javascript">
+          const items = [
+            {
+              title: "Motion Graphics",
+              detail: "Starting €129 + €19 per minute.",
+              filename: "mograph-icon.svg",
+            },
+            {
+              title: "Still",
+              detail: "Starting €99.",
+              filename: "stills-icon.svg",
+            },
+            {
+              title: "Photo Editing",
+              detail: "Starting €4/per image",
+              filename: "photo-editing-icon.svg",
+            },
+            {
+              title: "Video Editing",
+              detail: "Starting €69 + €12/per hour",
+              filename: "video-editing-icon.svg",
+            },
+            {
+              title: "Music",
+              detail: "Starting €129",
+              filename: "music-icon.svg",
+            },
+            {
+              title: "Commercial Licensing",
+              detail: "Starting €499 a year",
+              filename: "commercial-lic-icon.svg"
+            },
+          ];
+
+          items.forEach((item)=>{
+            let h2 = document.createElement("h2");
+            let p = document.createElement("p");
+            let img = document.createElement("img");
+            let baseDiv = document.createElement("div");
+            let detailDiv = document.createElement("div");
+
+            h2.textContent = item.title;
+            h2.className = "text-header";
+
+            p.textContent = item.detail;
+            p.className = "text-body";
+
+            img.src = 'media/icons/'+item.filename;
+
+            detailDiv.appendChild(h2);
+            detailDiv.appendChild(p);
+
+            baseDiv.className = "box commission-item-box";
+            baseDiv.appendChild(img);
+            baseDiv.appendChild(detailDiv);
+
+            document.getElementById('comm-item-grid').appendChild(baseDiv);
+          }) 
+        </script>
       </div>
 
       <h2 class="text-title-3">Q & A!</h2>
