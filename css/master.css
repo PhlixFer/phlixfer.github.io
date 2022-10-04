@@ -35,8 +35,6 @@
     --modal-panel-col: #ffffff7f;
     --image-outline-col: rgba(0, 0, 0, 0.1);
     --divider-col: rgba(0, 0, 0, 0.1);
-    --footer-content-fill: rgba(245, 245 , 245, 0.55);
-    --footer-content-fill-hover: rgba(245, 245, 245, 0.85);
   }
   .footer {
     --footer-content-fill: rgba(18, 18, 18, 0.55);
