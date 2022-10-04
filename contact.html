@@ -120,5 +120,25 @@
       <div class="sb sb-discord" onclick="openModal()"></div>
     </div>
 
+    <div class="email-form">
+      <h2>Say hello!</h2>
+      <div class="input-field">
+        <p class="text-body">Title</p>
+        <input type="text" name="Email Title" class="text-body" placeholder="Title" id="email-title">
+      </div>
+      <div class="input-field">
+        <p class="text-body">Body</p>
+        <textarea class="text-body" placeholder="Body" id="email-body"></textarea>
+      </div>
+      <a class="default-button-big text-body" style="margin: 16px 0 0 auto" onclick="sendMail()">Send</a>
+      <script type="text/javascript">
+        function sendMail() {
+          let title = document.getElementById('email-title');
+          let body = document.getElementById('email-body');
+          window.location.href = 'mailto:phlixfermusic@gmail.com?subject='+encodeURIComponent(title.value)+'&body='+encodeURIComponent(body.value);
+        }
+      </script>
+    </div>
+
   </body>
 </html>

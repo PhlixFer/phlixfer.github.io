@@ -16,6 +16,7 @@
   --main-big-button-opaque-col: #3DC378ff;
   --modal-panel-col: #24242499;
   --image-outline-col: rgba(255, 255, 255, 0.1);
+  --divider-col: rgba(255, 255, 255, 0.1);
 }
 
 
@@ -30,6 +31,7 @@
     --main-big-button-opaque-col: #4fdd8dff;
     --modal-panel-col: #ffffff7f;
     --image-outline-col: rgba(0, 0, 0, 0.1);
+    --divider-col: rgba(0, 0, 0, 0.1);
   }
 }
 
@@ -330,6 +332,40 @@ h2 {
   margin-left: auto;
   margin-right: auto;
   display: block;
+}
+
+.input-field {
+  width: calc(100% - 8px);
+  padding: 11px 16px;
+  display: flex;
+  border: none;
+  border-bottom: 1px solid var(--divider-col);
+}
+
+.input-field input, textarea {
+  border: none;
+  text-align: left !important;
+  padding: 0;
+  margin: 0 !important;
+  background-color: transparent;
+  flex-grow: 1;
+  height: 18px;
+  resize: vertical;
+}
+
+.input-field p {
+  margin: 0 0 0 16px;
+  text-align: left;
+  width: 100px;
+}
+
+.email-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 560px;
+  margin: 32px auto;
+  padding: 0 20px;
 }
 
 /* audio box things */
