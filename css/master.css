@@ -16,13 +16,11 @@
   --main-big-button-opaque-col: #3DC378ff;
   --modal-panel-col: #24242499;
   --image-outline-col: rgba(255, 255, 255, 0.1);
-  --footer-content-fill: rgba(245, 245 , 245, 0.55);
-  --footer-content-fill-hover: rgba(245, 245, 245, 0.85);
+  --divider-col: rgba(255, 255, 255, 0.1);
 }
 
 .footer {
   --footer-col: rgb(30, 30, 30);
-  --divider-col: rgba(255, 255, 255, 0.1);
 }
 
 @media (prefers-color-scheme: light) {
@@ -36,12 +34,14 @@
     --main-big-button-opaque-col: #4fdd8dff;
     --modal-panel-col: #ffffff7f;
     --image-outline-col: rgba(0, 0, 0, 0.1);
-    --footer-content-fill: rgba(18, 18, 18, 0.55);
-    --footer-content-fill-hover: rgba(18, 18, 18, 0.85);
+    --divider-col: rgba(0, 0, 0, 0.1);
+    --footer-content-fill: rgba(245, 245 , 245, 0.55);
+    --footer-content-fill-hover: rgba(245, 245, 245, 0.85);
   }
   .footer {
+    --footer-content-fill: rgba(18, 18, 18, 0.55);
+    --footer-content-fill-hover: rgba(18, 18, 18, 0.85);
     --footer-col: rgb(245, 245, 245);
-    --divider-col: rgba(0, 0, 0, 0.1);
   }
   .footer-content svg {
     --badge-fill-col: rgba(18, 18, 18, 0.55);
