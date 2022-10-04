@@ -17,6 +17,14 @@
   transition-duration: .3s;
 }
 
+.footer-sb {
+  width: 28px;
+  height: 28px;
+  margin: 6px 6px 0 0;
+  background-color: var(--footer-content-fill);
+  transition-duration: .3s;
+}
+
 .sb:hover {
   transform: scale(1.05) translateY(-2px);
 }
