@@ -16,14 +16,13 @@
     <script src="scripts/light-mode-check.js" charset="utf-8"></script>
     <title>Phlixfer</title>
   </head>
+
   <body id="body">
     <div class="loading-screen" id="loading-screen">
       <h1 class="text-title loading-ellipse" id="loading-ellipse">...</h1>
     </div>
 
     <div class="main-title-container paused" id="anim-1">
-      <!-- <h1 class="big-title" id="mask">PHLIXFER</h1>
-      <h1 class="big-title big-title-shadow">PHLIXFER</h1> -->
 
       <video autoplay muted loop class="big-title" type="video/webm">
         <source src="media/background-gradients.webm" type="video/webm">
@@ -44,12 +43,30 @@
       </div>
     </div>
 
-    <!-- <h1 class="text-title">hi there uwu</h1>
-    <p class="text-body">i'm phlixfer and this is my website! this is the playground for all my web things :D</p> -->
+    <div class="cool-music-container">
+      <div class="cool-music-subcontainer">
+        <h1 style="margin-bottom: 20px">What I'm Listening to:</h1>
+        <iframe allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write" frameborder="0" height="450" style="width:100%;max-width:660px;overflow:hidden;background:transparent;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/kh/album/what-do-you-want/1641577558?theme=light" id="music-embed"></iframe>
+        <script type="text/javascript">
+          var musicSource = document.getElementById("#music-embed")
 
-    <!-- <div class="apple-music-container">
-      <iframe allow="autoplay *; encrypted-media *; fullscreen *" frameborder="0" height="450" style="width:100%;max-width:660px;overflow:hidden;background:transparent;" class="apple-music-embed" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/kh/album/footpaths/1578011686"></iframe>
-    </div> -->
+          function lightMode() {
+            $("#music-embed").attr("src", "https://embed.music.apple.com/kh/album/what-do-you-want/1641577558?theme=light")
+          }
+          function darkMode() {
+            $("#music-embed").attr("src", "https://embed.music.apple.com/kh/album/what-do-you-want/1641577558?theme=dark")
+          }
+
+          const embedColorSchemeQueryList = window.matchMedia("(prefers-color-scheme: light)");
+          const setEmbedColorScheme = e => {
+            if (e.matches) {lightMode()} else {darkMode()}
+          }
+
+          setEmbedColorScheme(embedColorSchemeQueryList);
+          embedColorSchemeQueryList.addEventListener("change", setEmbedColorScheme);
+        </script>
+      </div>
+    </div>
 
     <script type="text/javascript">
       const elements = ["#anim-1", "#anim-2", ".navbar"];
@@ -70,7 +87,6 @@
         loadingScreen.className = "loading-screen transparent";
         setTimeout(hideEllipse, 1000);
       };
-
     </script>
 
     <script src="scripts/add-common-elements.js" charset="utf-8"></script>
