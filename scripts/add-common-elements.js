@@ -80,7 +80,7 @@ commonElements.forEach((item)=>{
 
 	if (item == htmlNavbar) {
 		div.innerHTML = htmlNavbar;
-		div.className = "navbar";
+		div.className = "navbar paused";
 		div.id = "navbar";
 		body.insertBefore(div, body.firstChild);
 
