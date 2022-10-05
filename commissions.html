@@ -7,12 +7,13 @@
     <link rel="stylesheet" href="css/master.css">
     <link rel="stylesheet" href="css/navbar.css">
     <link rel="stylesheet" href="css/social-buttons.css">
+    <link rel="stylesheet" type="text/css" href="css/social-buttons.css">
     <link rel="icon" href="media/favicon.svg">
     <link rel="icon" href="media/favicon.ico">
     <script src="scripts/light-mode-check.js" charset="utf-8"></script>
     <title>Commissions | Phlixfer</title>
   </head>
-  <body>
+  <body id="body">
     <div class="navbar" id="navbar">
       <a href="javascript:void(0);" class="borgor-menu">
         <!-- <img src="media/hamborgor_menu_closed.svg"> -->
@@ -104,13 +105,27 @@
           ];
 
           items.forEach((item)=>{
+            let a = document.createElement("a");
+            let sup = document.createElement("sup");
             let h2 = document.createElement("h2");
             let p = document.createElement("p");
             let img = document.createElement("img");
             let baseDiv = document.createElement("div");
             let detailDiv = document.createElement("div");
 
-            h2.textContent = item.title;
+            if (item.title == "Commercial Licensing") {
+              a.href = "#footnote-1";
+              a.className = "text-body";
+              a.textContent = " 1";
+              a.style.fontSize = "12px";
+
+              sup.appendChild(a);
+
+              h2.textContent = item.title;
+              h2.appendChild(sup);
+            } else {
+              h2.textContent = item.title;
+            }
             h2.className = "text-header";
 
             p.textContent = item.detail;
@@ -161,11 +176,20 @@
       Read the Terms!
     </a>
 
-    <footer class="footer">
-      <ol>
-        <li class="text-body" id="footnote-1">Commercial licensing does not apply to photo/video editing since you own your content.</li>
-      </ol>
-    </footer>
+    <script src="scripts/add-common-elements.js" charset="utf-8"></script>
+    <script type="text/javascript">
+      let ol = document.createElement('ol');
+      let li = document.createElement('li');
+
+      ol.className = "footer-container";
+
+      li.className = "text-body";
+      li.textContent = "Commercial licensing does not apply to photo/video editing since you own your content.";
+
+      ol.appendChild(li)
+
+      document.getElementById('footer').insertBefore(ol, document.getElementById('footer').firstChild)
+    </script>
 
   </body>
 </html>
