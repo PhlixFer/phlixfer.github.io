@@ -21,6 +21,8 @@
 
 .footer {
   --footer-col: rgb(30, 30, 30);
+  --footer-content-fill: rgba(255, 255, 255, 0.55);
+  --footer-content-fill-hover: rgba(255, 255, 255, 0.85);
 }
 
 @media (prefers-color-scheme: light) {
@@ -425,6 +427,7 @@ h2 {
   width: 100%;
   max-width: 500px;
   margin: auto;
+  margin-bottom: 64px;
 }
 
 @media screen and (max-width: 700px) {
@@ -458,14 +461,17 @@ h2 {
 
 .footer {
   display: block;
-  /* position: absolute; */
-  padding: 20px 80px;
+  padding: 20px;
   margin: 0;
   left: 0;
   bottom: 0;
-  width: calc(100% - 160px);
+  width: calc(100% - 40px);
   height: fit-content;
   background-color: var(--footer-col);
+}
+
+.footer ol {
+  border-bottom: 1px solid var(--divider-col);
 }
 
 .footer li {
@@ -475,18 +481,25 @@ h2 {
 }
 
 .footer-container {
-  max-width: 1200px;
+  max-width: 900px;
   margin-left: auto;
   margin-right: auto;
+}
+
+.footer-section {
+  padding-top: 10px;
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+.footer-section:not(:first-child) {
+  border-top: 1px solid var(--divider-col);
 }
 
 .footer-content {
   display: grid;
   grid-template-columns: 64px auto;
   grid-gap: 20px;
-  width: 100%;
-  border-top: 1px solid var(--divider-col);
-  padding-top: 10px;
 }
 
 .footer-content svg {
@@ -496,12 +509,24 @@ h2 {
 
 .footer-sitemap {
   display: grid;
-  grid-template-columns: auto auto;
+  grid-template-columns: 33.33% 33.33% auto;
 }
 
-.footer-sitemap p {
+.footer-copyright {
+  display: flex;
+  align-items: stretch;
+}
+
+.footer-copyright a {
+  width: fit-content;
+}
+
+.footer-copyright p {
+  margin-left: 0 !important;
+}
+
+.footer-content p {
   text-align: left;
-  height: 18px;
   width: 100%;
 }
 
@@ -532,7 +557,7 @@ h2 {
   transition-duration: .3s;
 }
 
-.text-footer:hover {
+.footer a:hover {
   color: var(--footer-content-fill-hover);
 }
 
@@ -550,10 +575,13 @@ h2 {
   .text-footer {
     font-size: 15px;
   }
-  .footer-sitemap div:last-child {
+  .footer-sitemap div:not(:first-child) {
     padding-top: 8px;
     margin-top: 10px;
     border-top: 1px solid var(--divider-col);
+  }
+  .footer-copyright {
+    flex-direction: column;
   }
 }
 
