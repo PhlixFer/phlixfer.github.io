@@ -43,7 +43,7 @@
       </div>
     </div>
 
-    <div class="cool-music-container">
+    <div class="cool-music-container paused" id="music-container">
       <div class="cool-music-subcontainer">
         <h1 style="margin-bottom: 20px">What I'm Listening to:</h1>
         <iframe allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write" frameborder="0" height="450" style="width:100%;max-width:660px;overflow:hidden;background:transparent;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/kh/album/what-do-you-want/1641577558?theme=light" id="music-embed"></iframe>
@@ -69,7 +69,7 @@
     </div>
 
     <script type="text/javascript">
-      const elements = ["#anim-1", "#anim-2", ".navbar"];
+      const elements = ["#anim-1", "#anim-2", ".navbar", "#music-container"];
       loadingScreen = document.getElementById('loading-screen');
       loadingElip = document.getElementById('loading-ellipse');
 

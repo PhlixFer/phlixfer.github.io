@@ -279,9 +279,10 @@ h2 {
 /* elements */
 
 .cool-music-container {
-  position: absolute;
-  top: 100vh;
+  margin-top: 35vh;
   width: 100%;
+  animation-name: subtitle-pop-in;
+  animation-duration: 1s;
 }
 
 .cool-music-subcontainer {
