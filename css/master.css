@@ -34,7 +34,7 @@
     --box-lvl-1-col: #e5e5e5;
     --main-big-button-col: #4fdd8de6;
     --main-big-button-opaque-col: #4fdd8dff;
-    --modal-panel-col: #ffffff7f;
+    --modal-panel-col: #ffffff99;
     --image-outline-col: rgba(0, 0, 0, 0.1);
     --divider-col: rgba(0, 0, 0, 0.1);
   }
@@ -938,13 +938,12 @@ h2 {
   height: fit-content;
   /* background-color: #242424; */
   background-color: var(--modal-panel-col);
-  -webkit-backdrop-filter: blur(30px) saturate(180%);
-  backdrop-filter: blur(30px) saturate(180%);
+  -webkit-backdrop-filter: blur(30px) saturate(200%);
+  backdrop-filter: blur(30px) saturate(200%);
   margin: 10% auto;
   border-radius: 13px;
   box-shadow: 0 1px 2px #0000007f, 0 30px 60px #0000004c;
   z-index: 98;
-  border: solid 1px #ffffff19;
   animation: modal-float-up .4s;
   animation-fill-mode: both
 }
@@ -956,7 +955,7 @@ h2 {
 }
 
 .modal-close {
-  border-top: solid 1px #ffffff19;
+  border-top: solid 1px var(--image-outline-col);
   height: fit-content;
   padding: 8px;
   margin: 0;
