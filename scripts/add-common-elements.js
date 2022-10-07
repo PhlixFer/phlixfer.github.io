@@ -80,8 +80,12 @@ commonElements.forEach((item)=>{
 
 	if (item == htmlNavbar) {
 		div.innerHTML = htmlNavbar;
-		div.className = "navbar paused";
+		div.className = "navbar";
 		div.id = "navbar";
+
+    if (needsPause == true) {
+      div.className += " paused";
+    }
 		body.insertBefore(div, body.firstChild);
 
     let script = document.createElement('script');
