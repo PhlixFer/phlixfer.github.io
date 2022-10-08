@@ -83,7 +83,7 @@ commonElements.forEach((item)=>{
 		div.className = "navbar";
 		div.id = "navbar";
 
-    if (needsPause == true) {
+    if (document.title == "Phlixfer") {
       div.className += " paused";
     }
 		body.insertBefore(div, body.firstChild);
