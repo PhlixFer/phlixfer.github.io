@@ -14,6 +14,15 @@
     <title>Commissions | Phlixfer</title>
   </head>
   <body id="body">
+    <div class="modal-bg" id="modalBackground">
+      <div class="modal-panel paused" id="modalPanel">
+        <iframe src="media/Commissions-ToS-rev8.pdf"></iframe>
+        <div class="modal-close text-body" onclick="closeModal()">
+          <p>Close</p>
+        </div>
+      </div>
+    </div>
+
     <div class="title-container">
       <h1 class="text-title">want to commission me?</h1>
     </div>
@@ -133,9 +142,26 @@
       </div> -->
     </div>
 
-    <a href="media/Commissions-ToS-rev8.pdf" class="default-button-big text-body" style="margin-bottom:68px;">
+    <a href="javascript:void(0);" class="default-button-big text-body" style="margin-bottom:68px;" onclick="openModal()">
       Read the Terms!
     </a>
+
+    <script type="text/javascript">
+      modalBackground = document.getElementById('modalBackground');
+      modalPanel = document.getElementById('modalPanel');
+
+      function closeModal() {
+        console.log("modal closed!");
+        modalBackground.className = "modal-bg";
+        modalPanel.className = "modal-panel";
+      }
+
+      function openModal() {
+        console.log("modal opened!");
+        modalBackground.className = "modal-bg modal-bg-shown";
+        modalPanel.className = "modal-panel";
+      }
+    </script>
 
     <script src="scripts/add-common-elements.js" charset="utf-8"></script>
     <script type="text/javascript">
