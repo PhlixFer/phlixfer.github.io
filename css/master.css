@@ -92,23 +92,6 @@ h2 {
   color: var(--main-text-col);
 }
 
-/* .big-title {
-  font-size: 16vw;
-  font-weight: 1000;
-  text-align: center;
-  color: transparent;
-  background-clip: text;
-  background-image: url(../media/background_gradients.mov);
-  background-position: center;
-  background-size: 100%;
-  background-repeat: repeat;
-  animation-name: sliding-horizontally;
-  animation-duration: 120s;
-  animation-delay: .4s;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
-} */
-
 .big-title {
   width: 100%;
   mask:url(../media/big-title.svg);
@@ -136,12 +119,6 @@ h2 {
   filter: blur(10px);
   -webkit-filter: blur(10px);
 }
-
-/* @media screen and (max-width: 500px) {
-  .big-title-shadow {
-    margin-top: -31vw;
-  }
-} */
 
 .text-title {
   font-family: var(--font-families);
@@ -937,7 +914,6 @@ h2 {
 .modal-panel {
   width: fit-content;
   height: fit-content;
-  /* background-color: #242424; */
   background-color: var(--modal-panel-col);
   -webkit-backdrop-filter: blur(30px) saturate(200%);
   backdrop-filter: blur(30px) saturate(200%);
