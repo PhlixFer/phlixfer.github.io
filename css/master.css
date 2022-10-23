@@ -949,12 +949,12 @@ h2 {
 }
 
 .modal-panel iframe {
-  border-radius: 8px;
+  border-radius: 10px;
   border: none;
   width: calc(100vw - 80px);
   max-width: 800px;
   height: 60vh;
-  margin: 20px;
+  margin: 4px;
 }
 
 @media screen and (max-width: 800px) {
