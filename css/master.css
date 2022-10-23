@@ -935,8 +935,7 @@ h2 {
 }
 
 .modal-panel {
-  width: 100%;
-  max-width: 660px;
+  width: fit-content;
   height: fit-content;
   /* background-color: #242424; */
   background-color: var(--modal-panel-col);
@@ -976,7 +975,8 @@ h2 {
 .modal-panel iframe {
   border-radius: 8px;
   border: none;
-  width: calc(100% - 40px);
+  width: 100vw;
+  max-width: 660px;
   height: 480px;
   margin: 20px;
 }
