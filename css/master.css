@@ -951,9 +951,9 @@ h2 {
 .modal-panel iframe {
   border-radius: 8px;
   border: none;
-  width: 100vw;
-  max-width: 660px;
-  height: 480px;
+  width: calc(100vw - 80px);
+  max-width: 800px;
+  height: 60vh;
   margin: 20px;
 }
 
