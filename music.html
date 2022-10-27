@@ -14,85 +14,84 @@
   </head>
   <body id="body">
     <div class="title-container">
-      <h1 class="text-title">my music things :></h1>
+      <h1 class="text-title">some music experiments!</h1>
     </div>
 
-    <p class="text-body">it's music, i think!</p>
+    <p class="text-body">it's music, i think</p>
 
-    <h2 class="text-header">my latest experiments!</h2>
-
-    <div style="margin-bottom: 32px;">
-      <div class="box audio-box-grid">
-        <img src="media/art-pics/graffiti-anv7.jpeg" alt="ANV7 graffiti on brick wall" class="audio-art">
-        <div>
-          <h2 class="text-header-audio-box">Wave</h2>
-          <p class="text-body-audio-box">My submission for FORM's All Nighter vol. 7!</p>
-          <audio controls src="media/music/wave_b1.mp3" class="audio-embed text-body-1" style="margin:0;text-align:left;padding:0;">
-            oh no, your browser isn't allowing audio embeds!
-          </audio>
-        </div>
-      </div>
-      <div class="box audio-box-grid">
-        <img src="media/art-pics/skye-cover.jpg" alt="sky" class="audio-art">
-        <div>
-          <h2 class="text-header-audio-box">Skye</h2>
-          <p class="text-body-audio-box">i like piano :></p>
-          <audio controls src="media/music/skye_b2.mp3" class="audio-embed text-body-1" style="margin:0;text-align:left;padding:0;">
-            oh no, your browser isn't allowing audio embeds!
-          </audio>
-        </div>
-      </div>
-      <div class="box audio-box-grid">
-        <img src="media/no-art-image.jpg" alt="no art :(" class="audio-art">
-        <div>
-          <h2 class="text-header-audio-box">2 beans on a tree</h2>
-          <p class="text-body-audio-box">hi <3</p>
-          <audio controls src="media/music/2_beans_on_a_tree_b3.mp3" class="audio-embed text-body-1" style="margin:0;text-align:left;padding:0;">
-            oh no, your browser isn't allowing audio embeds!
-          </audio>
-        </div>
-      </div>
-      <div class="box audio-box-grid">
-        <img src="media/no-art-image.jpg" alt="no art :(" class="audio-art">
-        <div>
-          <h2 class="text-header-audio-box">moonlight</h2>
-          <p class="text-body-audio-box">🌕</p>
-          <audio controls src="media/music/moonlight_2.mp3" class="audio-embed text-body-1" style="margin:0;text-align:left;padding:0;">
-            oh no, your browser isn't allowing audio embeds!
-          </audio>
-        </div>
-      </div>
-      <div class="box audio-box-grid">
-        <img src="media/no-art-image.jpg" alt="no art :(" class="audio-art">
-        <div>
-          <h2 class="text-header-audio-box">new u</h2>
-          <p class="text-body-audio-box">slow future bass question mark?</p>
-          <audio controls src="media/music/new_u_b3.mp3" class="audio-embed text-body-1" style="margin:0;text-align:left;padding:0;">
-            oh no, your browser isn't allowing audio embeds!
-          </audio>
-        </div>
-      </div>
-      <div class="box audio-box-grid">
-        <img src="media/no-art-image.jpg" alt="no art :(" class="audio-art">
-        <div>
-          <h2 class="text-header-audio-box">hypaaa!</h2>
-          <p class="text-body-audio-box">something fun!</p>
-          <audio controls src="media/music/hypaaa!_b2.mp3" class="audio-embed text-body-1" style="margin:0;text-align:left;padding:0;">
-            oh no, your browser isn't allowing audio embeds!
-          </audio>
-        </div>
-      </div>
-      <div class="box audio-box-grid">
-        <img src="media/no-art-image.jpg" alt="no art :(" class="audio-art">
-        <div>
-          <h2 class="text-header-audio-box">cloud7</h2>
-          <p class="text-body-audio-box">generative musicccc~</p>
-          <audio controls src="media/music/cloud7_b1.mp3" class="audio-embed text-body-1" style="margin:0;text-align:left;padding:0;">
-            oh no, your browser isn't allowing audio embeds!
-          </audio>
-        </div>
-      </div>
+    <div style="margin-bottom: 32px;" id="audio-grid">
     </div>
+
+    <script type="text/javascript">
+      const musicList = [
+        {
+          artFilename: 'graffiti-anv7.jpeg',
+          artAltText: 'ANV7 graffiti on brick wall',
+          audioFilename: 'wave_b1.mp3',
+          title: 'Wave',
+          description: 'My submission for FORM\'s All Nighter vol. 7\!'
+        },
+        {
+          artFilename: 'skye-cover.jpg',
+          artAltText: 'Clouds with \"Skye\" written on the corner.',
+          audioFilename: 'skye_b2.mp3',
+          title: 'Skye',
+          description: 'i like piano! :>'
+        },
+        {
+          artFilename: 'no-art-image.jpg',
+          artAltText: 'No art present for this track',
+          audioFilename: 'the-vault-of-heaven_b02.mp3',
+          title: 'The Vault of Heaven',
+          description: 'ethereal resampling! ☁️'
+        },
+        {
+          artFilename: 'no-art-image.jpg',
+          artAltText: 'No art present for this track',
+          audioFilename: '2_beans_on_a_tree_b3.mp3',
+          title: '2 beans on a tree',
+          description: 'hi <3'
+        },
+        {
+          artFilename: 'no-art-image.jpg',
+          artAltText: 'No art present for this track',
+          audioFilename: 'moonlight_2.mp3',
+          title: 'Moonlight',
+          description: '🌕'
+        },
+        {
+          artFilename: 'no-art-image.jpg',
+          artAltText: 'No art present for this track',
+          audioFilename: 'new_u_b3.mp3',
+          title: 'new u',
+          description: 'slow future bass???'
+        },
+        {
+          artFilename: 'no-art-image.jpg',
+          artAltText: 'No art present for this track',
+          audioFilename: 'hypaaa!_b2.mp3',
+          title: 'hypaaa!',
+          description: 'something fun!'
+        },
+      ];
+      musicList.forEach((item)=>{
+        let div = document.createElement('div');
+        var audioBoxTemplate = `
+        <img src="media/art-pics/${item.artFilename}" alt="${item.artAltText}" class="audio-art">
+        <div>
+          <h2 class="text-header-audio-box">${item.title}</h2>
+          <p class="text-body-audio-box">${item.description}</p>
+          <audio controls src="media/music/${item.audioFilename}" class="audio-embed text-body-1" style="margin:0;text-align:left;padding:0;">
+            oh no, your browser isn't allowing audio embeds!
+          </audio>
+        </div>`;
+
+        div.className = "box audio-box-grid";
+        div.innerHTML = audioBoxTemplate;
+
+        document.getElementById("audio-grid").appendChild(div);
+      });
+    </script>
 
     <script src="scripts/add-common-elements.js" charset="utf-8"></script>
 
