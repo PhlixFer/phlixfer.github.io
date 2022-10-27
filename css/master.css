@@ -376,6 +376,16 @@ h2 {
 
 /* audio box things */
 
+.audio-grid {
+  display: grid;
+  grid-template-columns: calc(50% - 32px) calc(50% - 20px);
+  grid-gap: 16px;
+  grid-column-gap: 32px;
+  max-width: 1200px;
+  margin: 16px auto 32px auto;
+  padding: 0 20px 0 20px;
+}
+
 .text-header-audio-box {
   font-family: var(--font-families);
   font-size: 19px;
@@ -398,6 +408,7 @@ h2 {
 }
 
 .audio-box-grid {
+  margin: 0;
   border-radius: 18px!important;
   padding: 10px;
   display: grid;
@@ -422,7 +433,7 @@ h2 {
   bottom: 0;
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 800px) {
   .text-body-audio-box {
     height: 36px;
   }
@@ -434,6 +445,13 @@ h2 {
   .audio-art {
     width: 100px;
     height: 100px;
+  }
+  .audio-grid {
+    grid-template-columns: auto;
+    width: calc(100% - 60px);
+    margin-left: 20px;
+    margin-right: 20px;
+    padding: 0;
   }
 }
 
