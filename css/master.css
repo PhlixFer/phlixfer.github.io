@@ -12,8 +12,7 @@
   --navbar-col: rgba(40, 40, 40, .7);
   --table-col: rgb(48, 48, 48);
   --box-lvl-1-col: #181818;
-  --main-big-button-col: #3DC378E6;
-  --main-big-button-opaque-col: #3DC378ff;
+  --main-big-button-col: mediumseagreen;
   --modal-panel-col: #24242499;
   --image-outline-col: rgba(255, 255, 255, 0.1);
   --divider-col: rgba(255, 255, 255, 0.1);
@@ -32,8 +31,7 @@
     --navbar-col: rgba(246, 246, 246, 0.72);
     --table-col: rgb(220, 220, 220);
     --box-lvl-1-col: #e5e5e5;
-    --main-big-button-col: #4fdd8de6;
-    --main-big-button-opaque-col: #4fdd8dff;
+    --main-big-button-col: mediumseagreen;
     --modal-panel-col: #ffffff99;
     --image-outline-col: rgba(0, 0, 0, 0.1);
     --divider-col: rgba(0, 0, 0, 0.1);
@@ -106,7 +104,6 @@ h2 {
 }
 
 .big-title-shadow {
-  /* margin-top: -29.5vw; */
   top: -29vw;
   mask:url(../media/big-title-shadow.svg);
   -webkit-mask:url(../media/big-title-shadow.svg);
@@ -199,10 +196,11 @@ h2 {
 .default-button-big {
   display: block;
   background-color: var(--main-big-button-col);
-  border-radius: 7px;
+  color: white;
+  border-radius: 8px;
   height: fit-content;
   width: fit-content;
-  padding: 5px 9px;
+  padding: 8px 12px;
   margin: 16px auto 32px auto;
   cursor: pointer;
   border: none;
@@ -216,14 +214,16 @@ h2 {
   text-align: center;
   padding-left: 6px;
   line-height: 30px;
-  background-color: #ff6347e6;
+  background-color: #ff6347;
 }
-
 .default-button-big-with-icon svg {
   height: 30px;
   float: left;
   clear: right;
   padding-right: 3px;
+}
+.default-button-big-with-icon g {
+  fill: white;
 }
 
 .inline-button-big {
@@ -233,15 +233,21 @@ h2 {
 }
 
 .default-button-big:hover {
-  /* background-color: #4cce84; */
-  background-color: var(--main-big-button-opaque-col);
-  transform: translateY(-2px);
+  transform: scale(1.02);
   box-shadow: 0 5px 10px #3DC3787f;
 }
 
+.default-button-big:active {
+  transform: scale(0.96);
+  box-shadow: 0 0px 4px #3DC3787f;
+}
+
 .default-button-big-with-icon:hover {
-  background-color: #ff6347;
   box-shadow: 0 5px 10px #ff63477f;
+}
+
+.default-button-big-with-icon:active {
+  box-shadow: 0 0px 4px #ff63477f;
 }
 
 .button-grid {

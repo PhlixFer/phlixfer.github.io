@@ -17,7 +17,7 @@
 }
 
 .navbar a {
-  font-family: Inter;
+  font-family: var(--font-families);
   font-size: 15px;
   font-weight: 400;
   margin-top: 16px;
@@ -47,9 +47,20 @@
   display: block;
   overflow: hidden;
 }
+.navbar-icon-container p {
+  color: white;
+}
+.navbar-icon-container g {
+  fill: var(--main-text-col);
+  transition-duration: 0.4s;
+}
+
 .navbar-icon-container:hover {
   background-color: #FF5E5B;
   width: 160px;
+}
+.navbar-icon-container:hover g {
+  fill: white;
 }
 
 @media (prefers-color-scheme: light) {
@@ -121,21 +132,6 @@
 
 }
 
-/* .navbar.mobile {
-  justify-content: right;
-  border-radius: 0 0 10px 10px;
-}
-
-.navbar.mobile a:not(:first-child) {
-  display: block;
-  opacity: 0%;
-  margin: 0 0 16px 0;
-  transition-duration: 0s;
-  transition-delay: 0s;
-}
-
-.navbar.mobile .borgor-menu {display: block;float: left;} */
-
 /* active mobile navbar styling */
 
 @media screen and (max-width: 750px) {
@@ -151,21 +147,4 @@
     margin: 0 0 16px 32px;
   }
 
-  /* .navbar.active a:hover {opacity: 100%;transition-delay:0s;} */
-
 }
-
-/* .navbar.mobile.active {
-  height: 280px;
-  flex-direction: column;
-}
-
-.navbar.mobile.active a:not(:first-child) {
-  display: block;
-  opacity: 50%;
-  margin: 0 0 16px 38px;
-  transition-delay: 0.2s;
-  transition-duration: 0.4s;
-}
-
-.navbar.mobile.active a:hover {opacity: 100%;transition-delay:0s;} */
