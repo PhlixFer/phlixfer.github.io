@@ -32,7 +32,7 @@ var htmlFooter = `
               <a href="https://instagram.com/phlixfer" target="_blank" class="footer-sb sb-insta"></a>
               <a href="https://ko-fi.com/phlixfer" target="_blank" class="footer-sb sb-kofi"></a>
               <a href="https://discord.gg/Q5P6t4jeam" target="_blank" class="footer-sb sb-discord"></a>
-              <a href="https://www.youtube.com/channel/UC5UuFv0_n5PZG9AXfr5HPTg" target="_blank" class="footer-sb sb-youtube"></a>
+              <a href="https://youtube.com/@phlixfer" target="_blank" class="footer-sb sb-youtube"></a>
             </div>
           </div>
         </div>
