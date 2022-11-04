@@ -46,15 +46,15 @@
     <div class="cool-music-container paused" id="music-container">
       <div class="cool-music-subcontainer">
         <h1 style="margin-bottom: 20px">What I'm Listening to:</h1>
-        <iframe allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write" frameborder="0" height="450" style="width:100%;max-width:660px;overflow:hidden;background:transparent;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/kh/album/what-do-you-want/1641577558?theme=light" id="music-embed"></iframe>
+        <iframe allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write" frameborder="0" height="450" style="width:100%;max-width:660px;overflow:hidden;background:transparent;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="" id="music-embed"></iframe>
         <script type="text/javascript">
           var musicSource = document.getElementById("#music-embed")
 
           function lightMode() {
-            $("#music-embed").attr("src", "https://embed.music.apple.com/kh/album/what-do-you-want/1641577558?theme=light")
+            $("#music-embed").attr("src", "https://embed.music.apple.com/kh/album/nascent/1641577811?theme=light")
           }
           function darkMode() {
-            $("#music-embed").attr("src", "https://embed.music.apple.com/kh/album/what-do-you-want/1641577558?theme=dark")
+            $("#music-embed").attr("src", "https://embed.music.apple.com/kh/album/nascent/1641577811?theme=dark")
           }
 
           const embedColorSchemeQueryList = window.matchMedia("(prefers-color-scheme: light)");
