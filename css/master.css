@@ -680,7 +680,7 @@ h2 {
 
 @media screen and (max-width: 1024px) {
   .commission-item-grid {grid-template-columns: 50% 50%}
-  .commission-item {height: calc(50vh - 24px)}
+  .commission-item {height: calc(100vh - 48px)}
 }
 
 @media screen and (max-width: 512px) {
