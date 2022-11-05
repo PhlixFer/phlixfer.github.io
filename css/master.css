@@ -653,9 +653,11 @@ h2 {
   align-items: center;
   justify-content: center;
 }
-.commission-item-last {
-  height: 360px;
+.commission-item:last-child {
+  grid-column: 1 / span 4;
+  height: 25vw;
 }
+
 .commission-item:hover .comm-item-text {
   opacity: 100%;
 }
@@ -681,11 +683,20 @@ h2 {
 @media screen and (max-width: 1024px) {
   .commission-item-grid {grid-template-columns: 50% 50%}
   .commission-item {height: calc(100vh - 48px)}
+  .commission-item:last-child {
+    grid-column: 1 / span 2;
+    height: 50vh;
+  }
 }
 
 @media screen and (max-width: 512px) {
   .commission-item-grid {grid-template-columns: 100%;}
   .commission-item {height: calc(100vh - 48px)}
+  .commission-item:last-child {
+    grid-column: 1 / span 1;
+    height: 240px;
+    background-size: 150%;
+  }
 }
 
 /* question list styling */
