@@ -685,7 +685,7 @@ h2 {
 
 @media screen and (max-width: 512px) {
   .commission-item-grid {grid-template-columns: 100%;}
-  .commission-item {height: 100vh}
+  .commission-item {height: calc(100vh - 48px)}
 }
 
 /* question list styling */
