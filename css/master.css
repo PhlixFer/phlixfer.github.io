@@ -127,7 +127,7 @@ h2 {
 
 .text-title-3 {
   font-size: 24px;
-  font-weight: 600;
+  font-weight: bold;
   text-align: center;
   margin-top: 8px;
   margin-bottom: 8px;
@@ -206,7 +206,7 @@ h2 {
   border: none;
   box-shadow: 0 0 0 #3DC3787f;
   text-decoration: none;
-  transition-duration: 0.4s;
+  transition-duration: 0.25s;
 }
 
 .default-button-big-with-icon {
@@ -476,7 +476,7 @@ h2 {
   width: 100%;
   max-width: 500px;
   margin: auto;
-  margin-bottom: 64px;
+  margin-bottom: 16px;
 }
 
 @media screen and (max-width: 700px) {
@@ -638,75 +638,68 @@ h2 {
 
 .commission-info {
   margin: 16px auto 80px auto;
-  padding: 0 180px;
-  max-width: calc(100% - 160px);
 }
 
 .commission-item-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  max-width: 1000px;
-  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
 }
 
-.commission-item-box {
-  padding: 10px 40px 10px 10px;
-  margin: 0 16px 16px 0;
-  width: fit-content;
-  max-width: 260px;
-  height: fit-content;
-  min-height: 80px;
-  display: grid;
-  grid-template-columns: auto auto;
-  column-gap: 10px;
+.commission-item {
+  height: calc(100vh - 48px);
+  background-position: center;
+  background-size: cover;
   display: flex;
   align-items: center;
+  justify-content: center;
+}
+.commission-item-last {
+  height: 360px;
+}
+.commission-item:hover .comm-item-text {
+  opacity: 100%;
 }
 
-.commission-item-box div {
-  padding-bottom: 8px;
+.comm-item-text {
+  height: calc(100% - 48px);
+  width: 100%;
+  padding-bottom: 48px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  background-color: rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  transition-duration: 0.4s;
 }
 
-.commission-item-box img {
-  width: 90px;
-  height: 100%;
-}
-
-.commission-item-box:last-child {
-  margin-right: 0;
-}
-
-.commission-item-box .text-header {
-  text-align: left;
+.commission-item * {
+  color: white;
   margin: 0;
 }
 
-.commission-item-box .text-body {
-  text-align: left;
-  margin: 0;
+@media screen and (max-width: 1024px) {
+  .commission-item-grid {grid-template-columns: 50% 50%}
+  .commission-item {height: calc(50vh - 24px)}
 }
 
-@media screen and (max-width: 700px) {
-  .commission-info {
-    padding: 0;
-    margin: 16px 20px 20px 20px;
-    max-width: 100%;
-  }
-  .commission-item-box 
-  {
-    width: 100%;
-    margin: 10px 0;
-  }
+@media screen and (max-width: 512px) {
+  .commission-item-grid {grid-template-columns: 100%;}
+  .commission-item {height: 100vh}
 }
 
 /* question list styling */
 
-.question-container {margin-bottom: 12px;}
-
+.question-container {
+  margin: 12px auto;
+  max-width: 900px;
+}
 .question-container .text-header {text-align: left;margin: 0;}
-
 .question-container .text-body {text-align: left;margin: 0;}
+
+@media screen and (max-width: 800px) {
+  .question-container {margin: 16px 20px;}
+}
 
 /* price list styling */
 

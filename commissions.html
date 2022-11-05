@@ -27,92 +27,73 @@
       <h1 class="text-title">want to commission me?</h1>
     </div>
 
-    <p class="text-body">reach out to me on any of the platforms below! or you could place an order via Ko-fi if you want to.</p>
+    <p class="text-body">reach out to me on anywhere below!</p>
 
     <div class="button-list">
       <a href="https://twitter.com/phlixfer" target="_blank" class="sb sb-twitter"></a>
+      <div class="sb sb-discord" onclick="copyUsername()"></div>
       <a href="mailto:phlixfermusic@gmail.com" target="_blank" class="sb sb-mail"></a>
-      <a href="https://ko-fi.com/phlixfer" target="_blank" class="sb sb-kofi"></a>
+      <!-- <a href="https://ko-fi.com/phlixfer" target="_blank" class="sb sb-kofi"></a> -->
+      <script type="text/javascript">
+        function copyUsername() {
+          navigator.clipboard.writeText("phlixfer#3924");
+          alert("my username has been copied to your clipboard");
+        }
+      </script>
     </div>
 
     <div class="commission-info">
       <h2 class="text-title-3">Pricing</h2>
       <p class="text-body">Pricing varies by complexity of the project(s)</p>
 
-      <div class="commission-item-grid" id="comm-item-grid">
+      <div class="commission-item-grid" id="commission-item-grid">
+
         <script type="text/javascript">
-          const items = [
+          let commissionItems = [
             {
-              title: "Motion Graphics",
-              detail: "Starting €99 for 3 minutes",
-              filename: "mograph-icon.svg",
+              label: 'Motion Graphics',
+              backgroundImageFilename: 'media/art-pics/commissions-page-artworks/sporb.jpg',
+              description: 'Starting €99'
             },
             {
-              title: "Stills",
-              detail: "Starting €49",
-              filename: "stills-icon.svg",
+              label: 'Stills',
+              backgroundImageFilename: 'media/art-pics/will-of-the-winding-forest.jpeg',
+              description: 'Starting €49'
             },
             {
-              title: "Photo Editing",
-              detail: "Starting €4/image",
-              filename: "photo-editing-icon.svg",
+              label: 'Music',
+              backgroundImageFilename: 'media/art-pics/commissions-page-artworks/waveforms.jpg',
+              description: 'Starting €59'
             },
             {
-              title: "Video Editing",
-              detail: "Starting €14/hour of footage",
-              filename: "video-editing-icon.svg",
+              label: 'Image Editing',
+              backgroundImageFilename: 'media/art-pics/commissions-page-artworks/parameters.jpg',
+              description: 'Starting €14/image'
             },
-            {
-              title: "Music",
-              detail: "Starting €59",
-              filename: "music-icon.svg",
-            },
-            {
-              title: "Commercial Licensing",
-              detail: "Starting €299 a year",
-              filename: "commercial-lic-icon.svg"
-            },
-          ];
+          ]
 
-          items.forEach((item)=>{
-            let a = document.createElement("a");
-            let sup = document.createElement("sup");
-            let h2 = document.createElement("h2");
-            let p = document.createElement("p");
-            let img = document.createElement("img");
-            let baseDiv = document.createElement("div");
-            let detailDiv = document.createElement("div");
+          commissionItems.forEach((item) => {
+            let commissionBoxTemplate = `
+            <div class="comm-item-text">
+              <h2>${item.label}</h2>
+              <p>${item.description}</p>
+            </div>
+            `;
 
-            if (item.title == "Commercial Licensing") {
-              a.href = "#footnote-1";
-              a.className = "text-body";
-              a.textContent = " 1";
-              a.style.fontSize = "12px";
+            let div = document.createElement('div');
+            div.className = "commission-item";
+            div.style.backgroundImage = "url("+item.backgroundImageFilename+")";
+            div.innerHTML = commissionBoxTemplate;
 
-              sup.appendChild(a);
-
-              h2.textContent = item.title;
-              h2.appendChild(sup);
-            } else {
-              h2.textContent = item.title;
-            }
-            h2.className = "text-header";
-
-            p.textContent = item.detail;
-            p.className = "text-body";
-
-            img.src = 'media/icons/'+item.filename;
-
-            detailDiv.appendChild(h2);
-            detailDiv.appendChild(p);
-
-            baseDiv.className = "box commission-item-box";
-            baseDiv.appendChild(img);
-            baseDiv.appendChild(detailDiv);
-
-            document.getElementById('comm-item-grid').appendChild(baseDiv);
-          }) 
+            document.getElementById("commission-item-grid").appendChild(div);
+          })
         </script>
+        </div>
+      <div class="commission-item commission-item-last" style="background-image: url(media/art-pics/commissions-page-artworks/worblies.jpg)">
+        <div class="comm-item-text">
+              <h2>Commercial Licensing</h2>
+              <p>Starting €199, billed bi-annually</p>
+            </div>
       </div>
 
       <h2 class="text-title-3">Q & A!</h2>
@@ -122,7 +103,7 @@
       </div>
       <div class="question-container">
         <h2 class="text-header">Q: How does licensing work?</h2>
-        <p class="text-body">A: For people earning more than €40,000 a year, a commercial license is required to use my art commercially.</p>
+        <p class="text-body">A: Individuals and corporate entities earning more than €40,000 a year require a commercial license to use my products commercially.</p>
       </div>
       <div class="question-container">
         <h2 class="text-header">Q: How long should I be expected to wait?</h2>
