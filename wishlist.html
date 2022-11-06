@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="theme-color" content="#1f1f1f">
+	<link rel="stylesheet" href="css/master.css">
+    <link rel="stylesheet" type="text/css" href="css/social-buttons.css">
+    <link rel="icon" href="media/favicon.svg">
+    <link rel="icon" href="media/favicon.ico">
+    <script src="scripts/light-mode-check.js" charset="utf-8"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+	<title>Wishlist | Phlixfer</title>
+</head>
+<body id="body">
+
+	<div class="title-container">
+      <h1 class="text-title">my wishlist of stuff i rly wish i could upgrade to 🥲</h1>
+      <p class="text-body">these prices may be higher than market prices bc local pricing :/ <br>
+      	i've tried rly hard to look for the best prices tho!<br>
+      	if you wanna help me afford to upgrade from my <span id="text-body-red-gradient">almost broken</span> setup to these, consider placing a commission or paypal-ing some cash! (dm me anywhere for the link)
+      </p>
+    </div>
+
+    <a href="commissions" class="default-button-big text-body">Commission me!</a>
+
+    <div class="wishlist-wrapper">
+    	<div class="wishlist-grid" id="wishlist-grid"></div>
+		<h1 id="price-text"></h1>
+    </div>
+
+    <script type="text/javascript">
+		const wishlistItems = [
+			{
+				label: 'MacBook Pro 16\"',
+				description: 'M1 Max, 64GB memory, 1TB storage',
+				price: 3200,
+				imageLink: 'https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/mbp-14-digitalmat-gallery-1-202111?wid=728&hei=666&fmt=png-alpha&.v=1635183223000'
+			},
+			{
+				label: 'iPhone 14 Pro',
+				description: '256GB storage',
+				price: 1219,
+				imageLink: 'https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone14pro-digitalmat-gallery-2-202209?wid=728&hei=666&fmt=png-alpha&.v=1660830896841'
+			},
+			{
+				label: 'Apple Pencil',
+				description: '2nd generation',
+				price: 159,
+				imageLink: 'https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MU8F2?wid=1000&hei=1000&fmt=jpeg&qlt=90&.v=1540596407165'
+			},
+			{
+				label: 'iPad Pro',
+				description: 'M1, 256GB storage',
+				price: 950,
+				imageLink: 'https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/ipadpro12-digitalmat-gallery-1-202210?wid=728&hei=666&fmt=png-alpha&.v=1664477069672'
+			},
+			{
+				label: 'AirPods Pro',
+				description: '2nd generation',
+				price: 279,
+				imageLink: 'https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MQD83?wid=1000&hei=1000&fmt=jpeg&qlt=90&.v=1660803972361'
+			},
+			{
+				label: 'MiniFuse 2',
+				description: 'from Arturia',
+				price: 149,
+				imageLink: 'https://medias.arturia.net/cdn-cgi/image/quality=60,width=null/images/products/minifuse-2/minifuse-2-image.png'
+			},
+			{
+				label: 'HD 560S',
+				description: 'from Sennheiser',
+				price: 257,
+				imageLink: 'https://cdn.shopify.com/s/files/1/0314/8863/9112/products/product_detail_x2_desktop_HD_560S_sennheiser_01_9151bd89-fc3a-411b-9b06-5578b380c1b7_1024x1024@2x.jpg?v=1655366982'
+			},
+			{
+				label: 'T7 SSD',
+				description: '2TB',
+				price: 228,
+				imageLink: 'https://m.media-amazon.com/images/I/91YfRIy7kYL._AC_SL1500_.jpg'
+			},
+		]
+
+		const wishlistGrid = document.getElementById('wishlist-grid');
+
+		var price = 0;
+
+		wishlistItems.forEach((item)=>{
+			var div = document.createElement('div');
+			const wishlistItemHTML = `
+			<div class="wishlist-img" style="background-image: url(${item.imageLink});"></div>
+			<div class="wishlist-text">
+    			<h3>${item.label}</h3>
+    			<p>${item.description}</p>
+    			<h3 class="wishlist-text-price">$${item.price.toLocaleString('en')}</h3>
+    		</div>
+    		`
+    		div.className = "box wishlist-item";
+    		div.innerHTML = wishlistItemHTML;
+
+    		wishlistGrid.appendChild(div);
+    		price += item.price;
+		});
+
+		price = price.toLocaleString('en');
+		document.getElementById('price-text').innerHTML = `Total: $${price}`;
+	</script>
+
+	<script src="scripts/add-common-elements.js" charset="utf-8"></script>
+
+</body>
+</html>

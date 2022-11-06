@@ -1,6 +1,7 @@
 @import url('https://rsms.me/inter/inter.css');
 @import url(navbar.css);
 @import url(social-buttons.css);
+@import url(wishlist-styles.css);
 
 @supports (font-variation-settings: normal) {
   :root {
@@ -18,6 +19,10 @@
   --modal-panel-col: #24242499;
   --image-outline-col: rgba(255, 255, 255, 0.1);
   --divider-col: rgba(255, 255, 255, 0.1);
+}
+
+* {
+  font-family: var(--font-families);
 }
 
 .footer {
@@ -57,11 +62,10 @@ body {
 }
 
 p {
-  font-family: var(--font-families);
   font-size: 15px;
-  font-weight: 400;
-  text-align: center;
-  margin: 0 20px;
+  font-weight: normal;
+  text-align: left;
+  margin: 0;
   color: var(--main-text-col);
 }
 
@@ -75,20 +79,26 @@ p a:hover {
 }
 
 h1 {
-  font-family: var(--font-families);
   font-size: 28px;
-  font-weight: 600;
+  font-weight: bold;
   text-align: left;
   margin-bottom: 5px;
   color: var(--main-text-col);
 }
 
 h2 {
-  font-family: var(--font-families);
   font-size: 22px;
-  font-weight: 600;
+  font-weight: bold;
   text-align: left;
   margin-top: 24px 20px;
+  color: var(--main-text-col);
+}
+
+h3 {
+  font-size: 18px;
+  font-weight: bold;
+  text-align: left;
+  margin: 0;
   color: var(--main-text-col);
 }
 
@@ -122,7 +132,7 @@ h2 {
 .text-title {
   font-family: var(--font-families);
   font-size: 28px;
-  font-weight: 600;
+  font-weight: bold;
   text-align: center;
   color: var(--main-text-col);
 }
@@ -184,12 +194,13 @@ h2 {
 }
 
 .title-container {
-  margin-top: 64px;
+  margin: 64px auto 0px auto;
+  max-width: 660px;
 }
 
 @media screen and (max-width: 800px) {
   .title-container {
-    margin-top: 80px;
+    margin: 80px 16px 0px 16px;
   }
 }
 
@@ -397,7 +408,7 @@ h2 {
 .text-header-audio-box {
   font-family: var(--font-families);
   font-size: 19px;
-  font-weight: 500;
+  font-weight: bold;
   text-align: left;
   margin: 0;
   color: var(--main-text-col);
