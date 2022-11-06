@@ -106,6 +106,13 @@
 
 .sb-discord:hover {background-color: #5865F2}
 
+.sb-cohost {
+  -webkit-mask-image: url(../media/icons/cohost-logo-mono.svg);
+  mask-image: url(../media/icons/cohost-logo-mono.svg);
+}
+
+.sb-cohost:hover {background-color: #6F163E}
+
 /* modal icons */
 
 .sb-modal {
