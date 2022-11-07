@@ -1,7 +1,7 @@
 const commsDone = [
 	{
-		clientName: "lorem",
-		totalPaid: 0,
+		clientName: "starting funds",
+		totalPaid: 99,
 	},
 ]
 
