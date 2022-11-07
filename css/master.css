@@ -983,6 +983,7 @@ h3 {
   color: tomato;
   opacity: 70%;
   transition-duration: .3s;
+  text-align: center;
 }
 
 .modal-close:hover p {
