@@ -1,3 +1,11 @@
+.wishlist-total {
+	filter: blur(8px);
+	transition-duration: .4s;
+}
+.wishlist-total:hover {
+	filter: none;
+}
+
 .wishlist-wrapper {
 	display: flex;
 	align-items: center;

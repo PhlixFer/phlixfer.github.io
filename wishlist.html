@@ -120,8 +120,14 @@
     		price += item.price;
 		});
 
-		price = price.toLocaleString('en');
-		document.getElementById('price-text').innerHTML = `Total: $${price}`;
+		price = "$" + price.toLocaleString('en');
+
+		let priceElement = document.createElement('span');
+		priceElement.innerHTML = price;
+		priceElement.className = "wishlist-total";
+
+		document.getElementById('price-text').innerHTML = "Total: ";
+		document.getElementById('price-text').appendChild(priceElement);
 	</script>
 
 	<script src="scripts/add-common-elements.js" charset="utf-8"></script>
