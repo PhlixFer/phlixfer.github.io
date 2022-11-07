@@ -16,8 +16,8 @@
 
 .wishlist-item {
 	height: fit-content !important;
-	width: fit-content;
-	max-width: 100% !important;
+	width: 100% !important;
+	padding: 0 !important;
 	overflow: hidden;
 	margin: 0 !important;
 	border-radius: 20px !important;
@@ -58,12 +58,12 @@
 
 .wishlist-text-price {
 	margin-top: 8px;
-	color: rgba(245, 245, 245, 0.55);
+	color: var(--secondary-text-col);
 }
 
 #price-text {
 	margin-bottom: 64px;
-	color: rgba(245, 245, 245, 0.35);
+	color: var(--tertiary-text-col);
 }
 
 #text-body-red-gradient {

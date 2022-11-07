@@ -27,7 +27,7 @@ h2 {
   font-size: 22px;
   font-weight: bold;
   text-align: left;
-  margin-top: 24px 20px;
+  margin: 0 !important;
   color: var(--main-text-col);
 }
 

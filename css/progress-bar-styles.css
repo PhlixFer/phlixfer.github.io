@@ -1,0 +1,33 @@
+.progress-wrapper {
+	width: calc(100% - 32px) !important;
+	max-width: 330px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.progress-wrapper * {
+	text-align: center;
+}
+
+.progress-bar-wrapper {
+	width: 100%;
+	max-width: 320px;
+	margin: 10px 0;
+	height: 8px;
+	background-color: #fff;
+	display: flex;
+	flex-direction: row;
+	align-items: start;
+	border-radius: 6px;
+	overflow: hidden;
+}
+
+.progress-bar {
+	height: 100%;
+	background-color: forestgreen;
+}
+
+.progress-subtitle {
+	color: var(--secondary-text-col);
+}
