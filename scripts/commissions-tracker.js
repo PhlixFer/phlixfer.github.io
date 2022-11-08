@@ -18,4 +18,4 @@ let progressBar = document.getElementById('progress-bar');
 progressBar.style.width = progressed + '%';
 
 let progressFraction = document.getElementById('progress-fraction');
-progressFraction.innerHTML = "$" + total.toLocaleString('en') + " / $" + totalToRaise.toLocaleString('en');
+progressFraction.innerHTML =  Math.round(progressed) + "% of $" + totalToRaise.toLocaleString('en');
