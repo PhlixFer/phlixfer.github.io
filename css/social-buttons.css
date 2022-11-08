@@ -82,13 +82,6 @@
 
 .sb-patreon:hover {background-color: #FF424D}
 
-.sb-linktree {
-  -webkit-mask-image: url(../media/icons/linktree-logo-mono.svg);
-  mask-image: url(../media/icons/linktree-logo-mono.svg);
-}
-
-.sb-linktree:hover {background-color: mediumseagreen}
-
 .sb-tumblr {
   -webkit-mask-image: url(../media/icons/tumblr-logo-mono.svg);
   mask-image: url(../media/icons/tumblr-logo-mono.svg);
