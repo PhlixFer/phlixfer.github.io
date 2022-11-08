@@ -26,3 +26,22 @@
 .panel-container-margins {
   margin-bottom: 80px;
 }
+
+.big-title-wrapper {
+  margin: 0 16px;
+  width: calc(100% - 32px);
+}
+
+.big-title-wrapper * {
+  text-align: center;
+  font-size: 145px;
+  font-weight: 1000;
+}
+
+.big-title-gradient {
+  background: url('../media/new-bg-gradients/background-gradients.webm');
+  background-size: cover;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin: 0;
+}
