@@ -39,7 +39,8 @@
 }
 
 .big-title-gradient {
-  background: url('../media/new-bg-gradients/background-gradients.webm');
+  background: url('../media/new-bg-gradients/background-gradients.mp4'),
+              url('../media/new-bg-gradients/background-gradients.webm');
   background-size: cover;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
