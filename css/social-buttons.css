@@ -26,7 +26,11 @@
 }
 
 .sb:hover {
-  transform: scale(1.05) translateY(-2px);
+  transform: scale(1.05);
+}
+
+.sb:active {
+  transform: scale(0.95);
 }
 
 .sb-twitter {
