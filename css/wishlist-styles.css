@@ -28,7 +28,7 @@
 	padding: 0 !important;
 	overflow: hidden;
 	margin: 0 !important;
-	border-radius: 20px !important;
+	border-radius: 18px !important;
 }
 
 .wishlist-img {
@@ -54,7 +54,7 @@
 	background-size: 220px;
 }
 .wishlist-item:nth-child(6) .wishlist-img {
-	background-size: 220px;
+	background-size: 80%;
 }
 .wishlist-item:nth-child(2) .wishlist-img {
 	background-size: cover;
@@ -114,7 +114,7 @@
 		background-size: 280px;
 	}
 	.wishlist-item:nth-child(9) .wishlist-img {
-		background-size: 170px;
+		background-size: 95%;
 	}
 	.wishlist-item:nth-child(8) .wishlist-img {
 		background-size: 120px;
