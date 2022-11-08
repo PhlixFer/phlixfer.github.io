@@ -113,6 +113,13 @@
 
 .sb-cohost:hover {background-color: #6F163E}
 
+.sb-soundcloud {
+  -webkit-mask-image: url(../media/icons/soundcloud-logo-mono.svg);
+  mask-image: url(../media/icons/soundcloud-logo-mono.svg);
+}
+
+.sb-soundcloud:hover {background-color: #EE5B1C}
+
 /* modal icons */
 
 .sb-modal {
