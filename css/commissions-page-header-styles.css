@@ -1,0 +1,89 @@
+.commission-page-header-grid {
+	display: grid;
+	grid-template-columns: repeat(2, calc(50% - 8px));
+	grid-gap: 16px;
+	margin: 64px auto 48px auto;
+	max-width: 800px;
+}
+
+.commission-header-title {
+	display: flex;
+	flex-direction: column;
+	justify-content: start;
+}
+
+.commission-header-title * {
+	text-align: right;
+	margin-top: 0;
+}
+
+.commission-header-title .button-list {
+	justify-content: end;
+	margin: 0;
+}
+
+.commission-header-title .button-list .sb {
+	margin: 0 0 0 8px;
+}
+
+.commission-header-statuses .progress-wrapper {
+	max-width: none;
+	justify-content: start;
+}
+
+.commission-header-statuses .progress-wrapper h2, .progress-subtitle {
+	text-align: left !important;
+	width: 100%;
+}
+
+.commission-header-statuses .progress-wrapper .progress-bar-wrapper {
+	max-width: none;
+}
+
+.commission-header-statuses {
+	flex-direction: column;
+}
+
+.shop-status-wrapper {
+	margin-bottom: 12px;
+}
+
+.shop-status-wrapper p {
+	color: var(--secondary-text-col);
+}
+
+#shop-status {
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+@media screen and (max-width: 800px) {
+	.commission-page-header-grid {
+		grid-template-columns: auto;
+		margin: 80px 16px 48px 16px;
+	}
+	.commission-header-title {
+		justify-content: center;
+	}
+	.commission-header-title * {
+		text-align: center;
+	}
+	.commission-header-title .button-list {
+		justify-content: center;
+		max-width: none;
+	}
+	.commission-header-statuses .progress-wrapper {
+		max-width: 330px;
+		margin: 0 auto;
+	}
+	.commission-header-statuses {
+		display: flex;
+		justify-content: center;
+	}
+	.commission-header-statuses .progress-wrapper h2, .progress-subtitle {
+		text-align: center !important;
+	}
+	.shop-status-wrapper h2, p {
+		text-align: center !important;
+	}
+}

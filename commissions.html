@@ -15,7 +15,7 @@
     <link rel="stylesheet" type="text/css" href="css/progress-bar-styles.css">
     <link rel="stylesheet" href="css/master.css">
     <link rel="stylesheet" href="css/master.css">
-    <link rel="stylesheet" type="text/css" href="css/social-buttons.css">
+    <link rel="stylesheet" type="text/css" href="css/commissions-page-header-styles.css">
     <link rel="icon" href="media/favicon.svg">
     <link rel="icon" href="media/favicon.ico">
     <script src="scripts/light-mode-check.js" charset="utf-8"></script>
@@ -31,33 +31,66 @@
       </div>
     </div>
 
-    <div class="title-container">
-      <h1 class="text-title">want to commission me?</h1>
-    </div>
+    <div>
+      <div class="commission-page-header-grid">
 
-    <p class="text-body">reach out to me on anywhere below!</p>
+        <div class="commission-header-title">
+          <h1 class="text-title">want to commission me?</h1>
+          <p class="text-body">reach out to me on anywhere below!</p>
 
-    <div class="button-list">
-      <a href="https://twitter.com/phlixfer" target="_blank" class="sb sb-twitter"></a>
-      <div class="sb sb-discord" onclick="copyUsername()"></div>
-      <a href="mailto:phlixfermusic@gmail.com" target="_blank" class="sb sb-mail"></a>
-      <!-- <a href="https://ko-fi.com/phlixfer" target="_blank" class="sb sb-kofi"></a> -->
-      <script type="text/javascript">
-        function copyUsername() {
-          navigator.clipboard.writeText("phlixfer#3924");
-          alert("my username has been copied to your clipboard");
-        }
-      </script>
-    </div>
-
-    <div class="single-section">
-      <div class="progress-wrapper box">
-        <h2>setup upgrade fundraising progress:</h2>
-        <div class="progress-bar-wrapper">
-          <div class="progress-bar" id="progress-bar"></div>
+          <div class="button-list">
+            <a href="https://twitter.com/phlixfer" target="_blank" class="sb sb-twitter"></a>
+            <div class="sb sb-discord" onclick="copyUsername()"></div>
+            <a href="mailto:phlixfermusic@gmail.com" target="_blank" class="sb sb-mail"></a>
+            <!-- <a href="https://ko-fi.com/phlixfer" target="_blank" class="sb sb-kofi"></a> -->
+            <script type="text/javascript">
+              function copyUsername() {
+                navigator.clipboard.writeText("phlixfer#3924");
+                alert("my username has been copied to your clipboard");
+              }
+            </script>
+          </div>
         </div>
-        <h3 class="progress-subtitle" id="progress-fraction"></h3>
-        <script src="scripts/commissions-tracker.js" charset="utf-8"></script>
+
+        <div class="commission-header-statuses">
+          <div class="shop-status-wrapper box">
+            <h2>current status: <span id="shop-status"></span></h2>
+            <p>opening hours: 11am to 9pm, ICT</p>
+            <script type="text/javascript">
+              function convertTZ(date, tzString) {
+                return new Date((typeof date === "string" ? new Date(date) : date).toLocaleString("en-US", {timeZone: tzString}));
+              }
+
+              let shopStatusElement = document.getElementById('shop-status');
+              var isOpen = true;
+              var shopStatus = '';
+              var statusCol = '';
+
+              const currentHour = convertTZ(Date(), "Asia/Bangkok").getHours();
+
+              isOpen = (currentHour >> 11 && currentHour << 21) ? true : false;
+
+              if (isOpen == true) {
+                shopStatus = "open";
+                statusCol = 'linear-gradient(palegreen, darkgreen)'
+              } else {
+                shopStatus = "closed";
+                statusCol = 'linear-gradient(lightpink, crimson)';
+              };
+              shopStatusElement.innerHTML = shopStatus;
+              shopStatusElement.style.backgroundImage = statusCol;
+            </script>
+          </div>
+
+          <div class="progress-wrapper box">
+            <h2>setup upgrade fundraising progress:</h2>
+            <div class="progress-bar-wrapper">
+              <div class="progress-bar" id="progress-bar"></div>
+            </div>
+            <h3 class="progress-subtitle" id="progress-fraction"></h3>
+            <script src="scripts/commissions-tracker.js" charset="utf-8"></script>
+          </div>
+        </div>
       </div>
     </div>
 
