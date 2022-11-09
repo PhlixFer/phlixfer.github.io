@@ -27,17 +27,11 @@
   animation-fill-mode: both;
 }
 
-.modal-grid {
-  padding: 40px;
-  display: grid;
-  grid-template-columns: 50% 50%;
-}
-
 .modal-close {
   border-top: solid 1px var(--image-outline-col);
   height: fit-content;
   padding: 13px;
-  margin: 0;
+  margin: 0 !important;
   cursor: pointer;
 }
 
@@ -61,11 +55,31 @@
   margin: 4px;
 }
 
+.discord-modal {
+  width: calc(100% - 40px);
+  padding: 20px;
+  display: flex;
+}
+
+.discord-modal-item {
+  /*width: fit-content;*/
+  flex-grow: 1;
+  min-width: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
+  align-items: center;
+}
+.discord-modal-item:first-child {
+  margin-right: 16px;
+}
+
+.discord-modal-item * {
+  text-align: center;
+}
+
 @media screen and (max-width: 800px) {
   .modal-panel {
-    width: calc(100% - 40px);
-  }
-  .modal-grid {
-    padding: 20px;
+    width: calc(100% - 16px);
   }
 }
