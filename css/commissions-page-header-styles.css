@@ -70,6 +70,7 @@
 	}
 	.commission-header-title .button-list {
 		justify-content: center;
+		width: 100%;
 		max-width: none;
 	}
 	.commission-header-statuses .progress-wrapper {
@@ -86,5 +87,6 @@
 	}
 	.shop-status-wrapper h2, p {
 		text-align: center !important;
+		margin: 0 !important;
 	}
 }
