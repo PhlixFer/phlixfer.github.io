@@ -74,11 +74,12 @@
 	}
 	.commission-header-statuses .progress-wrapper {
 		max-width: 330px;
-		margin: 0 auto;
+		margin: 0;
 	}
 	.commission-header-statuses {
 		display: flex;
 		justify-content: center;
+		align-items: center;
 	}
 	.commission-header-statuses .progress-wrapper h2, .progress-subtitle {
 		text-align: center !important;
