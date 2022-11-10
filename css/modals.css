@@ -49,7 +49,7 @@
 .modal-panel iframe {
   border-radius: 10px;
   border: none;
-  width: calc(100vw - 40px - 8px);
+  width: calc(100vw - 16px - 8px);
   max-width: 800px;
   height: 60vh;
   margin: 4px;
