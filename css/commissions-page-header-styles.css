@@ -3,7 +3,7 @@
 	grid-template-columns: repeat(2, calc(50% - 8px));
 	grid-gap: 16px;
 	margin: 64px auto 48px auto;
-	max-width: 800px;
+	max-width: 900px;
 }
 
 .commission-header-title {
@@ -29,11 +29,13 @@
 .commission-header-statuses .progress-wrapper {
 	max-width: none;
 	justify-content: start;
+	width: fit-content !important;
 }
 
 .commission-header-statuses .progress-wrapper h2, .progress-subtitle {
 	text-align: left !important;
 	width: 100%;
+	font-weight: bold;
 }
 
 .commission-header-statuses .progress-wrapper .progress-bar-wrapper {
