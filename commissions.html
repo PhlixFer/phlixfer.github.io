@@ -55,7 +55,7 @@
         <div class="commission-header-statuses">
           <div class="shop-status-wrapper box">
             <h2>current status: <span id="shop-status"></span></h2>
-            <p>opening hours: 11am to 9pm, ICT</p>
+            <p>opening hours: 11am to 11pm, ICT</p>
             <script type="text/javascript">
               // timezone converter function from stackoverflow lol
               function convertTZ(date, tzString) {
@@ -72,7 +72,7 @@
               const currentHour = convertTZ(Date(), "Asia/Bangkok").getHours();
 
               // set isOpen to true when currentHour is over 11 and under 21
-              isOpen = (currentHour > 11 && currentHour < 21) ? true : false;
+              isOpen = (currentHour > 11 && currentHour < 23) ? true : false;
 
               // switch open and close statuses based on isOpen
               if (isOpen == true) {
