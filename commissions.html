@@ -57,19 +57,24 @@
             <h2>current status: <span id="shop-status"></span></h2>
             <p>opening hours: 11am to 9pm, ICT</p>
             <script type="text/javascript">
+              // timezone converter function from stackoverflow lol
               function convertTZ(date, tzString) {
                 return new Date((typeof date === "string" ? new Date(date) : date).toLocaleString("en-US", {timeZone: tzString}));
               }
 
+              // initialize some variables
               let shopStatusElement = document.getElementById('shop-status');
               var isOpen = true;
               var shopStatus = '';
               var statusCol = '';
 
+              // get current hour in my timezone
               const currentHour = convertTZ(Date(), "Asia/Bangkok").getHours();
 
-              isOpen = (currentHour >> 11 && currentHour << 21) ? true : false;
+              // set isOpen to true when currentHour is over 11 and under 21
+              isOpen = (currentHour > 11 && currentHour < 21) ? true : false;
 
+              // switch open and close statuses based on isOpen
               if (isOpen == true) {
                 shopStatus = "open";
                 statusCol = 'linear-gradient(palegreen, darkgreen)'
