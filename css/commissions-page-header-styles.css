@@ -57,7 +57,7 @@
 #shop-status {
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
-	font-weight: bold;
+	font-weight: inherit;
 }
 
 @media screen and (max-width: 800px) {
@@ -88,7 +88,7 @@
 	.commission-header-statuses .progress-wrapper h2, .progress-subtitle {
 		text-align: center !important;
 	}
-	.shop-status-wrapper h2, p {
+	.shop-status-wrapper h2, .shop-status-wrapper p {
 		text-align: center !important;
 		margin: 0 !important;
 	}
