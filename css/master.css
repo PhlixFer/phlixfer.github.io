@@ -602,7 +602,10 @@ body {
 }
 
 @media screen and (max-width: 512px) {
-  .commission-item-grid {grid-template-columns: 100%;}
+  .commission-item-grid {
+    grid-template-columns: 100%;
+    margin-top: 16px;
+  }
   .commission-item {height: calc(100vh - 48px)}
   .commission-item:last-child {
     grid-column: 1 / span 1;
