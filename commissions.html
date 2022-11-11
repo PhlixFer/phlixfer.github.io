@@ -72,7 +72,7 @@
               const currentHour = convertTZ(Date(), "Asia/Bangkok").getHours();
 
               // set isOpen to true when currentHour is over 11 and under 21
-              isOpen = (currentHour > 11 && currentHour < 23) ? true : false;
+              isOpen = (currentHour >= 11 && currentHour <= 23) ? true : false;
 
               // switch open and close statuses based on isOpen
               if (isOpen == true) {
