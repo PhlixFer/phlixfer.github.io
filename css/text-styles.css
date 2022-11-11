@@ -104,8 +104,11 @@ h3 {
 }
 
 .title-container {
-  margin: 64px auto 0px auto;
-  max-width: 660px;
+  padding: 0 16px;
+  margin-top: 46px;
+  width: calc(100% - 32px);
+  display: flex;
+  justify-content: center;
 }
 
 .text-wrapper {
@@ -115,7 +118,7 @@ h3 {
 
 @media screen and (max-width: 800px) {
   .title-container {
-    margin: 80px 16px 0px 16px;
+    margin-top: 64px
   }
   .text-wrapper {
     margin: 0 16px;
