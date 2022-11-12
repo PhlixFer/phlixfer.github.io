@@ -880,7 +880,7 @@ body {
 /* vanity classes */
 
 .paused {
-  animation-play-state: paused;
+  animation-play-state: paused !important;
 }
 
 .transparent {
