@@ -32,25 +32,38 @@
         top: 80vh;
         position: absolute;
       }
+      .get-real-wrapper {
+        width: 100%;
+        height: 75vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
     </style>
   </head>
   <body id="body">
-    <button type="button" name="button-redirect" class="default-button-big text-body" onclick="getReal()" style="margin-top: 31vh;">get real</button>
 
-    <img src="media/get-real-cat.gif" alt="get real meow" id="real-pic" class="real-pic" style="display: none">
+    <div class="get-real-wrapper">
+      <div class="button-wrapper">
+        <button type="button" name="button-redirect" class="default-button-big text-body" onclick="getReal()">get real</button>
+      </div>
 
-    <script type="text/javascript">
-      function getReal() {
-        var x = document.getElementById('real-pic');
-        if (x.style.display === 'none') {
-          x.style.display = 'block';
-          alert('you\'ve gotten real!')
-        } else {
-          x.style.display = 'none';
-          alert('you\'ve de-real-ed yourself 😔');
+      <img src="media/get-real-cat.gif" alt="get real meow" id="real-pic" class="real-pic" style="display: none">
+
+      <script type="text/javascript">
+        function getReal() {
+          var x = document.getElementById('real-pic');
+          if (x.style.display === 'none') {
+            x.style.display = 'block';
+            alert('you\'ve gotten real!')
+          } else {
+            x.style.display = 'none';
+            alert('you\'ve de-real-ed yourself 😔');
+          }
         }
-      }
-    </script>
+      </script>
+    </div>
 
     <script src="scripts/add-common-elements.js" charset="utf-8"></script>
 
