@@ -40,7 +40,7 @@ var htmlFooter = `
         <div class="footer-section footer-copyright">
           <p class="text-footer">© Phlixfer on all content, MIT for website</p>
           <div style="flex-grow: 1;"></div>
-          <a href="https://ko-fi.com/phlixfer" target="_blank" class="text-footer" style="text-align: left;">Buy me a Coffee! ☕️</a>
+          <a href="support-me" target="_blank" class="text-footer" style="text-align: left;">💸 I'm in need of financial aid, support me here!</a>
         </div>
 	</div>`;
 var htmlNavbar = `

@@ -1,0 +1,33 @@
+.support-wrapper-grid {
+	display: grid;
+	grid-template-columns: repeat(2, calc(50% - 4px));
+	grid-gap: 8px;
+	width: 100%;
+	max-width: 900px;
+	margin-top: 16px;
+	margin-bottom: 64px;
+}
+
+.support-wrapper {
+	width: calc(100% - 40px);
+	height: fit-content;
+	min-height: 50vh;
+	border-radius: 20px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding: 16px 20px 20px;
+}
+
+.support-wrapper .footnotes {
+	margin: 4px 0;
+}
+
+@media screen and (max-width: 800px) {
+	.support-wrapper-grid {
+		grid-template-columns: 100%;
+	}
+	.support-wrapper {
+		min-height: fit-content;
+	}
+}

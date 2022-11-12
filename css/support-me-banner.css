@@ -1,0 +1,45 @@
+.support-me-banner-wrapper {
+  width: calc(100% - 32px);
+  padding: 0 16px;
+  display: flex;
+  justify-content: center;
+}
+
+.support-me-banner-wrapper-front-page {
+  position: absolute;
+  bottom: 0;
+}
+
+.support-me-banner-wrapper-front-page .support-me-banner {
+  opacity: 0;
+  animation: subtitle-pop-in;
+  animation-fill-mode: forwards;
+  animation-duration: 1.5s;
+  animation-delay: 3.5s;
+}
+
+.support-me-banner {
+  width: fit-content;
+  padding: 16px 18px;
+  margin-bottom: 16px;
+  /*height: 68px;*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(128, 128, 128, 0.2);
+  text-decoration: none;
+  border-radius: 13px;
+}
+
+.support-me-banner .text-title-3 {
+  text-align: center;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-image: linear-gradient(to bottom right, wheat, darkgoldenrod);
+}
+
+@media (prefers-color-scheme: light) {
+  .support-me-banner .text-title-3 {
+    background-image: linear-gradient(to bottom right, #FEBB0D, darkgoldenrod);
+  }
+}
