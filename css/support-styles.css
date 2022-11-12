@@ -11,7 +11,7 @@
 .support-wrapper {
 	width: calc(100% - 40px);
 	height: fit-content;
-	min-height: 50vh;
+	min-height: 60vh;
 	border-radius: 20px;
 	display: flex;
 	flex-direction: column;
