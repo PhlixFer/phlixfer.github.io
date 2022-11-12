@@ -104,7 +104,7 @@ body {
   height: fit-content;
   width: fit-content;
   padding: 8px 12px;
-  margin: 16px auto 32px auto;
+  margin: 8px 0 0;
   cursor: pointer;
   border: none;
   box-shadow: 0 0 0 #3DC3787f;
@@ -188,7 +188,7 @@ body {
 
 .box {
   height: fit-content;
-  padding: 10px 14px;
+  padding: 10px 14px 14px;
   margin: 0;
   width: fit-content;
   border-radius: 13px;
