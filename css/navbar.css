@@ -136,7 +136,7 @@
 
 @media screen and (max-width: 750px) {
   .navbar.active {
-    height: 325px;
+    height: 335px;
     flex-direction: column;
     box-shadow: 0 20px 40px #00000033;
   }
