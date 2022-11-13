@@ -1,16 +1,5 @@
-const commsDone = [
-	{
-		clientName: "dummy",
-		totalPaid: 0,
-	},
-]
-
 const totalToRaise = 1388;
 var total = 0;
-
-commsDone.forEach((item) => {
-	total += item.totalPaid;
-})
 
 var progressed = ( 100 * total ) / totalToRaise;
 
