@@ -28,11 +28,13 @@ var htmlFooter = `
             <div>
               <p class="text-footer-header">Socials</p>
 
-              <a href="https://twitter.com/phlixfer" target="_blank" class="footer-sb sb-twitter"></a>
-              <a href="https://instagram.com/phlixfer" target="_blank" class="footer-sb sb-insta"></a>
-              <a href="https://ko-fi.com/phlixfer" target="_blank" class="footer-sb sb-kofi"></a>
-              <a href="https://discord.gg/Q5P6t4jeam" target="_blank" class="footer-sb sb-discord"></a>
-              <a href="https://youtube.com/@phlixfer" target="_blank" class="footer-sb sb-youtube"></a>
+              <div class="footer-social-buttons-wrapper">
+                <a href="https://twitter.com/phlixfer" target="_blank" class="footer-sb sb-twitter"></a>
+                <a href="https://instagram.com/phlixfer" target="_blank" class="footer-sb sb-insta"></a>
+                <a href="https://ko-fi.com/phlixfer" target="_blank" class="footer-sb sb-kofi"></a>
+                <a href="https://discord.gg/Q5P6t4jeam" target="_blank" class="footer-sb sb-discord"></a>
+                <a href="https://youtube.com/@phlixfer" target="_blank" class="footer-sb sb-youtube"></a>
+              </div>
             </div>
           </div>
         </div>

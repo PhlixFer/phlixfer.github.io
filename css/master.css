@@ -523,29 +523,15 @@ body {
   flex-direction: column;
 }
 
-.footer-sitemap div:last-child {
-  flex-direction: row;
-  height: fit-content;
-}
-
-.text-footer-header {
-  font-weight: bold;
-  color: var(--footer-content-fill);
-  margin: 0;
-}
-
-.text-footer {
-  font-family: var(--font-families);
-  font-size: 13px;
-  color: var(--footer-content-fill);
-  text-decoration: none;
-  margin-top: 8px;
-  width: fit-content;
-  transition-duration: .3s;
-}
-
 .footer a:hover {
   color: var(--footer-content-fill-hover);
+}
+
+.footer-social-buttons-wrapper {
+  flex-direction: row !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: none !important;
 }
 
 @media screen and (max-width: 800px) {

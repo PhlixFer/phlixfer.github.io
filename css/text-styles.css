@@ -112,6 +112,22 @@ h3 {
   transition-duration: .4s;
 }
 
+.text-footer-header {
+  font-weight: bold;
+  color: var(--footer-content-fill);
+  margin: 0;
+}
+
+.text-footer {
+  font-family: var(--font-families);
+  font-size: 13px;
+  color: var(--footer-content-fill);
+  text-decoration: none;
+  margin-top: 8px;
+  width: fit-content;
+  transition-duration: .3s;
+}
+
 .title-container {
   padding: 0 16px;
   margin-top: 46px;
