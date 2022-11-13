@@ -36,7 +36,7 @@
           artAltText: 'ANV7 graffiti on brick wall',
           audioFilename: 'wave_b1.mp3',
           title: 'Wave',
-          description: 'My submission for FORM\'s All Nighter vol. 7\!'
+          description: 'My submission for FORM\'s All Nighter vol. 7\! Qui culpa enim exercitation deserunt ipsum ullamco ex elit culpa tempor amet.'
         },
         {
           artFilename: 'skye-cover.jpg',
@@ -84,9 +84,11 @@
       musicList.forEach((item)=>{
         let div = document.createElement('div');
         var audioBoxTemplate = `
-        <img src="media/art-pics/${item.artFilename}" alt="${item.artAltText}" class="audio-art">
-        <div>
-          <h2 class="text-header-audio-box">${item.title}</h2>
+        <div class="audio-art-wrapper">
+          <img src="media/art-pics/${item.artFilename}" alt="${item.artAltText}" class="audio-art">
+        </div>
+        <div class="audio-details-wrapper">
+          <h3 class="text-header-audio-box">${item.title}</h3>
           <p class="text-body-audio-box">${item.description}</p>
           <audio controls src="media/music/${item.audioFilename}" class="audio-embed text-body-1" style="margin:0;text-align:left;padding:0;">
             oh no, your browser isn't allowing audio embeds!

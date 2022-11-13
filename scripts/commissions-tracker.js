@@ -1,5 +1,5 @@
 const totalToRaise = 1388;
-var total = 0;
+var total = 70;
 
 var progressed = ( 100 * total ) / totalToRaise;
 

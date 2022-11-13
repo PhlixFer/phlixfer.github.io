@@ -320,24 +320,11 @@ body {
 }
 
 .text-header-audio-box {
-  font-family: var(--font-families);
-  font-size: 19px;
-  font-weight: bold;
-  text-align: left;
   margin: 0;
-  color: var(--main-text-col);
 }
 
 .text-body-audio-box {
-  font-family: var(--font-families);
-  font-size: 15px;
-  font-weight: 400;
-  text-align: left;
-  height: 86px;
-  margin: 0;
-  margin-bottom: 10px;
-  color: var(--main-text-col);
-  text-decoration: none;
+  margin: 0 0 8px 0;
 }
 
 .audio-box-grid {
@@ -358,10 +345,26 @@ body {
   box-shadow: 0 2px 2px #0000003f;
 }
 
+.audio-art-wrapper {
+  height: 100%;
+  display: flex;
+  align-items: start;
+}
+
+.audio-details-wrapper {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+.audio-details-wrapper p {
+  flex-grow: 1;
+}
+
 .audio-embed {
   width: 100%;
   border-radius: 8px;
-  height: 31px;
   box-shadow: 0 2px 2px #0000003f;
   position: relative;
   bottom: 0;
@@ -369,11 +372,9 @@ body {
 
 @media screen and (max-width: 800px) {
   .text-body-audio-box {
-    height: 36px;
   }
   .audio-box-grid {
     max-width: calc(100vw - 40px);
-    height: 100px;
     grid-template-columns: 110px auto;
   }
   .audio-art {
@@ -461,7 +462,7 @@ body {
 }
 
 .footer li {
-  font-size: 12px;
+  font-size: 13px;
   text-align: left;
   color: var(--footer-content-fill);
 }
@@ -535,7 +536,7 @@ body {
 
 .text-footer {
   font-family: var(--font-families);
-  font-size: 11px;
+  font-size: 13px;
   color: var(--footer-content-fill);
   text-decoration: none;
   margin-top: 8px;
