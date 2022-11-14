@@ -78,6 +78,16 @@
   text-align: center;
 }
 
+.modal-details {
+  padding: 16px 20px 20px;
+  width: 100vw;
+  max-width: 600px;
+}
+
+.modal-details * {
+  text-align: left !important;
+}
+
 @media screen and (max-width: 800px) {
   .modal-panel {
     width: calc(100% - 16px);

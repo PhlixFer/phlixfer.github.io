@@ -21,7 +21,7 @@
   --table-col: rgb(48, 48, 48);
   --box-lvl-1-col: #212121;
   --main-big-button-col: mediumseagreen;
-  --modal-panel-col: #24242499;
+  --modal-panel-col: #282828b3;
   --image-outline-col: rgba(255, 255, 255, 0.1);
   --divider-col: rgba(255, 255, 255, 0.1);
 }
@@ -46,7 +46,7 @@
     --table-col: rgb(220, 220, 220);
     --box-lvl-1-col: #e5e5e5;
     --main-big-button-col: mediumseagreen;
-    --modal-panel-col: #ffffff99;
+    --modal-panel-col: #ffffffb8;
     --image-outline-col: rgba(0, 0, 0, 0.1);
     --divider-col: rgba(0, 0, 0, 0.1);
   }
@@ -403,7 +403,7 @@ body {
   flex-wrap: wrap;
   width: 100%;
 }
-.button-chips a:not(last-child) {
+.button-chips button:not(last-child), .button-chips a:not(last-child) {
   margin-right: 8px;
 }
 
