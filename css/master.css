@@ -8,7 +8,7 @@
 
 @supports (font-variation-settings: normal) {
   :root {
-    --font-families: apple-system, 'Inter var', system-ui, sans-serif, 'Apple Color Emoji';
+    --font-families: -apple-system, 'Inter var', system-ui, sans-serif, 'Apple Color Emoji';
   }
 }
 
