@@ -2,6 +2,7 @@ p {
   font-size: 17px;
   font-weight: normal;
   text-align: left;
+  line-height: 22px;
   margin: 0;
   color: var(--main-text-col);
 }
@@ -19,6 +20,7 @@ h1 {
   font-size: 28px;
   font-weight: bold;
   text-align: left;
+  line-height: 34px;
   margin-bottom: 5px;
   color: var(--main-text-col);
 }
@@ -27,6 +29,7 @@ h2 {
   font-size: 22px;
   font-weight: bold;
   text-align: left;
+  line-height: 28px;
   margin: 0 !important;
   color: var(--main-text-col);
 }
@@ -35,6 +38,7 @@ h3 {
   font-size: 20px;
   font-weight: bold;
   text-align: left;
+  line-height: 24px;
   margin: 0;
   color: var(--main-text-col);
 }
@@ -43,6 +47,7 @@ h3 {
   font-family: var(--font-families);
   font-size: 34px;
   font-weight: bold;
+  line-height: 41px;
   text-align: center;
   color: var(--main-text-col);
 }
@@ -69,6 +74,7 @@ h3 {
   font-size: 17px;
   font-weight: 700;
   text-align: center;
+  line-height: 22px;
   margin-top: 8px;
   margin-bottom: 8px;
   color: var(--main-text-col);
@@ -121,6 +127,7 @@ h3 {
 .text-footer {
   font-family: var(--font-families);
   font-size: 13px;
+  line-height: 18px;
   color: var(--footer-content-fill);
   text-decoration: none;
   margin-top: 8px;
