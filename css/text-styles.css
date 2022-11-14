@@ -50,6 +50,7 @@ h3 {
   line-height: 41px;
   text-align: center;
   color: var(--main-text-col);
+  margin: 0;
 }
 
 .text-title-1 {
