@@ -48,7 +48,6 @@ h3 {
   font-size: 34px;
   font-weight: bold;
   line-height: 41px;
-  text-align: center;
   color: var(--main-text-col);
   margin: 0;
 }
@@ -138,10 +137,14 @@ h3 {
 
 .title-container {
   padding: 0 16px;
-  margin-top: 46px;
+  margin-top: 64px;
   width: calc(100% - 32px);
   display: flex;
   justify-content: center;
+}
+
+.title-container .text-title {
+  text-align: center;
 }
 
 .text-wrapper {
@@ -151,7 +154,7 @@ h3 {
 
 @media screen and (max-width: 800px) {
   .title-container {
-    margin-top: 64px
+    margin-top: 80px
   }
   .text-wrapper {
     margin: 0 16px;
