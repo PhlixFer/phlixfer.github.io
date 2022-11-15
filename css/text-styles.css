@@ -158,6 +158,16 @@ a {
   margin: 0 auto;
 }
 
+.section-info-text {
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+.section-info-text * {
+  text-align: center;
+  padding: 0 16px;
+}
+
 @media screen and (max-width: 800px) {
   .title-container {
     margin-top: 80px
