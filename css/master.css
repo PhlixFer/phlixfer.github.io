@@ -636,7 +636,7 @@ body {
 .question-container .text-body {text-align: left;margin: 0;}
 
 @media screen and (max-width: 800px) {
-  .question-container {margin: 16px 20px;}
+  .question-container {margin: 8px 0;}
 }
 
 /* price list styling */
