@@ -1,8 +1,13 @@
+.commission-page-header-wrapper {
+	display: flex;
+	justify-content: center;
+	margin-top: 64px;
+}
+
 .commission-page-header-grid {
 	display: grid;
 	grid-template-columns: repeat(2, calc(50% - 8px));
 	grid-gap: 16px;
-	margin: 64px auto 48px auto;
 	max-width: 900px;
 }
 
@@ -14,7 +19,7 @@
 
 .commission-header-title * {
 	text-align: right;
-	margin-top: 0;
+	margin: 0;
 }
 
 .commission-header-title .button-list {
