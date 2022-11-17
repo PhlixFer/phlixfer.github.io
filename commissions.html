@@ -24,7 +24,7 @@
   <body id="body">
     <div class="modal-bg" id="modalBackground">
       <div class="modal-panel paused" id="modalPanel">
-        <iframe src="https://www.craft.do/s/TSnsgfT0wrzlko"></iframe>
+        <div id="modal-content"></div>
         <div class="modal-close" onclick="closeModal()">
           <p>Close</p>
         </div>
@@ -40,15 +40,9 @@
 
           <div class="button-list">
             <a href="https://twitter.com/phlixfer" target="_blank" class="sb sb-twitter"></a>
-            <div class="sb sb-discord" onclick="copyUsername()"></div>
+            <div class="sb sb-discord" onclick="openModal('dscrd')"></div>
             <a href="mailto:phlixfermusic@gmail.com" target="_blank" class="sb sb-mail"></a>
             <!-- <a href="https://ko-fi.com/phlixfer" target="_blank" class="sb sb-kofi"></a> -->
-            <script type="text/javascript">
-              function copyUsername() {
-                navigator.clipboard.writeText("phlixfer#3924");
-                alert("my username has been copied to your clipboard");
-              }
-            </script>
           </div>
         </div>
 
@@ -185,7 +179,7 @@
     </div>
 
     <div class="button-wrapper">
-      <a href="javascript:void(0);" class="default-button-big text-body" onclick="openModal()">
+      <a href="javascript:void(0);" class="default-button-big text-body" onclick="openModal('terms')">
         Read the Terms!
       </a>
     </div>
@@ -200,10 +194,36 @@
         modalPanel.className = "modal-panel";
       }
 
-      function openModal() {
+      function openModal(content) {
         console.log("modal opened!");
         modalBackground.className = "modal-bg modal-bg-shown";
         modalPanel.className = "modal-panel";
+        let modalContent = document.getElementById('modal-content');
+
+        if (content == 'terms') {
+          modalContent.innerHTML = `<iframe src="https://www.craft.do/s/TSnsgfT0wrzlko"></iframe>`
+        } if (content == 'dscrd') {
+          modalContent.innerHTML = `
+          <div class="discord-modal">
+            <div class="discord-modal-item">
+              <p style="font-weight:bold;">My username</p>
+              <div class="sb-modal sb-discord-username" onclick="copyUsername()"></div>
+              <p><i>phlixfer#3924</i></p>
+              <div class="success-alert text-body transparent" id="successAlert">
+                copied!
+              </div>
+            </div>
+
+            <div class="discord-modal-item">
+              <p style="font-weight:bold;">Join my server!</p>
+              <a href="https://discord.gg/Q5P6t4jeam" target="_blank" class="sb-modal sb-discord-server"></a>
+              <p>the flower place</p>
+            </div>
+          </div>
+          `
+        } else {
+          console.log('invalid modal argument 🤷‍♀️')
+        }
       }
     </script>
 
