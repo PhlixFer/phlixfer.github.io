@@ -28,8 +28,11 @@
   background-repeat: no-repeat;
 }
 
+.fullscreen-image-info h2 {
+  color: rgb(245, 245, 245);
+}
 .fullscreen-image-info p {
-  color: var(--secondary-text-col);
+  color: rgba(245, 245, 245, 0.65);
 }
 
 .fullscreen-image-info {
