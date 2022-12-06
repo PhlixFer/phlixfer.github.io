@@ -5,6 +5,7 @@
   position: fixed;
   background-color: #0000007f;
   -webkit-backdrop-filter: blur(30px) saturate(140%);
+  backdrop-filter: blur(30px) saturate(140%);
   z-index: 97;
   display: none;
 }
