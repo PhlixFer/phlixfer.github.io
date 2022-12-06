@@ -42,66 +42,79 @@
             filename: 'iwd.jpg',
             alt: 'I Wanna D**',
             aspectRatio: 1.0,
+            year: "Sep 2022",
           },
           {
             filename: 'twistoid.jpg',
             alt: 'Twistoid',
             aspectRatio: 1.0,
+            year: "Jun 2022",
           },
           {
             filename: 'radical-shapes-1.jpg',
             alt: 'Radical Shapes',
             aspectRatio: 0.6666666667,
+            year: "May 2022",
           },
           {
             filename: 'toon-heart.jpg',
             alt: 'Toon Heart',
             aspectRatio: 1.25,
+            year: "Jan 2022",
           },
           {
             filename: 'growing-pains.jpeg',
             alt: 'Growing Pains',
             aspectRatio: 1.0,
+            year: "Oct 2021",
           },
           {
             filename: 'liquid-heart.jpeg',
             alt: 'Liquid Heart',
             aspectRatio: 1.0,
+            year: "Dec 2021",
           },
           {
             filename: 'someone-elses-far-away.jpg',
             alt: 'Someone Else\'s Far Away',
             aspectRatio: 1.25,
+            year: "Oct 2021",
           },
           {
             filename: 'will-of-the-winding-forest.jpeg',
             alt: 'Will of the Winding Forest',
             aspectRatio: 1.0,
+            year: "Oct 2021",
           },
           {
             filename: 'goddess-of-the-hunt.jpg',
             alt: 'Goddess of the Hunt',
             aspectRatio: 1.25,
+            year: "Oct 2021",
           },
           {
             filename: 'gay-crystals.jpg',
             alt: 'Gay Crystals',
             aspectRatio: 1.0,
+            year: "Jan 2022",
           },
           {
             filename: 'ley-lines.jpeg',
             alt: 'Ley Lines',
             aspectRatio: 1.25,
+            year: "Oct 2021",
           },
           {
             filename: 'Flora_Lined_Metropolis.jpg',
             alt: 'Flora Lined Metropolis',
             aspectRatio: 1.25,
+            year: "Oct 2021",
           },
           {
             filename: '1984-Macintosh.jpeg',
             alt: 'Macintosh 1984',
             aspectRatio: 1.0,
+            year: "May 2021",
           },
         ];
 
@@ -124,7 +137,7 @@
 
           div.appendChild(h2);
 
-          div.setAttribute("onclick",'imgFullscreenView("media/art-pics/'+item.filename+'");');
+          div.setAttribute("onclick",`imgFullscreenView( "media/art-pics/${item.filename}", "${item.alt}", "${item.year}");`);
 
           if ( constant % 2 == 0) {
             document.getElementById("img-container-column-1").appendChild(div);
@@ -141,7 +154,7 @@
 
         // open and close fullscreen image modal functions
 
-        function imgFullscreenView(filename) {
+        function imgFullscreenView(filename, title, year) {
           let backgroundDimmer = document.createElement('div');
           backgroundDimmer.className = 'modal-bg';
           backgroundDimmer.id = 'background-dimmer';
@@ -155,12 +168,26 @@
           let fullscreenImage = document.createElement('div');
           fullscreenImage.className = 'fullscreen-image';
           fullscreenImage.style.backgroundImage = 'url('+filename+')';
-          // fullscreenImage.src = filename;
 
           fullscreenImageWrapper.appendChild(fullscreenImage);
           backgroundDimmer.appendChild(fullscreenImageWrapper);
 
+          // peice info dom elements
 
+          let pieceInfo = document.createElement('div');
+          pieceInfo.className = 'fullscreen-image-info';
+
+          let pieceTitle = document.createElement('h2');
+          pieceTitle.textContent = title;
+
+          let pieceYear = document.createElement('p');
+          pieceYear.textContent = year;
+
+          pieceInfo.appendChild(pieceTitle);
+          pieceInfo.appendChild(pieceYear);
+          backgroundDimmer.appendChild(pieceInfo);
+
+          // dissmiss button element
           let modalDismissalButton = document.createElement('div');
           modalDismissalButton.className = 'modal-dismiss-button';
           modalDismissalButton.setAttribute('onclick', 'dismissImgFullscreenView();');
