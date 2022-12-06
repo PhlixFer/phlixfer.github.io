@@ -35,6 +35,7 @@
     <div class="img-container transparent" id="img-container">
       <div class="img-container-column paused" id="img-container-column-1"></div>
       <div class="img-container-column paused" id="img-container-column-2"></div>
+      <script type="text/javascript" src="scripts/animate-function.js"></script>
       <script type="text/javascript">
         const images = [
           {
@@ -123,6 +124,8 @@
 
           div.appendChild(h2);
 
+          div.setAttribute("onclick",'imgFullscreenView("media/art-pics/'+item.filename+'");');
+
           if ( constant % 2 == 0) {
             document.getElementById("img-container-column-1").appendChild(div);
           } else {
@@ -131,6 +134,71 @@
           
           constant += 1;
         })
+
+        //animation timing thing
+
+        let quadEaseInOut = makeEaseInOut(quad);
+
+        // open and close fullscreen image modal functions
+
+        function imgFullscreenView(filename) {
+          let backgroundDimmer = document.createElement('div');
+          backgroundDimmer.className = 'modal-bg';
+          backgroundDimmer.id = 'background-dimmer';
+          backgroundDimmer.style.display = 'block';
+
+
+          let fullscreenImageWrapper = document.createElement('div');
+          fullscreenImageWrapper.className = 'fullscreen-image-wrapper';
+          fullscreenImageWrapper.id = 'fullscreen-image-wrapper';
+
+          let fullscreenImage = document.createElement('div');
+          fullscreenImage.className = 'fullscreen-image';
+          fullscreenImage.style.backgroundImage = 'url('+filename+')';
+          // fullscreenImage.src = filename;
+
+          fullscreenImageWrapper.appendChild(fullscreenImage);
+          backgroundDimmer.appendChild(fullscreenImageWrapper);
+
+
+          let modalDismissalButton = document.createElement('div');
+          modalDismissalButton.className = 'modal-dismiss-button';
+          modalDismissalButton.setAttribute('onclick', 'dismissImgFullscreenView();');
+
+          backgroundDimmer.appendChild(modalDismissalButton);
+
+          // animate modal sliding and fading in with timing functions and animation function from animate-function.js
+
+          animate({
+            duration: 250,
+            timing: quadEaseInOut,
+            draw(progress) {
+              backgroundDimmer.style.opacity = progress * 100 + '%';
+              fullscreenImageWrapper.style.top = (1 - progress) * 20 + 'px';
+            }
+          });
+
+          document.getElementById('body').appendChild(backgroundDimmer);
+        }
+
+        function dismissImgFullscreenView() {
+          let backgroundDimmer = document.getElementById('background-dimmer');
+          let fullscreenImageWrapper = document.getElementById('fullscreen-image-wrapper');
+
+          // animate modal sliding and fading out with timing functions and animation function from animate-function.js
+
+          animate({
+            duration: 250,
+            timing: quadEaseInOut,
+            draw(progress) {
+              backgroundDimmer.style.opacity = (1 - progress) * 100 + '%';
+              fullscreenImageWrapper.style.top = progress * 20 + 'px';
+              if (progress == 1) {
+                backgroundDimmer.parentNode.removeChild(backgroundDimmer);
+              }
+            }
+          });
+        }
       </script>
     </div>
 
