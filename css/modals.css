@@ -130,11 +130,11 @@
 .modal-dismiss-button {
   position: absolute;
 
-  top: 96px;
-  left: 32px;
+  top: 80px;
+  left: 24px;
 
-  width: 38px;
-  height: 38px;
+  width: 44px;
+  height: 44px;
 
   background-repeat: no-repeat;
   background-position: center;
