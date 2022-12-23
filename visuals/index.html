@@ -12,11 +12,11 @@
     <meta name="og:image:height" content="627">
     <meta name="og:url" content="https://phlixfer.github.io/visuals/">
 
-    <link rel="stylesheet" href="css/master.css">
-    <link rel="stylesheet" href="css/master.css">
-    <link rel="icon" href="media/favicon.svg">
-    <link rel="icon" href="media/favicon.ico">
-    <script src="scripts/light-mode-check.js" charset="utf-8"></script>
+    <link rel="stylesheet" href="/css/master.css">
+    <link rel="stylesheet" href="/css/master.css">
+    <link rel="icon" href="/media/favicon.svg">
+    <link rel="icon" href="/media/favicon.ico">
+    <script src="/scripts/light-mode-check.js" charset="utf-8"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
     <title>Visuals | Phlixfer</title>
   </head>
@@ -26,7 +26,7 @@
     </div>
 
     <div class="button-wrapper">
-      <a href="commissions" class="default-button-big text-body">commission me!</a>
+      <a href="/commissions" class="default-button-big text-body">commission me!</a>
     </div>
 
     <div class="loading-screen" id="loading-screen">
@@ -35,7 +35,7 @@
     <div class="img-container transparent" id="img-container">
       <div class="img-container-column paused" id="img-container-column-1"></div>
       <div class="img-container-column paused" id="img-container-column-2"></div>
-      <script type="text/javascript" src="scripts/animate-function.js"></script>
+      <script type="text/javascript" src="/scripts/animate-function.js"></script>
       <script type="text/javascript">
         const images = [
           {
@@ -126,7 +126,7 @@
 
         function imgFrame(element, filename, aspectRatio) {
           element.classList.add('img-frame');
-          element.style.backgroundImage = 'url(media/art-pics/'+filename+')';
+          element.style.backgroundImage = 'url(/media/art-pics/'+filename+')';
           element.style.paddingTop = aspectRatio * 100 + '%';
         }
 
@@ -143,7 +143,7 @@
 
           div.appendChild(h2);
 
-          div.setAttribute("onclick",`imgFullscreenView( "media/art-pics/${item.filename}", "${item.alt}", "${item.year}");`);
+          div.setAttribute("onclick",`imgFullscreenView( "/media/art-pics/${item.filename}", "${item.alt}", "${item.year}");`);
 
           if ( constant % 2 == 0) {
             document.getElementById("img-container-column-1").appendChild(div);
@@ -257,7 +257,7 @@
       };
     </script>
 
-    <script src="scripts/add-common-elements.js" charset="utf-8"></script>
+    <script src="/scripts/add-common-elements.js" charset="utf-8"></script>
     <script type="text/javascript">
       let ol = document.createElement('ol');
       let li = document.createElement('li');

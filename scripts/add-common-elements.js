@@ -10,20 +10,20 @@ var htmlFooter = `
             <div>
               <p class="text-footer-header">Sitemap</p>
 
-              <a href="index" class="text-footer">Home</a>
-              <a href="visuals" class="text-footer">Visuals</a>
-              <a href="music" class="text-footer">Music</a>
-              <a href="contact" class="text-footer">Contact</a>
-              <a href="commissions" class="text-footer">Commissions</a>
-              <a href="about" class="text-footer">About</a>
-              <a href="get-real" class="text-footer">Get Real</a>
-              <a href="test" class="text-footer">Test</a>
+              <a href="/" class="text-footer">Home</a>
+              <a href="/visuals" class="text-footer">Visuals</a>
+              <a href="/music" class="text-footer">Music</a>
+              <a href="/contact" class="text-footer">Contact</a>
+              <a href="/commissions" class="text-footer">Commissions</a>
+              <a href="/about" class="text-footer">About</a>
+              <a href="/get-real" class="text-footer">Get Real</a>
+              <a href="/test" class="text-footer">Test</a>
             </div>
             <div>
               <p class="text-footer-header">Cool Links</p>
 
               <a href="https://throne.me/u/phlixfer" target="_blank" class="text-footer">My Throne Wishlist!</a>
-              <a href="wishlist" class="text-footer">my upgrade wishlist;;</a>
+              <a href="/wishlist" class="text-footer">my upgrade wishlist;;</a>
             </div>
             <div>
               <p class="text-footer-header">Socials</p>
@@ -51,12 +51,12 @@ var htmlNavbar = `
         </div>
       </a>
       <a href="/">Home</a>
-      <a href="visuals">Visuals</a>
-      <a href="music">Music</a>
-      <a href="contact">Contact</a>
-      <a href="commissions">Commissions</a>
-      <a href="about">About</a>
-      <a href="get-real">Get Real</a>
+      <a href="/visuals">Visuals</a>
+      <a href="/music">Music</a>
+      <a href="/contact">Contact</a>
+      <a href="/commissions">Commissions</a>
+      <a href="/about">About</a>
+      <a href="/get-real">Get Real</a>
       <div class="navbar-icon-container">
         <a href="https://ko-fi.com/phlixfer" target="_blank" class="navbar-icon">
           <svg width="100%" height="100%" viewBox="0 0 600 600" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
@@ -85,20 +85,22 @@ commonElements.forEach((item)=>{
 		div.className = "navbar";
 		div.id = "navbar";
 
-    if (document.title == "Phlixfer") {
-      div.className += " paused";
-    }
-		body.insertBefore(div, body.firstChild);
+                if (document.title == "Phlixfer") {
+                	div.className += " paused";
+                }
+                
+                let script = document.createElement('script');
+                script.src = '/media/hamborgor_anim.hyperesources/hamborgoranim_hype_generated_script.js?62498';
 
-    let script = document.createElement('script');
-    script.src = 'media/hamborgor_anim.hyperesources/hamborgoranim_hype_generated_script.js?62498';
-    let burgerMenu = document.getElementById('hamborgoranim_hype_container');
-    burgerMenu.appendChild(script);
+            	body.insertBefore(div, body.firstChild);
+        
+            	let burgerMenu = document.getElementById('hamborgoranim_hype_container');
+            	burgerMenu.appendChild(script);
 
 	} else {
 		footer.innerHTML = htmlFooter;
 		footer.className = "footer";
-    footer.id = "footer"
+    		footer.id = "footer"
 		body.appendChild(footer);
 	}
 });

@@ -12,11 +12,11 @@
     <meta name="og:image:height" content="627">
     <meta name="og:url" content="https://phlixfer.github.io/music/">
 
-    <link rel="stylesheet" href="css/master.css">
-    <link rel="stylesheet" href="css/master.css">
-    <link rel="icon" href="media/favicon.svg">
-    <link rel="icon" href="media/favicon.ico">
-    <script src="scripts/light-mode-check.js" charset="utf-8"></script>
+    <link rel="stylesheet" href="/css/master.css">
+    <link rel="stylesheet" href="/css/master.css">
+    <link rel="icon" href="/media/favicon.svg">
+    <link rel="icon" href="/media/favicon.ico">
+    <script src="/scripts/light-mode-check.js" charset="utf-8"></script>
     <title>Music | Phlixfer</title>
   </head>
   <body id="body">
@@ -85,12 +85,12 @@
         let div = document.createElement('div');
         var audioBoxTemplate = `
         <div class="audio-art-wrapper">
-          <img src="media/art-pics/${item.artFilename}" alt="${item.artAltText}" class="audio-art">
+          <img src="/media/art-pics/${item.artFilename}" alt="${item.artAltText}" class="audio-art">
         </div>
         <div class="audio-details-wrapper">
           <h3 class="text-header-audio-box">${item.title}</h3>
           <p class="text-body-audio-box">${item.description}</p>
-          <audio controls src="media/music/${item.audioFilename}" class="audio-embed text-body-1" style="margin:0;text-align:left;padding:0;">
+          <audio controls src="/media/music/${item.audioFilename}" class="audio-embed text-body-1" style="margin:0;text-align:left;padding:0;">
             oh no, your browser isn't allowing audio embeds!
           </audio>
         </div>`;
@@ -102,7 +102,7 @@
       });
     </script>
 
-    <script src="scripts/add-common-elements.js" charset="utf-8"></script>
+    <script src="/scripts/add-common-elements.js" charset="utf-8"></script>
 
   </body>
 </html>

@@ -27,6 +27,7 @@
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
+  z-index: 50;
 }
 
 .fullscreen-image-info h2 {
@@ -144,6 +145,8 @@
   -webkit-backdrop-filter: blur(30px) saturate(180%);
 
   cursor: pointer;
+  
+  z-index: 51;
 
   transition-duration: 0.2s;
 }
