@@ -42,7 +42,7 @@ var htmlFooter = `
         <div class="footer-section footer-copyright">
           <p class="text-footer">© Phlixfer on all content, MIT for website</p>
           <div style="flex-grow: 1;"></div>
-          <a href="support-me" class="text-footer" style="text-align: left;">💸 I'm in need financially, support me here!</a>
+          <a href="/support-me" class="text-footer" style="text-align: left;">💸 I'm in need financially, support me here!</a>
         </div>
 	</div>`;
 var htmlNavbar = `
