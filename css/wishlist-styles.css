@@ -53,7 +53,10 @@
 .wishlist-item:nth-child(4) .wishlist-img {
 	background-size: 220px;
 }
-.wishlist-item:nth-child(6) .wishlist-img {
+.wishlist-item:nth-child(3) .wishlist-img {
+	background-size: 180px;
+}
+.wishlist-item:nth-child(7) .wishlist-img {
 	background-size: 80%;
 }
 .wishlist-item:nth-child(2) .wishlist-img {
@@ -119,11 +122,14 @@
 	.wishlist-item:nth-child(8) .wishlist-img {
 		background-size: 120px;
 	}
-	.wishlist-item:nth-child(6) .wishlist-img {
+	.wishlist-item:nth-child(7) .wishlist-img {
 		background-size: 150px;
 	}
 	.wishlist-item:nth-child(4) .wishlist-img {
 		background-size: 150px;
+	}
+	.wishlist-item:nth-child(3) .wishlist-img {
+		background-size: 140px;
 	}
 }
 
@@ -147,10 +153,13 @@
 	.wishlist-item:nth-child(8) .wishlist-img {
 		background-size: 110px;
 	}
-	.wishlist-item:nth-child(6) .wishlist-img {
+	.wishlist-item:nth-child(7) .wishlist-img {
 		background-size: 180px;
 	}
 	.wishlist-item:nth-child(4) .wishlist-img {
 		background-size: 150px;
+	}
+	.wishlist-item:nth-child(3) .wishlist-img {
+		background-size: 140px;
 	}
 }
