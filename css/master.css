@@ -5,6 +5,7 @@
 @import url(modals.css);
 @import url(text-styles.css);
 @import url(support-me-banner.css);
+@import url(about-panels.css);
 
 @supports (font-variation-settings: normal) {
   :root {
@@ -24,6 +25,7 @@
   --modal-panel-col: #282828b3;
   --image-outline-col: rgba(255, 255, 255, 0.1);
   --divider-col: rgba(255, 255, 255, 0.1);
+  --elevated-body: #181818;
 }
 
 * {
@@ -49,6 +51,7 @@
     --modal-panel-col: #ffffffb8;
     --image-outline-col: rgba(0, 0, 0, 0.1);
     --divider-col: rgba(0, 0, 0, 0.1);
+    --elevated-body: #e3e3e3;
   }
   .footer {
     --footer-content-fill: rgba(18, 18, 18, 0.55);
@@ -689,85 +692,6 @@ body {
   margin: 0;
   margin-top: 4px;
   margin-bottom: 6px;
-}
-
-/* colourful panel styling */
-
-.panel-container-margins {
-  margin: 0;
-}
-
-.panel-container {
-  margin: 32px auto;
-  max-width: 900px;
-  display: flex;
-  justify-content: center;
-  flex-flow: row wrap;
-  align-items: center;
-}
-
-.panel-container div {
-  border-radius: 24px;
-  margin-bottom: 18px;
-  max-width: 260px;
-  transition-duration: .3s;
-  padding: 14px 20px 20px 20px;
-}
-
-.panel-container div:first-child {
-  margin-right: 18px;
-}
-
-.panel-title {
-  margin: 0;
-  color: rgb(245, 245, 245);
-}
-
-.panel-text {
-  margin: 0;
-  text-align: left;
-  color: rgb(245, 245, 245);
-}
-
-.panel-red {
-  background-image: linear-gradient(180deg, #F13838, #CA0B0B);
-}
-
-.panel-green {
-  background-image: linear-gradient(180deg, #17D47E, #079253);
-}
-
-.panel-blue {
-  background-image: linear-gradient(180deg, #3397F2, #0465BD);
-}
-
-@media screen and (max-width: 800px) {
-  .panel-container {
-    grid-template-columns: auto auto;
-  }
-  .panel-container div {
-    max-width: 100%;
-    margin-right: 0;
-  }
-  .panel-container-margins {
-    margin: 20px;
-  }
-  .panel-container div:first-child {
-    margin-right: 0;
-  }
-}
-
-@media screen and (max-width: 750px) {
-  .panel-container {
-    grid-template-columns: auto;
-  }
-  .panel-container div {
-    width: 100%;
-    margin-right: 0;
-  }
-  .panel-container-margins {
-    margin: 20px;
-  }
 }
 
 /* add image boxes */
