@@ -47,61 +47,71 @@
 				label: 'MacBook Pro 16\"',
 				description: 'M1 Max, 64GB memory, 1TB storage',
 				price: 3100,
-				imageLink: 'https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/mbp-14-digitalmat-gallery-1-202111?wid=728&hei=666&fmt=png-alpha&.v=1635183223000'
+				imageLink: 'https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/mbp-14-digitalmat-gallery-1-202111?wid=728&hei=666&fmt=png-alpha&.v=1635183223000',
+                id: 'mbp'
 			},
 			{
 				label: 'iPhone 14 Pro',
 				description: '256GB storage',
 				price: 1219,
-				imageLink: 'https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone14pro-digitalmat-gallery-2-202209?wid=728&hei=666&fmt=png-alpha&.v=1660830896841'
+				imageLink: 'https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone14pro-digitalmat-gallery-2-202209?wid=728&hei=666&fmt=png-alpha&.v=1660830896841',
+                id: 'iphn'
 			},
             {
             	label: 'Climara 50 Patches',
                 description: 'for 3 boxes',
                 price: 87,
-                imageLink: 'https://cdn.shopify.com/s/files/1/1228/7332/products/Climara_50_dermal_patch_3.8_mg950c28e7-9e95-4af9-a24e-9fab001ebf12_1024x1024.GIF?v=1511972016'
+                imageLink: 'https://cdn.shopify.com/s/files/1/1228/7332/products/Climara_50_dermal_patch_3.8_mg950c28e7-9e95-4af9-a24e-9fab001ebf12_1024x1024.GIF?v=1511972016',
+                id: 'clptch'
             },
 			{
 				label: 'AirPods Pro',
 				description: '2nd generation',
 				price: 279,
-				imageLink: 'https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MQD83?wid=1000&hei=1000&fmt=jpeg&qlt=90&.v=1660803972361'
+				imageLink: 'https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MQD83?wid=1000&hei=1000&fmt=jpeg&qlt=90&.v=1660803972361',
+                id: 'arpds'
 			},
 			{
 				label: 'MiniFuse 2',
 				description: 'from Arturia',
 				price: 149,
-				imageLink: 'https://medias.arturia.net/cdn-cgi/image/quality=60,width=null/images/products/minifuse-2/minifuse-2-image.png'
+				imageLink: 'https://medias.arturia.net/cdn-cgi/image/quality=60,width=null/images/products/minifuse-2/minifuse-2-image.png',
+                id: 'mnfse'
 			},
             {
             	label: 'Launchpad X',
                 description: 'Refurbished',
                 price: 152,
                 imageLink: 'https://novationmusic.com/sites/novation/files/lpx-overhead-chromatic-2000.png',
+                id: 'lnchpd'
             },
 			{
 				label: 'HD 560S',
 				description: 'from Sennheiser',
 				price: 257,
-				imageLink: 'https://cdn.shopify.com/s/files/1/0314/8863/9112/products/product_detail_x2_desktop_HD_560S_sennheiser_01_9151bd89-fc3a-411b-9b06-5578b380c1b7_1024x1024@2x.jpg?v=1655366982'
+				imageLink: 'https://cdn.shopify.com/s/files/1/0314/8863/9112/products/product_detail_x2_desktop_HD_560S_sennheiser_01_9151bd89-fc3a-411b-9b06-5578b380c1b7_1024x1024@2x.jpg?v=1655366982',
+                id: 'hd560s'
 			},
 			{
 				label: 'T7 SSD',
 				description: '2TB',
 				price: 228,
-				imageLink: 'https://m.media-amazon.com/images/I/91YfRIy7kYL._AC_SL1500_.jpg'
+				imageLink: 'https://m.media-amazon.com/images/I/91YfRIy7kYL._AC_SL1500_.jpg',
+                id: 't7ssd'
 			},
 			{
 				label: 'Magic Wand Original',
 				description: 'for massages, ofc haha',
 				price: 112,
-				imageLink: 'https://m.media-amazon.com/images/I/71DHxdDWxGL._AC_SL1500_.jpg'
+				imageLink: 'https://m.media-amazon.com/images/I/71DHxdDWxGL._AC_SL1500_.jpg',
+                id: 'mgcwnd'
 			},
 			{
 				label: 'Magic Keyboard Case',
 				description: '12.9\" white variant, bc aesthetics',
 				price: 395,
-				imageLink: 'https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MJQL3LL_AV4?wid=800&hei=800&fmt=jpeg&qlt=90&.v=1664549292349'
+				imageLink: 'https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MJQL3LL_AV4?wid=800&hei=800&fmt=jpeg&qlt=90&.v=1664549292349',
+                id: 'mgckybrd'
 			},
 		]
 
@@ -120,6 +130,7 @@
     		</div>
     		`
     		div.className = "box wishlist-item";
+			div.id = item.id;
     		div.innerHTML = wishlistItemHTML;
 
     		wishlistGrid.appendChild(div);

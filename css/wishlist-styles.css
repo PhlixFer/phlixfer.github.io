@@ -40,26 +40,26 @@
 	background-position: center;
 }
 
-.wishlist-item:first-child .wishlist-img {
+#mbp .wishlist-img {
 	background-size: 380px;
 }
-.wishlist-item:nth-child(9) .wishlist-img {
+#mgckybrd .wishlist-img {
 	background-size: 270px;
 	background-position: right;
 }
-.wishlist-item:nth-child(8) .wishlist-img {
+#mgcwnd .wishlist-img {
 	background-size: 180px;
 }
-.wishlist-item:nth-child(4) .wishlist-img {
+#arpds .wishlist-img {
 	background-size: 220px;
 }
-.wishlist-item:nth-child(3) .wishlist-img {
+#clptch .wishlist-img {
 	background-size: 180px;
 }
-.wishlist-item:nth-child(7) .wishlist-img {
+#t7ssd .wishlist-img {
 	background-size: 80%;
 }
-.wishlist-item:nth-child(2) .wishlist-img {
+#iphn .wishlist-img {
 	background-size: cover;
 }
 
@@ -86,13 +86,13 @@
 
 /* make the macbook card larger */
 
-.wishlist-item:first-child {
+#mbp {
 	grid-column: 1 / span 2;
 }
 
 /* make the airpods card larger */
 
-.wishlist-item:nth-child(4) {
+#arpds {
 	grid-column: 2 / span 2;
 }
 
@@ -107,28 +107,28 @@
 	.wishlist-img {
 		height: 200px;
 	}
-	.wishlist-item:first-child {
+	#mbp {
 		grid-column: 1 / span 2;
 	}
-	.wishlist-item:nth-child(4) {
+	#arpds {
 		grid-column: 1 / span 2;
 	}
-	.wishlist-item:first-child .wishlist-img {
+	#mbp .wishlist-img {
 		background-size: 280px;
 	}
-	.wishlist-item:nth-child(9) .wishlist-img {
+	#mgckybrd .wishlist-img {
 		background-size: 95%;
 	}
-	.wishlist-item:nth-child(8) .wishlist-img {
+	#mgcwnd .wishlist-img {
 		background-size: 120px;
 	}
-	.wishlist-item:nth-child(7) .wishlist-img {
+	#t7ssd .wishlist-img {
 		background-size: 150px;
 	}
-	.wishlist-item:nth-child(4) .wishlist-img {
+	#arpds .wishlist-img {
 		background-size: 150px;
 	}
-	.wishlist-item:nth-child(3) .wishlist-img {
+	#clptch .wishlist-img {
 		background-size: 140px;
 	}
 }
@@ -138,28 +138,28 @@
 		grid-template-columns: 100%;
 		grid-gap: 8px;
 	}
-	.wishlist-item:first-child {
+	#mbp {
 		grid-column: 1;
 	}
-	.wishlist-item:nth-child(4) {
+	#arpds {
 		grid-column: 1;
 	}
 	.wishlist-img {
 		height: 180px;
 	}
-	.wishlist-item:nth-child(9) .wishlist-img {
+	#mgckybrd .wishlist-img {
 		background-size: 270px;
 	}
-	.wishlist-item:nth-child(8) .wishlist-img {
+	#mgcwnd .wishlist-img {
 		background-size: 110px;
 	}
-	.wishlist-item:nth-child(7) .wishlist-img {
+	#t7ssd .wishlist-img {
 		background-size: 180px;
 	}
-	.wishlist-item:nth-child(4) .wishlist-img {
+	#arpds .wishlist-img {
 		background-size: 150px;
 	}
-	.wishlist-item:nth-child(3) .wishlist-img {
+	#clptch .wishlist-img {
 		background-size: 140px;
 	}
 }
