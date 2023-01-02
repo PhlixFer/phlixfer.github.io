@@ -66,9 +66,12 @@
 }
 
 @media screen and (max-width: 800px) {
+	.commission-page-header-wrapper {
+		margin-top: 80px
+	}
 	.commission-page-header-grid {
 		grid-template-columns: auto;
-		margin: 80px 16px 48px 16px;
+		margin: 0 16px 48px 16px;
 	}
 	.commission-header-title {
 		justify-content: center;
