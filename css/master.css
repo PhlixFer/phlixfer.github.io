@@ -617,11 +617,20 @@ body {
 }
 
 @media screen and (max-width: 512px) {
+  .comm-item-text {
+    opacity: 100%;
+    background-color: transparent;
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.3), transparent);
+    max-height: 150px;
+  }
   .commission-item-grid {
     grid-template-columns: 100%;
     margin-top: 16px;
   }
-  .commission-item {height: calc(100vh - 48px)}
+  .commission-item {
+    height: calc(100vh - 48px);
+    align-items: end;
+  }
   .commission-item:last-child {
     grid-column: 1 / span 1;
     height: 240px;
