@@ -62,6 +62,15 @@
 #iphn .wishlist-img {
 	background-size: cover;
 }
+#flstdio .wishlist-img {
+	background-size: 50%;
+}
+#abltnlive .wishlist-img {
+	background-size: 50%;
+}
+#mnfse .wishlist-img {
+	background-size: 80%;
+}
 
 .wishlist-text {
 	padding: 10px 16px 16px 16px;
@@ -161,5 +170,8 @@
 	}
 	#clptch .wishlist-img {
 		background-size: 140px;
+	}
+	#flstdio .wishlist-img {
+		background-size: 40%;
 	}
 }
