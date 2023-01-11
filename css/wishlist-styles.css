@@ -44,11 +44,11 @@
 	background-size: 380px;
 }
 #mgckybrd .wishlist-img {
-	background-size: 270px;
-	background-position: right;
+	background-size: 240px
 }
 #mgcwnd .wishlist-img {
-	background-size: 180px;
+	background-size: 90%;
+	background-position: right;
 }
 #arpds .wishlist-img {
 	background-size: 220px;
@@ -57,7 +57,7 @@
 	background-size: 180px;
 }
 #t7ssd .wishlist-img {
-	background-size: 80%;
+	background-size: 50%;
 }
 #iphn .wishlist-img {
 	background-size: cover;
@@ -126,10 +126,10 @@
 		background-size: 280px;
 	}
 	#mgckybrd .wishlist-img {
-		background-size: 95%;
+		background-size: 85%;
 	}
 	#mgcwnd .wishlist-img {
-		background-size: 120px;
+		background-size: 90%;
 	}
 	#t7ssd .wishlist-img {
 		background-size: 150px;
@@ -142,7 +142,7 @@
 	}
 }
 
-@media screen and (max-width: 330px) {
+@media screen and (max-width: 320px) {
 	.wishlist-grid {
 		grid-template-columns: 100%;
 		grid-gap: 8px;
@@ -157,13 +157,13 @@
 		height: 180px;
 	}
 	#mgckybrd .wishlist-img {
-		background-size: 270px;
+		background-size: 230px;
 	}
 	#mgcwnd .wishlist-img {
-		background-size: 110px;
+		background-size: 260px;
 	}
 	#t7ssd .wishlist-img {
-		background-size: 180px;
+		background-size: 140px;
 	}
 	#arpds .wishlist-img {
 		background-size: 150px;
