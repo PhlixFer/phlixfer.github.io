@@ -28,13 +28,9 @@
     <div class="button-wrapper">
       <a href="/commissions" class="default-button-big text-body">commission me!</a>
     </div>
-
-    <div class="loading-screen" id="loading-screen">
-      <h1 class="text-title loading-ellipse" id="loading-ellipse">...</h1>
-    </div>
-    <div class="img-container transparent" id="img-container">
-      <div class="img-container-column paused" id="img-container-column-1"></div>
-      <div class="img-container-column paused" id="img-container-column-2"></div>
+    <div class="img-container" id="img-container">
+      <div class="img-container-column" id="img-container-column-1"></div>
+      <div class="img-container-column" id="img-container-column-2"></div>
       <script type="text/javascript" src="/scripts/animate-function.js"></script>
       <script type="text/javascript">
         const images = [
@@ -144,7 +140,8 @@
 
         function imgFrame(element, filename, aspectRatio) {
           element.classList.add('img-frame');
-          element.style.backgroundImage = 'url(/media/art-pics/'+filename+')';
+          element.style.backgroundColor = `var(--box-lvl-1-col)`
+          element.style.backgroundImage = `url("/media/art-pics/${filename}")`;
           element.style.paddingTop = aspectRatio * 100 + '%';
         }
 
@@ -252,28 +249,6 @@
         }
       </script>
     </div>
-
-    <script>
-      const elements = ['#img-container-column-1', '#img-container-column-2']
-      var imgContainer = document.getElementById("img-container");
-      var loadingScreen = document.getElementById('loading-screen');
-      var loadingElip = document.getElementById('loading-ellipse');
-
-      function hideEllipse() {
-        loadingElip.className = "loading-ellipse hidden";
-        console.log("hidden the ellipse");
-      }
-
-      window.onload = function() {
-        imgContainer.className = "img-container";
-        elements.forEach((item, i) => {
-          var $elem = $(item);
-          $elem.removeClass("paused");
-        });
-        loadingScreen.className = "loading-screen transparent";
-        setTimeout(hideEllipse, 1000);
-      };
-    </script>
 
     <script src="/scripts/add-common-elements.js" charset="utf-8"></script>
     <script type="text/javascript">
