@@ -589,6 +589,10 @@ body {
   opacity: 100%;
 }
 
+.commission-item p {
+  text-align: center !important;
+}
+
 .comm-item-text {
   height: calc(100% - 48px);
   width: 100%;
