@@ -24,6 +24,7 @@ var htmlFooter = `
 
               <a href="https://throne.me/u/phlixfer" target="_blank" class="text-footer">My Throne Wishlist!</a>
               <a href="/wishlist" class="text-footer">my upgrade wishlist;;</a>
+              <a href="/cherished-music" class="text-footer">the music i cherish~</a>
             </div>
             <div>
               <p class="text-footer-header">Socials</p>

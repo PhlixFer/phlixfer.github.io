@@ -1,0 +1,99 @@
+.album-banner-wrapper {
+	display: grid;
+	grid-template-columns: 280px auto;
+	grid-gap: 24px;
+	padding: 32px 64px;
+}
+
+.album-cover-banner {
+	width: 100%;
+	height: 280px;
+	border-radius: 13px;
+	box-shadow: inset 0 0 0 1px rgba(2550, 255, 255, 0.1);
+}
+
+.album-banner-text-wrapper {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.album-banner-wrapper h2 {
+	font-size: 56px;
+	line-height: 60px;
+}
+.album-banner-wrapper h3 {
+	font-size: 24px;
+	line-height: 32px;
+	font-weight: 500;
+	color: var(--secondary-text-col);
+}
+
+.album-play-button {
+	background-color: #FA233B !important;
+	box-shadow: 0 0 0 #FA233B7f !important;
+}
+.album-play-button:hover {
+	box-shadow: 0 5px 10px #FA233B7f !important;
+}
+
+.album-play-button::before {
+	content: "";
+}
+
+@media screen and (max-width: 500px) {
+  .album-banner-wrapper {
+  	grid-template-columns: auto;
+  	grid-template-rows: auto auto;
+  	padding: 16px;
+  	grid-gap: 8px;
+  }
+  .album-cover-banner {
+  	width: calc(100vw - 32px);
+  	height: calc(100vw - 32px);
+  }
+  .album-banner-wrapper h2 {
+  	font-size: 34px;
+  	line-height: 40px;
+  }
+}
+
+#cover-good-faith {
+	background: linear-gradient(to bottom , #0000004d, #0000004d),
+	linear-gradient(to bottom right, #00D6DC, #0095F1);
+}
+
+#cover-nascent {
+	background: linear-gradient(to bottom , #0000004d, #0000004d),
+	linear-gradient(to bottom right, #657529, #78A1D2);
+}
+
+#cover-nurture {
+	background: linear-gradient(to bottom , #0000004d, #0000004d),
+	linear-gradient(to bottom right, #51BA70, #5E9537);
+}
+
+#cover-adventure {
+	background: linear-gradient(to bottom , #0000004d, #0000004d),
+	linear-gradient(to bottom right, #69A5A4, #FFF, #8F5C62);
+}
+
+#cover-shelter {
+	background: linear-gradient(to bottom , #0000004d, #0000004d),
+	linear-gradient(to bottom right, #19384B, #01F3BC);
+}
+
+#cover-wdyw {
+	background: linear-gradient(to bottom , #0000004d, #0000004d),
+	linear-gradient(to bottom right, #829CA1, #895A5C);
+}
+
+#cover-boneyard {
+	background: linear-gradient(to bottom , #0000004d, #0000004d),
+	linear-gradient(to bottom right, #182A49, #424B16);
+}
+
+#cover-character-dev {
+	background: linear-gradient(to bottom , #0000004d, #0000004d),
+	linear-gradient(to bottom right, #ECECEC, #5CB869);
+}

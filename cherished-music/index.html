@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="theme-color" content="#1f1f1f">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="og:title" content="Phlixfer">
+    <meta name="og:type" content="website">
+    <meta name="og:image" content="https://phlixfer.github.io/media/social-artwork/index@2x.png">
+    <meta name="og:image:width" content="1200">
+    <meta name="og:image:height" content="627">
+    <meta name="og:url" content="https://phlixfer.github.io/">
+
+    <link rel="stylesheet" href="/css/master.css">
+    <link rel="stylesheet" href="/css/support-me-banner.css">
+    <link rel="icon" href="/media/favicon.svg">
+    <link rel="icon" href="/media/favicon.ico">
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="/scripts/light-mode-check.js" charset="utf-8"></script>
+    <title>Phlixfer | Cherished Music</title>
+  </head>
+
+  <body id="body">
+    
+    <div class="title-container">
+      <h1>cherished music</h1>
+    </div>
+
+    <div id="album-banners"></div>
+
+    <script type="text/javascript">
+      
+      const albumsList = [
+        {
+          title: 'Nascent',
+          artist: 'Alexander Panos',
+          myComments: '',
+          link: 'https://music.apple.com/album/nascent/1641577811',
+          coverLink: 'https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/5b/8f/60/5b8f6062-094b-2c4c-cee5-6e8a852950c5/197077279870_cover.jpg/1000x1000bb.webp',
+          id: 'cover-nascent'
+        },
+        {
+          title: 'Good Faith',
+          artist: 'Madeon',
+          myComments: '',
+          link: 'https://music.apple.com/album/good-faith/1485487825',
+          coverLink: 'https://is3-ssl.mzstatic.com/image/thumb/Music113/v4/de/5c/c4/de5cc49b-1e97-f373-cca0-5d2374332800/886448085232.jpg/1000x1000bb.webp',
+          id: 'cover-good-faith'
+        },
+        {
+          title: 'Nurture',
+          artist: 'Porter Robinson',
+          myComments: '',
+          link: 'https://music.apple.com/album/nurture/1550626757',
+          coverLink: 'https://is2-ssl.mzstatic.com/image/thumb/Music125/v4/e7/e7/f7/e7e7f72a-431f-1819-e46e-d3584047125a/858275061918.png/1000x1000bb.webp',
+          id: 'cover-nurture'
+        },
+        {
+          title: 'Adventure',
+          artist: 'Madeon',
+          myComments: '',
+          link: 'https://music.apple.com/album/adventure-deluxe/955824966',
+          coverLink: 'https://is5-ssl.mzstatic.com/image/thumb/Music125/v4/fb/97/22/fb972256-697d-0d4d-e424-e5383b8ac1e0/mzm.tkotdcab.jpg/1000x1000bb.webp',
+          id: 'cover-adventure'
+        },
+        {
+          title: 'Shelter',
+          artist: 'Porter Robinson & Madeon',
+          myComments: '',
+          link: 'https://music.apple.com/album/shelter-single/1140574239',
+          coverLink: 'https://is3-ssl.mzstatic.com/image/thumb/Music125/v4/a9/aa/a8/a9aaa8cb-708c-899e-b968-22304e720edb/SHELTER.jpg/1000x1000bb.webp',
+          id: 'cover-shelter'
+        },
+        {
+          title: 'What Do You Want!',
+          artist: 'acloudyskye',
+          myComments: '',
+          link: 'https://music.apple.com/album/what-do-you-want/1641577558',
+          coverLink: 'https://is2-ssl.mzstatic.com/image/thumb/Music112/v4/f0/4c/fe/f04cfe46-9716-69dd-5f7b-f0182a2f2b1e/artwork.jpg/1000x1000bb.webp',
+          id: 'cover-wdyw'
+        },
+        {
+          title: 'boneyard aka fearmonger',
+          artist: 'underscores',
+          myComments: '',
+          link: 'https://music.apple.com/album/boneyard-aka-fearmonger/1591626228',
+          coverLink: 'https://is5-ssl.mzstatic.com/image/thumb/Music126/v4/4d/f1/60/4df16008-351f-7f15-6474-ee73de1f0ff7/5056495363378_1.jpg/1000x1000bb.webp',
+          id: 'cover-boneyard'
+        },
+        {
+          title: 'Character Development!',
+          artist: 'underscores',
+          myComments: '',
+          link: 'https://music.apple.com/album/character-development-single/1492116660',
+          coverLink: 'https://is3-ssl.mzstatic.com/image/thumb/Music116/v4/34/7e/e8/347ee832-3ffe-cfb4-7735-97cf4b8b8d41/8718857773641.png/1000x1000bb.webp',
+          id: 'cover-character-dev'
+        },
+      ]
+
+      albumsList.forEach((item) =>{
+        var albumBannerTemplate = `
+        <div class="album-cover-banner" style="background: center / contain url(${item.coverLink});"></div>
+        <div class="album-banner-text-wrapper">
+          <h2>${item.title}</h2>
+          <h3>${item.artist}</h3>
+          <p>${item.myComments}</p>
+          <a class="default-button-big album-play-button" href="${item.link}" target="_blank">Play on Apple Music</a>
+        </div>
+        `
+        let div = document.createElement('div');
+        div.className = "album-banner-wrapper";
+        div.id = item.id;
+        div.innerHTML = albumBannerTemplate;
+        document.getElementById('album-banners').appendChild(div);
+      })
+
+    </script>
+
+    <script src="/scripts/add-common-elements.js" charset="utf-8"></script>
+
+  </body>
+</html>

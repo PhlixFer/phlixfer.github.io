@@ -6,6 +6,7 @@
 @import url(text-styles.css);
 @import url(support-me-banner.css);
 @import url(about-panels.css);
+@import url(album-thumbnails.css);
 
 @supports (font-variation-settings: normal) {
   :root {
