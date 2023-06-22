@@ -58,6 +58,11 @@
   }
 }
 
+#cover-gbg {
+	background: linear-gradient(to bottom , #0000004d, #0000004d),
+	linear-gradient(to bottom right, #0085D4, #001A56);
+}
+
 #cover-good-faith {
 	background: linear-gradient(to bottom , #0000004d, #0000004d),
 	linear-gradient(to bottom right, #00D6DC, #0095F1);
