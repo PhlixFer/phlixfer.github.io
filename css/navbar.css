@@ -57,7 +57,7 @@
 
 .navbar-icon-container:hover {
   background-color: #FF5E5B;
-  width: 174px;
+  width: 138px;
 }
 .navbar-icon-container:hover g {
   fill: white;
@@ -76,7 +76,7 @@
   text-align: left;
   padding-top: 5px;
   opacity: 0%;
-  width: 174px;
+  width: 138px;
   transition-duration: .3s;
 }
 
@@ -89,7 +89,7 @@
 }
 
 .navbar-icon svg {
-  margin: 0 4px 0 4px;
+  margin: 1px 4px 0 4px;
   width: 26px;
   float: left;
   opacity: 80%;
