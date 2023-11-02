@@ -50,17 +50,12 @@
 	background-size: 90%;
 	background-position: right;
 }
-#arpds .wishlist-img {
-	background-size: 220px;
-}
-#clptch .wishlist-img {
-	background-size: 180px;
-}
 #t7ssd .wishlist-img {
 	background-size: 50%;
 }
 #iphn .wishlist-img {
-	background-size: cover;
+	background-size: 100%;
+	background-position: top 25%;
 }
 #flstdio .wishlist-img {
 	background-size: 50%;
@@ -119,9 +114,6 @@
 	#mbp {
 		grid-column: 1 / span 2;
 	}
-	#arpds {
-		grid-column: 1 / span 2;
-	}
 	#mbp .wishlist-img {
 		background-size: 280px;
 	}
@@ -132,9 +124,6 @@
 		background-size: 90%;
 	}
 	#t7ssd .wishlist-img {
-		background-size: 150px;
-	}
-	#arpds .wishlist-img {
 		background-size: 150px;
 	}
 	#clptch .wishlist-img {
@@ -148,9 +137,6 @@
 		grid-gap: 8px;
 	}
 	#mbp {
-		grid-column: 1;
-	}
-	#arpds {
 		grid-column: 1;
 	}
 	.wishlist-img {
@@ -167,9 +153,6 @@
 	}
 	#arpds .wishlist-img {
 		background-size: 150px;
-	}
-	#clptch .wishlist-img {
-		background-size: 140px;
 	}
 	#flstdio .wishlist-img {
 		background-size: 40%;
