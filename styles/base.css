@@ -1,0 +1,21 @@
+@font-face {
+	font-family: "Vollkorn";
+	src: url("../media/fonts/Vollkorn/Vollkorn-VariableFont_wght.ttf");
+	font-style: normal;
+	font-weight: 400 900;
+}
+
+@font-face {
+	font-family "Vollkorn";
+	src: url("../media/fonts/Vollkorn/Vollkorn-Italic-VariableFont_wght.ttf");
+	font-style: italic;
+	font-weight: 400 900;
+}
+
+* {
+	font-family: "Vollkorn", system-ui, serif;
+}
+
+body {
+	background-color: #bdcb93;
+}
