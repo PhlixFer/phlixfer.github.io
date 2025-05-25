@@ -7,17 +7,56 @@
 		<meta name="color-scheme" content="light"/>
 		<meta name="robots" content="noindex"/>
 		<link href="/styles/base.css" rel="stylesheet" />
+		<link href="/styles/test.css" rel="stylesheet" />
 		<link rel="icon" href="/media/favicon.png" />
 		<link rel="apple-touch-icon" href="/media/apple-touch-icon@3x.png" />
 		<title>test page - phlixfer</title>
-	</head>
 	<body>
 		<div id="navbar-container">
-			<div id="navbar"></div>
+			<div id="navbar" class="navbar-closed translucent-box-medium"></div>
 		</div>
 		<main>
-			<p>hallo, welt!</p>
+			<h1>hello world!</h1>
+			<p>this is a test page for me to experiment with random ideas. if you've found this page, watch your back 👁️</p>
+			<div id="story-machine-container">
+				<div id="story-machine-narrator">
+					<p></p>
+				</div>
+				<div id="story-machine-choices-container"></div>
+			</div>
 		</main>
 		<script type="module" src="/scripts/assemble-navbar.js"></script>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.12.2/lottie.min.js"></script>
+		<script type="text/javascript">
+			let stories;
+			let storyMachineContainer = document.getElementById('story-machine-container');
+			fetch('./stories.json')
+				.then((response) => {
+					if (!response.ok) {
+						throw new Error(`HTTP error! Status: ${response.status}`);
+					}
+					return response.json();
+				})
+				.then((data) => {
+					stories = data;
+					//let chosenStory = stories[Math.floor(Math.random() * 2.99)];
+					progressStory(0, stories[0]);
+				});
+			function progressStory(page, story) {
+				let narratorText = storyMachineContainer.querySelector('#story-machine-narrator').querySelector('p');
+				narratorText.innerHTML = story[page].eventDescription;
+				
+				let choicesContainer = storyMachineContainer.querySelector('#story-machine-choices-container');
+				while (choicesContainer.firstChild) {choicesContainer.removeChild(choicesContainer.firstChild)}
+				for (const actions of story[page].validActions) {
+					let choiceButton = document.createElement('button');
+					choiceButton.innerText = actions.key;
+					choiceButton.onclick = (event) => {
+						progressStory(actions.newIndex, story);
+					};
+					choicesContainer.appendChild(choiceButton);
+				}
+			}
+		</script>
 	</body>
 </html>

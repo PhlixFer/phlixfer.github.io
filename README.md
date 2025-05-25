@@ -14,6 +14,7 @@ this site was made possible by the following tools, standards, and so and such:
 - the [Vollkorn](http://vollkorn-typeface.com/) font— designed by Friedrich Althausen
 - designed in the [Affinity](https://affinity.serif.com/) suite and [Figma](https://figma.com/)
 - [mdn](https://developer.mozilla.org/)— a lifesaver when it comes to navigating the mess of web development specs and standards
+- the [Chivo Mono](https://github.com/Omnibus-Type/Chivo) font
 
 --- 
 

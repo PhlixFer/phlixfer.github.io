@@ -1,0 +1,50 @@
+@font-face {
+	font-family: "Chivo Mono";
+	src: url("/media/fonts/Chivo_Mono/ChivoMono-VariableFont_wght.ttf");
+}
+main {
+	margin-top: 60px;
+	padding: 20px;
+}
+
+#story-machine-container {
+	max-width: 600px;
+	border-radius: 20px;
+	border: 4px solid var(--text-col-primary);
+	padding: 20px;
+	margin: 32px auto 0 auto;
+	display: grid;
+	grid: auto auto / auto-flow dense;
+	gap: 10px;
+}
+
+#story-machine-container * {
+	font-family: "system-mono", "Chivo Mono", mono, serif;
+}
+
+#story-machine-narrator p {
+	margin: 0;
+	hyphens: auto;
+}
+
+#story-machine-choices-container {
+	display: flex;
+	flex-wrap: wrap;
+	flex: 3;
+	gap: 10px;
+}
+
+#story-machine-choices-container button {
+	flex: 1 0 auto;
+	border: none;
+	background-color: var(--button-col);
+	color: var(--bg-col);
+	padding: 14px 16px;
+	border-radius: 10px;
+}
+
+@media screen and (max-width: 480px) {
+	#story-machine-container {
+		padding: 10px;
+	}
+}
