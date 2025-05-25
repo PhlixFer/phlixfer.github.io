@@ -2,18 +2,105 @@
 <html lang="en">
 	<head>
 		<meta charset="UTF-8"/>
+		<meta name="viewport-fit" content="cover"/>
 		<meta name="theme-color" content="#bdcb93" media="(prefers-color-scheme: light)"/>
 		<meta name="color-scheme" content="light"/>
 		<link href="/styles/base.css" rel="stylesheet" />
-		<link href="/styles/loading-screen.css" rel="stylesheet" />
+		<link href="/styles/commissions-form-page.css" rel="stylesheet" />
 		<link rel="icon" href="/media/favicon.png" />
 		<link rel="apple-touch-icon" href="/media/apple-touch-icon@3x.png" />
-		<script blocking="render" async src="https://cdn.jsdelivr.net/npm/p5@1.11.1/lib/p5.min.js"></script>
-		<title>phlixfer</title>
+		<title>commissioning - phlixfer</title>
+		<meta name="description" content="see how to commission phlixfer"/>
 	</head>
 	<body>
+		<div id="navbar-container">
+			<div id="navbar" class="navbar-closed translucent-box-medium"></div>
+		</div>
 		<main>
-			<script src="./scripts/tmp-waiting-screen.js"></script>
+			<div id="commissions-title-card" style="transform:translateY(0px);">
+				<div id="pencil-drawing"></div>
+				<img src="/media/com-page-icons/message-bubble.svg" id="message-bubble" />
+				<div id="mouse">
+					<img src="/media/com-page-icons/mouse.svg" />
+				</div>
+				<img src="/media/com-page-icons/torus.svg" id="torus" />
+				<div id="title-card-text">
+					<h1>commission me!</h1>
+				</div>
+				<div id="speaker"></div>
+				<img src="/media/com-page-icons/crescent-moon.svg" id="crescent-moon" />
+			</div>
+			<div id="commissions-form-container">
+				<h1>let me work for you</h1>
+				<div id="commissions-form">
+					<div id="commissions-form-preamble">
+						<p>i can do all sorts of things, from little doodles and ditties, to paintings and little symphonies, to design and animation, to even vjs and interactive experiences like this site! shoot me an email and i'll see what i can do for you.
+							</br>
+							</br>
+							let this list below be a sort of reference for the prices you can expect if you are looking for my work for personal uses.</p>
+						<ul>
+							<li>drawings & doodles - ~$60+</li>
+							<li>dittes & tunes - ~$100+</li>
+							<li>design & animation, vjs & so forth - ~$120+</li>
+							<li>interactive experiences (e.g. websites) - ~$250+</li>
+						</ul>
+					</div>
+					<div id="commissions-mail-form">
+						<fieldset>
+							<legend>email me:</legend>
+							<label>title</label>
+							<input type="text" placeholder="hello!" id="email-title" autocomplete="off" />
+							<label>body</label>
+							<!--<input type="text" placeholder="i'd like…" id="email-body" />!-->
+							<textarea placeholder="i'd like…" id="email-body" rows="8" autocomplete="off"></textarea>
+							<button class="rounded-button button-with-arrow" type="button" onclick="sendMailForm();">send</button>
+						</fieldset>
+						<a href="https://forms.gle/TFqAxC6nSyu58Gb57" target="_blank" id="form-button" class="rounded-button button-with-arrow">
+							<div>want to fill out a form instead?</div>
+						</a>
+					</div>
+				</div>
+			</div>
 		</main>
+		<script type="module" src="/scripts/assemble-navbar.js"></script>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.12.2/lottie.min.js"></script>
+		<script type="text/javascript">
+			function sendMailForm()
+			{
+				let mailMessage = document.getElementById("email-body").value;
+				let mailSubject = document.getElementById("email-title").value;
+				document.location.href= `mailto:phlixfermusic@gmail.com?subject=${encodeURIComponent(mailSubject)}&body=${encodeURIComponent(mailMessage)}`;
+			}
+			let pencilDrawing = document.getElementById("pencil-drawing");
+			let pencilDrawingAnim = lottie.loadAnimation({
+				container: pencilDrawing,
+				renderer: 'svg',
+				loop: false,
+				autoplay: true,
+				path: '/media/com-page-icons/pencil-bounce.json'
+			});
+			pencilDrawingAnim.setSpeed(1.25);
+			let speaker = document.getElementById("speaker");
+			let speakerAnim = lottie.loadAnimation({
+				container: speaker,
+				renderer: 'svg',
+				loop: false,
+				autoplay: false,
+				path: '/media/com-page-icons/speaker.json'
+			});
+			
+			setTimeout(function(){
+				speakerAnim.play();
+			}, 1000);
+			
+			let titleCard = document.getElementById("commissions-title-card");
+			let body = document.documentElement;
+			let scrollPercentage = null;
+			document.addEventListener("scroll", (event) => {
+				scrollPercentage = Math.min(Math.max((body.scrollTop - window.innerHeight*0) / (window.innerHeight), 0), 1);
+				titleCard.style.filter = `blur(${Math.pow(scrollPercentage,2)/2 * 60}px)`;
+				titleCard.style.transform = `translateY(${Math.pow(scrollPercentage,2)/2 * -200}px)`;
+			});
+		</script>
 	</body>
 </html>

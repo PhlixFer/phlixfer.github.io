@@ -1,0 +1,368 @@
+{
+	"topDirs": [
+		{
+			"dirName": "visual_portfolio",
+			"customId": "visual-portfolio-item",
+			"hasCustomIcon": true,
+			"subDirs": [
+				{
+					"dirName": "older_works",
+					"customId": "",
+					"hasCustomIcon": false,
+					"subDirs": [],
+					"items": [
+						{
+							"name": "context.txt",
+							"date": "",
+							"comments": "this is a pile of older pieces that i'd still like to include in this browser <s>to pad it out</s> to give context behind my artistic journey so far! enjoy this little collection :D",
+							"type": "text",
+							"path": "",
+							"thumbnailPath": ""
+						},
+						{
+							"name": "talisman",
+							"date": "05/2023",
+							"comments": "",
+							"type": "image",
+							"path": "/media/portfolio-pieces/visual-portfolio/older-works/talisman.jpg",
+							"thumbnailPath": "/media/portfolio-pieces/visual-portfolio/older-works/thumbnails/talisman.jpeg"
+						},
+						{
+							"name": "evergreen",
+							"date": "03/2023",
+							"comments": "",
+							"type": "image",
+							"path": "/media/portfolio-pieces/visual-portfolio/older-works/evergreen_01.jpg",
+							"thumbnailPath": "/media/portfolio-pieces/visual-portfolio/older-works/thumbnails/evergreen_01.jpeg"
+						},
+						{
+							"name": "lonely",
+							"date": "02/2023",
+							"comments": "",
+							"type": "image",
+							"path": "/media/portfolio-pieces/visual-portfolio/older-works/lonely.jpg",
+							"thumbnailPath": "/media/portfolio-pieces/visual-portfolio/older-works/thumbnails/lonely.jpeg"
+						},
+						{
+							"name": "pixelbreaker",
+							"date": "02/2023",
+							"comments": "",
+							"type": "image",
+							"path": "/media/portfolio-pieces/visual-portfolio/older-works/pixel-breaker.jpg",
+							"thumbnailPath": "/media/portfolio-pieces/visual-portfolio/older-works/thumbnails/pixel-breaker.jpeg"
+						},
+						{
+							"name": "unrest",
+							"date": "02/2023",
+							"comments": "",
+							"type": "image",
+							"path": "/media/portfolio-pieces/visual-portfolio/older-works/unrest.jpg",
+							"thumbnailPath": "/media/portfolio-pieces/visual-portfolio/older-works/thumbnails/unrest.jpeg"
+						},
+						{
+							"name": "farther away than normal",
+							"date": "01/2023",
+							"comments": "",
+							"type": "image",
+							"path": "/media/portfolio-pieces/visual-portfolio/older-works/farther-away-than-normal.jpg",
+							"thumbnailPath": "/media/portfolio-pieces/visual-portfolio/older-works/thumbnails/farther-away-than-normal.jpeg"
+						},
+						{
+							"name": "sproing",
+							"date": "11/2022",
+							"comments": "",
+							"type": "image",
+							"path": "/media/portfolio-pieces/visual-portfolio/older-works/sproing.jpg",
+							"thumbnailPath": "/media/portfolio-pieces/visual-portfolio/older-works/thumbnails/sproing.jpeg"
+						},
+						{
+							"name": "IWD",
+							"date": "08/2022",
+							"comments": "",
+							"type": "image",
+							"path": "/media/portfolio-pieces/visual-portfolio/older-works/iwd.jpg",
+							"thumbnailPath": "/media/portfolio-pieces/visual-portfolio/older-works/thumbnails/iwd.jpeg"
+						},
+						{
+							"name": "twistoid",
+							"date": "06/2022",
+							"comments": "",
+							"type": "image",
+							"path": "/media/portfolio-pieces/visual-portfolio/older-works/twistoid.jpg",
+							"thumbnailPath": "/media/portfolio-pieces/visual-portfolio/older-works/thumbnails/twistoid.jpeg"
+						},
+						{
+							"name": "radical shapes",
+							"date": "05/2022",
+							"comments": "",
+							"type": "image",
+							"path": "/media/portfolio-pieces/visual-portfolio/older-works/radical-shapes-1.jpg",
+							"thumbnailPath": "/media/portfolio-pieces/visual-portfolio/older-works/thumbnails/radical-shapes-1.jpeg"
+						},
+						{
+							"name": "toon heart",
+							"date": "01/2022",
+							"comments": "",
+							"type": "image",
+							"path": "/media/portfolio-pieces/visual-portfolio/older-works/toon-heart.jpg",
+							"thumbnailPath": "/media/portfolio-pieces/visual-portfolio/older-works/thumbnails/toon-heart.jpeg"
+						},
+						{
+							"name": "growing pains",
+							"date": "10/2021",
+							"comments": "made for formtober 2021",
+							"type": "image",
+							"path": "/media/portfolio-pieces/visual-portfolio/older-works/growing-pains.jpeg",
+							"thumbnailPath": "/media/portfolio-pieces/visual-portfolio/older-works/thumbnails/growing-pains.jpeg"
+						},
+						{
+							"name": "liquid heart",
+							"date": "12/2021",
+							"comments": "",
+							"type": "image",
+							"path": "/media/portfolio-pieces/visual-portfolio/older-works/liquid-heart.jpeg",
+							"thumbnailPath": "/media/portfolio-pieces/visual-portfolio/older-works/thumbnails/liquid-heart.jpeg"
+						},
+						{
+							"name": "someone else's far away",
+							"date": "10/2021",
+							"comments": "made for formtober 2021",
+							"type": "image",
+							"path": "/media/portfolio-pieces/visual-portfolio/older-works/someone-elses-far-away.jpg",
+							"thumbnailPath": "/media/portfolio-pieces/visual-portfolio/older-works/thumbnails/someone-elses-far-away.jpeg"
+						},
+						{
+							"name": "will of the winding forest",
+							"date": "10/2021",
+							"comments": "made for formtober 2021",
+							"type": "image",
+							"path": "/media/portfolio-pieces/visual-portfolio/older-works/will-of-the-winding-forest.jpeg",
+							"thumbnailPath": "/media/portfolio-pieces/visual-portfolio/older-works/thumbnails/will-of-the-winding-forest.jpeg"
+						},
+						{
+							"name": "surrounded by fish",
+							"date": "10/2021",
+							"comments": "made for formtober 2021",
+							"type": "image",
+							"path": "/media/portfolio-pieces/visual-portfolio/older-works/surrounded-by-fish.jpg",
+							"thumbnailPath": "/media/portfolio-pieces/visual-portfolio/older-works/thumbnails/surrounded-by-fish.jpeg"
+						},
+						{
+							"name": "goddess of the hunt",
+							"date": "10/2021",
+							"comments": "made for formtober 2021",
+							"type": "image",
+							"path": "/media/portfolio-pieces/visual-portfolio/older-works/goddess-of-the-hunt.jpg",
+							"thumbnailPath": "/media/portfolio-pieces/visual-portfolio/older-works/thumbnails/goddess-of-the-hunt.jpeg"
+						},
+						{
+							"name": "gay crystals",
+							"date": "01/2022",
+							"comments": "",
+							"type": "image",
+							"path": "/media/portfolio-pieces/visual-portfolio/older-works/gay-crystals.jpg",
+							"thumbnailPath": "/media/portfolio-pieces/visual-portfolio/older-works/thumbnails/gay-crystals.jpeg"
+						},
+						{
+							"name": "ley lines",
+							"date": "10/2021",
+							"comments": "made for formtober 2021",
+							"type": "image",
+							"path": "/media/portfolio-pieces/visual-portfolio/older-works/ley-lines.jpeg",
+							"thumbnailPath": "/media/portfolio-pieces/visual-portfolio/older-works/thumbnails/ley-lines.jpeg"
+						},
+						{
+							"name": "flora-lined metropolis",
+							"date": "10/2021",
+							"comments": "made for formtober 2021",
+							"type": "image",
+							"path": "/media/portfolio-pieces/visual-portfolio/older-works/Flora_Lined_Metropolis.jpg",
+							"thumbnailPath": "/media/portfolio-pieces/visual-portfolio/older-works/thumbnails/Flora_Lined_Metropolis.jpeg"
+						},
+						{
+							"name": "1984 macintosh",
+							"date": "05/2021",
+							"comments": "",
+							"type": "image",
+							"path": "/media/portfolio-pieces/visual-portfolio/older-works/1984-Macintosh.jpeg",
+							"thumbnailPath": "/media/portfolio-pieces/visual-portfolio/older-works/thumbnails/1984-Macintosh.jpeg"
+						}
+					]
+				}
+			],
+			"items": [
+				{
+					"name": "bumblebee",
+					"date": "28/04/2025",
+					"comments": "digital vector illustration— made in affinity designer",
+					"type": "image",
+					"path": "/media/portfolio-pieces/visual-portfolio/bumblebee.jpg",
+					"thumbnailPath": "/media/portfolio-pieces/visual-portfolio/thumbnails/bumblebee.jpeg"
+				},
+				{
+					"name": "mondlicht tiefsee",
+					"date": "11/04/2025",
+					"comments": "digital painting— made in procreate",
+					"type": "image",
+					"path": "/media/portfolio-pieces/visual-portfolio/Mondlicht_Tiefsee.jpg",
+					"thumbnailPath": "/media/portfolio-pieces/visual-portfolio/thumbnails/Mondlicht_Tiefsee.jpeg"
+				},
+				{
+					"name": "maelevolence",
+					"date": "06/02/2025",
+					"comments": "digital painting— made in procreate",
+					"type": "image",
+					"path": "/media/portfolio-pieces/visual-portfolio/mae-borowski.jpg",
+					"thumbnailPath": "/media/portfolio-pieces/visual-portfolio/thumbnails/mae-borowski.jpeg"
+				},
+				{
+					"name": "zu schmerzen",
+					"date": "31/01/2025",
+					"comments": "digital painting— made in procreate",
+					"type": "image",
+					"path": "/media/portfolio-pieces/visual-portfolio/zu-schmerzen.jpg",
+					"thumbnailPath": "/media/portfolio-pieces/visual-portfolio/thumbnails/zu-schmerzen.jpeg"
+				},
+				{
+					"name": "lady maria",
+					"date": "27/02/2025",
+					"comments": "digital pixel art illustration— made in \"Pixsquare\"",
+					"type": "image",
+					"path": "/media/portfolio-pieces/visual-portfolio/lady-maria.png",
+					"thumbnailPath": "/media/portfolio-pieces/visual-portfolio/thumbnails/lady-maria.jpeg"
+				},
+				{
+					"name": "captive",
+					"date": "19/12/2024",
+					"comments": "digital painting— made in procreate",
+					"type": "image",
+					"path": "/media/portfolio-pieces/visual-portfolio/captive.jpg",
+					"thumbnailPath": "/media/portfolio-pieces/visual-portfolio/thumbnails/captive.jpeg"
+				},
+				{
+					"name": "stirb",
+					"date": "21/12/2024",
+					"comments": "digital painting— made in procreate",
+					"type": "image",
+					"path": "/media/portfolio-pieces/visual-portfolio/stirb.jpg",
+					"thumbnailPath": "/media/portfolio-pieces/visual-portfolio/thumbnails/stirb.jpeg"
+				},
+				{
+					"name": "coward",
+					"date": "11/11/2024",
+					"comments": "digital painting— made in procreate",
+					"type": "image",
+					"path": "/media/portfolio-pieces/visual-portfolio/coward.jpg",
+					"thumbnailPath": "/media/portfolio-pieces/visual-portfolio/thumbnails/coward.jpeg"
+				}
+			]
+		},
+		{
+			"dirName": "aural_portfolio",
+			"customId": "aural-portfolio-item",
+			"hasCustomIcon": true,
+			"subDirs": [
+				{
+					"dirName": "unfinished_scrap",
+					"customId": "",
+					"hasCustomIcon": false,
+					"subDirs": [],
+					"items": [
+						{
+							"name": "a figment of my imagination",
+							"date": "11/11/2023",
+							"comments": "",
+							"type": "audio",
+							"path": "/media/portfolio-pieces/aural-portfolio/unfinished-scrap/a-figment-of-my-imagination_b3.mp3",
+							"thumbnailPath": ""
+						},
+						{
+							"name": "hallowed",
+							"date": "21/09/2023",
+							"comments": "",
+							"type": "audio",
+							"path": "/media/portfolio-pieces/aural-portfolio/unfinished-scrap/hallowed_b1.mp3",
+							"thumbnailPath": ""
+						},
+						{
+							"name": "real entity",
+							"date": "27/10/2023",
+							"comments": "",
+							"type": "audio",
+							"path": "/media/portfolio-pieces/aural-portfolio/unfinished-scrap/real-entity_b3.mp3",
+							"thumbnailPath": ""
+						},
+						{
+							"name": "havanosphere",
+							"date": "08/10/2023",
+							"comments": "",
+							"type": "audio",
+							"path": "/media/portfolio-pieces/aural-portfolio/unfinished-scrap/havanosphere_b2.mp3",
+							"thumbnailPath": ""
+						},
+						{
+							"name": "perdis ma chemine",
+							"date": "13/03/2024",
+							"comments": "",
+							"type": "audio",
+							"path": "/media/portfolio-pieces/aural-portfolio/unfinished-scrap/perdis-ma-chemine_b1.mp3",
+							"thumbnailPath": ""
+						},
+						{
+							"name": "it'll be greater",
+							"date": "",
+							"comments": "co-produced with 1ngrayscale",
+							"type": "audio",
+							"path": "/media/portfolio-pieces/aural-portfolio/unfinished-scrap/itll-be-greater.mp3",
+							"thumbnailPath": ""
+						}
+					]
+				}
+			],
+			"items": [
+				{
+					"name": "canopy",
+					"date": "13/08/2023",
+					"comments": "made for FORM's all nighter v7. co-produced with 1ngrayscale",
+					"type": "audio",
+					"path": "/media/portfolio-pieces/aural-portfolio/canopy_1_b3.mp3",
+					"thumbnailPath": ""
+				},
+				{
+					"name": "runic walkway",
+					"date": "01/04/2023",
+					"comments": "made for a school assignment",
+					"type": "audio",
+					"path": "/media/portfolio-pieces/aural-portfolio/runic-walkway_2_b1.mp3",
+					"thumbnailPath": ""
+				}
+			]
+		},
+		{
+			"dirName": "reels_and_interactives",
+			"customId": "reels-portfolio-item",
+			"hasCustomIcon": true,
+			"subDirs": [],
+			"items": [
+				{
+					"name": "disclaimer.txt",
+					"date": "",
+					"comments": "real talk, this directory is still under construction. check back in sometime soon!",
+					"type": "text",
+					"path": "",
+					"thumbnailPath": ""
+				}
+			]
+		}
+	],
+	"items": [
+		{
+			"name": "README.txt",
+			"date": "",
+			"comments": "Welcome to the Portfolio Browser 2000! This is <i>the</i> premiere portfolio viewing application. Complete with a full file browsing experience and comprehensive audio/motion picture viewer, this software will make your portfolio shine. We thank you for your patronage and hope you enjoy the software!</br></br>Sincerely,</br>Die Unnötige Firma GmbH",
+			"type": "text",
+			"path": "",
+			"thumbnailPath": ""
+		}
+	]
+}

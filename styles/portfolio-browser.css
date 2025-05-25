@@ -1,0 +1,555 @@
+#portfolio-browser-container {
+	width: calc(100vw - 40px);
+	height: 90vh;
+	min-height: 560px;
+	padding: 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#portfolio-browser {
+	width: 100%;
+	max-width: 800px;
+	height: 100%;
+	max-height: 560px;
+	border: solid 4px var(--text-col-primary);
+	border-radius: 20px;
+	display: grid;
+	grid: auto-flow dense / 220px auto;
+	box-shadow: 0 10px 10px #00000026;
+	animation: 1s var(--snappy-ease-out) scale-up;
+}
+
+#portfolio-browser:fullscreen {
+	background-color: var(--bg-col);
+	border: none;
+	border-radius: 0;
+}
+
+@keyframes scale-up {
+	0% {
+		transform: translateY(calc(80px * 100vw / 100vh));
+		filter: blur(20px);
+		opacity: 0;
+	}
+	100% {
+		transform: translateY(0);
+	}
+}
+
+#portfolio-browser-sidebar {
+	border-right: 2px solid var(--text-col-primary);
+}
+
+#portfolio-browser-sidebar h1 {
+	font-size: 36px;
+	line-height: 1.25;
+	margin: 0;
+}
+
+#portfolio-browser-sidebar-content {
+	padding: 0 16px;
+}
+
+#portfolio-browser-window-controls {
+	height: 64px;
+}
+
+#portfolio-browser-window-controls path {
+	fill: var(--text-col-primary);
+}
+
+#portfolio-browser-window {
+	height: inherit;
+	overflow: scroll;
+}
+
+#portfolio-browser-window-toolbar {
+	position: sticky;
+	top: 0;
+	height: 56px;
+	display: flex;
+	flex-direction: row;
+	border-bottom: 2px solid var(--text-col-primary);
+	border-top-right-radius: 16px;
+	padding: 0 15px;
+	z-index: 50;
+	transition: background-color 0.3s;
+}
+
+.window-toolbar-solid {
+	background-color: var(--bg-col);
+}
+
+.toolbar-item {
+	transition: opacity 0.3s;
+}
+
+#window-toolbar-title {
+	margin: auto 0 auto 10px;
+	font-size: 18px;
+}
+
+.back-button-chevron path {
+	fill: var(--text-col-primary);
+}
+
+.toolbar-item-disabled {
+	opacity: 0.6;
+	pointer-events: none;
+}
+
+#portfolio-browser-list-container {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	gap: 8px;
+	padding: 16px;
+	overflow: hidden;
+	z-index: 49;
+}
+
+@media screen and (max-width: 480px) {
+	#portfolio-browser-container {
+		width: 100vw;
+		height: 90vh;
+		padding: 0;
+		min-height: 560px;
+	}
+	#portfolio-browser-sidebar {
+		display: none;
+	}
+	#portfolio-browser {
+		width: 100%;
+		height: 100%;
+		max-height: 80vh;
+		border-right: none;
+		border-left: none;
+		box-shadow: none;
+		border-radius: 0;
+		display: block;
+	}
+	#portfolio-browser-window-toolbar {border-radius: 0}
+}
+
+#window-control-alert-container {
+	border: none;
+	background-color: transparent;
+	width: 100vw;
+	height: 100vh;
+	position: fixed;
+	overflow: clip;
+}
+
+#window-control-alert-container::backdrop {
+	background-color: transparent;
+}
+
+.window-control-alert-window {
+	width: 300px;
+	height: fit-content;
+	border-radius: 10px;
+	padding: 16px 20px 20px;
+	animation: 0.25s cubic-bezier(0.2, 0.3, 0.2, 1.3) alert-popup;
+	animation-fill-mode: both;
+}
+
+.window-control-alert-window * {margin: 0}
+
+@keyframes alert-popup {
+	from {
+		transform: scale(0.6);
+		opacity: 0;
+	}
+	to {
+		transform: scale(1);
+		opacity: 1;
+	}
+}
+
+/* modal styles */
+
+#preview-modal-container {
+	border-radius: 32px;
+	border: 4px solid var(--text-col-primary);
+	background-color: var(--bg-col);
+	overflow: scroll;
+	animation: 0.4s var(--snappy-ease-out) slide-up;
+	padding: 0;
+}
+
+#preview-modal-container h1, #preview-modal-container p {margin: 0}
+#preview-modal-container h1 {line-height: 1em}
+
+#preview-modal-controls {
+	position: sticky;
+	bottom: 0;
+	padding: 20px;
+	justify-content: space-between;
+}
+
+@keyframes slide-up {
+	0% {
+		transform: translateY(100vh);
+	}
+	100% {
+		transform: translateY(0);
+	}
+}
+
+/* text preview modal controls */
+
+.text-preview {
+	padding: 0;
+	width: 100vw;
+	max-width: 500px;
+	height: 100vh;
+	max-height: 420px;
+}
+
+.text-preview #preview-modal {
+	padding: 30px 34px;
+	margin-bottom: 10px;
+}
+
+/* image preview modal styles */
+
+/* the image preview modal breaks the established design conventiona wee bit for immersion's sake. i might re-work this later, but i think this compromise is appropriate for now. */
+
+#preview-modal-container:is(.image-preview) {
+	background-color: #151515;
+	border: none;
+	width: calc(100vw - 128px);
+	height: calc(100vh - 128px);
+	overflow: hidden;
+	padding: 0;
+}
+
+.image-preview #preview-modal-controls {
+	display: flex;
+	flex-direction: row;
+	gap: 10px;
+	justify-content: space-between;
+}
+
+#preview-image-container {
+	width: 100%;
+	height: calc(100vh - 128px);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 0;
+}
+
+/*#preview-image-container img {border-radius: 8px;}*/
+
+@media screen and (max-aspect-ratio: 1/1) {
+	#preview-image-container img {
+		width: 100%!important;
+		height: auto!important;
+	}
+}
+
+@media screen and (min-aspect-ratio: 1/1) {
+	#preview-image-container img {
+		width: auto!important;
+		height: calc(100vh - 128px)!important;
+	}
+}
+
+
+:modal:not(:is(.image-preview)) #preview-image-info {display: none}
+.image-preview #preview-image-info {display: flex}
+
+#preview-image-info {
+	padding: 24px 32px;
+	border-radius: 20px;
+	border: 2px solid #f5f5f51a;
+	display: flex;
+	flex-direction: column;
+	transition: height 0.3s, width 0.3s, opacity 0.3s;
+}
+
+#preview-image-info * {
+	text-align: end;
+	color: #f5f5f5cc;
+}
+
+#preview-image-info h1 {font-size:38px}
+#preview-image-info p {font-size:18px}
+#preview-image-info small {color: #f5f5f58c}
+
+:modal[open] #preview-image-info {
+	transform: translateY(10px);
+	animation: 1.5s cubic-bezier(0.2, 0.1, 0.3, 1) 0.2s indicate-interaction;
+	animation-fill-mode: both;
+}
+
+@keyframes indicate-interaction {
+	0% {
+		transform: translateY(10px);
+	}
+	15% {
+		transform: translateY(-7px);
+	}
+	30% {
+		transform: translateY(4px);
+	}
+	45% {
+		transform: translateY(-2px);
+	}
+	100% {
+		transform: translateY(0);
+	}
+}
+
+.image-preview .rounded-button {
+	background-color: #1212127c;
+	backdrop-filter: blur(30px) saturate(180%);
+	border: 2px solid #f5f5f51a;
+	color: #f5f5f5cc!important;
+	height: min-content;
+	align-self: end;
+}
+
+/* audio preview modal styles */
+
+.audio-preview {
+	width: 100vw;
+	max-width: 520px;
+}
+
+.audio-preview #preview-modal {
+	padding: 30px 34px 0 34px;
+}
+
+#preview-audio-info {
+	margin-bottom: 10px;
+}
+
+/* audio controls styles */
+
+#preview-audio-controls {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	justify-content: center;
+}
+
+.audio-timeline {
+	display: flex;
+	flex-direction: column;
+}
+
+.audio-timecodes {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.audio-timecodes p {color: var(--text-col-secondary)}
+
+#progress-bar-container {}
+
+.playback-controls {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+.playback-controls path {fill: var(--text-col-primary)}
+.skip-backwards-button, .play-pause-buttons, .skip-forwards-button {
+	width: 64px;
+	height: 64px;
+	transition: transform 0.3s;
+	border-radius: 8px;
+}
+.play-pause-buttons {
+	width: 80px;
+	height: 80px;
+}
+.play-pause-buttons:active {
+	transform: scale(0.95);
+}
+.skip-backwards-button:active {
+	transform: rotateZ(-15deg) scale(0.95);
+}
+.skip-forwards-button:active {
+	transform: rotateZ(15deg) scale(0.95);
+}
+
+.volume-control {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	gap: 8px;
+}
+.volume-control path {fill: var(--text-col-secondary)}
+/* note: i hate this proprietary garbage */
+.slider-container {
+	width: 100%;
+	height: 10px;
+	/* this is to de facto increase the touch target of the sliders */
+	padding: 21px 0;
+	margin: -21px 0;
+	display: flex;
+	align-items: center;
+}
+.slider {
+	-webkit-appearance: none;
+	appearance: none;
+	height: 10px;
+	width: 100%;
+	border-radius: 15px;
+	overflow: clip;
+	background-color: #adbd7c;
+	transition: height 0.2s ease-in-out;
+}
+.slider::-webkit-progress-bar {
+	background-color: #adbd7c;
+}
+.slider::-webkit-progress-value {
+	background-color: var(--button-col);
+	border-radius: 15px;
+	transition: background-color 0.3s;
+	min-width: 10px;
+}
+.slider::-moz-progress-bar {
+	background-color: var(--button-col);
+	border-radius: 15px;
+	min-width: 10px;
+}
+.slider-container:active .slider {height: 15px}
+.slider-container:active .slider::-webkit-progress-value {background-color: var(--text-col-primary)}
+.slider-container:active .slider::-moz-progress-bar {background-color: var(--text-col-primary)}
+.min-volume-icon, .max-volume-icon {
+	width: 36px;
+	height: 36px;
+}
+
+/* mobile layout rules */
+
+@media screen and (max-width: 480px) {
+	#preview-modal-container {
+		position: fixed;
+		border: none;
+		border-radius: 20px 20px 0 0;
+		width: 100vw;
+		max-width: none;
+		height: stretch;
+		max-height: none;
+		margin: 32px 0 0 0;
+		padding: 32px 0 env(safe-area-inset-bottom, 32px) 0;
+		box-shadow: 0 0 20px #0000004d;
+	}
+	#preview-modal-container:is(.image-preview) {
+		width: 100vw;
+		height: auto;
+	}
+	.audio-preview {
+		height: 100%;
+	}
+	#preview-image-container img {
+		border-radius: 0;
+	}
+	#preview-image-controls {
+		position: fixed;
+		bottom: env(safe-area-inset-bottom, 32px);
+	}
+	#preview-image-info {
+		padding: 16px 18px;
+	}
+}
+
+/* modal backdrop animation */
+
+#preview-modal-container:not([closed])::backdrop {
+	animation: 0.4s ease-out blur-gradually;
+	animation-fill-mode: both;
+}
+
+#preview-modal-container[closed]::backdrop {
+	animation: 0.4s ease-out unblur-gradually;
+	animation-fill-mode: both;
+}
+
+@keyframes blur-gradually {
+	0% {
+		background-color: #00000000;
+		backdrop-filter: blur(0);
+	}
+	100% {
+		background-color: #0000004d;
+		backdrop-filter: blur(10px);
+	}
+}
+
+@keyframes unblur-gradually {
+	0% {
+		background-color: #0000004d;
+		backdrop-filter: blur(10px);
+	}
+	100% {
+		background-color: #00000000;
+		backdrop-filter: blur(0);
+	}
+}
+
+/* styles for individual items in browser list */
+
+.list-item-container {
+	display: grid;
+	grid: 1fr auto / auto-flow dense;
+	width: 128px;
+	height: fit-content;
+	border-radius: 10px;
+	text-wrap: balance;
+	text-overflow: ellipsis;
+	overflow-wrap: break-word;
+	transition: transform 0.3s, background-color 0.3s;
+	/*view-transition-name: list-item-container;*/
+}
+
+.folder-container div {
+	max-height: 128px;
+}
+
+.list-item-container:active {
+	transform: scale(0.95);
+	background-color: #0000001a
+}
+
+.folder-thumbnail, .item-thumbnail {
+	border-radius: 10px;
+	width: inherit;
+	aspect-ratio: 1;
+}
+
+.folder-thumbnail {
+	background: url('/media/icons/browser-icons/generic-folder-icon.svg');
+	background-size: cover;
+}
+
+.item-thumbnail {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.item-thumbnail img {
+	border: 4px solid #eaf2e5;
+	border-top: 4px solid #fafffa;
+	box-shadow: 0 2px 2px #0000004d;
+}
+
+.list-item-container p {
+	width: inherit;
+	max-height: 3em;
+	font-size: 18px;
+	text-align: center;
+	margin: 5px 0 0 0;
+}
+
+.item-container {
+}

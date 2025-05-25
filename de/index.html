@@ -5,15 +5,92 @@
 		<meta name="theme-color" content="#bdcb93" media="(prefers-color-scheme: light)"/>
 		<meta name="color-scheme" content="light"/>
 		<link href="/styles/base.css" rel="stylesheet" />
-		<link href="/styles/loading-screen.css" rel="stylesheet" />
+		<link href="/styles/opening-illustration.css" rel="stylesheet" />
 		<link rel="icon" href="/media/favicon.png" />
 		<link rel="apple-touch-icon" href="/media/apple-touch-icon@3x.png" />
-		<script blocking="render" async src="https://cdn.jsdelivr.net/npm/p5@1.11.1/lib/p5.min.js"></script>
 		<title>phlixfer</title>
 	</head>
 	<body>
 		<main>
-			<script src="./scripts/tmp-waiting-screen.js"></script>
+			<div id="opening-text-container">
+				<div id="opening-text">hallo, ich bin</div>
+			</div>
+			<div id="opening-illustration-container">
+				<canvas id="illustration-canvas" tabindex="1" style="position:absolute;"></canvas>
+			</div>
+			<div id="homepage-navbar-container">
+				<div id="navbar"></div>
+			</div>
+			<div id="socials-buttons-container">
+				<a href="https://x.com/phlixfer" target="_blank" id="twitter-social-button" class="social-button">
+					<div>
+						<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 248 204">
+							<path d="M221.95 51.29c.15 2.17.15 4.34.15 6.53 0 66.73-50.8 143.69-143.69 143.69v-.04c-27.44.04-54.31-7.82-77.41-22.64 3.99.48 8 .72 12.02.73 22.74.02 44.83-7.61 62.72-21.66-21.61-.41-40.56-14.5-47.18-35.07 7.57 1.46 15.37 1.16 22.8-.87-23.56-4.76-40.51-25.46-40.51-49.5v-.64c7.02 3.91 14.88 6.08 22.92 6.32C11.58 63.31 4.74 33.79 18.14 10.71c25.64 31.55 63.47 50.73 104.08 52.76-4.07-17.54 1.49-35.92 14.61-48.25 20.34-19.12 52.33-18.14 71.45 2.19 11.31-2.23 22.15-6.38 32.07-12.26-3.77 11.69-11.66 21.62-22.2 27.93 10.01-1.18 19.79-3.86 29-7.95-6.78 10.16-15.32 19.01-25.2 26.16z"/>
+						</svg>
+					</div>
+				</a>
+				<a href="https://bsky.app/profile/phlixfer.bsky.social" target="_blank" id="bsky-social-button" class="social-button">
+					<div>
+						<svg width="568" height="501" viewBox="0 0 568 501" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M123.121 33.6637C188.241 82.5526 258.281 181.681 284 234.873C309.719 181.681 379.759 82.5526 444.879 33.6637C491.866 -1.61183 568 -28.9064 568 57.9464C568 75.2916 558.055 203.659 552.222 224.501C531.947 296.954 458.067 315.434 392.347 304.249C507.222 323.8 536.444 388.56 473.333 453.32C353.473 576.312 301.061 422.461 287.631 383.039C285.169 375.812 284.017 372.431 284 375.306C283.983 372.431 282.831 375.812 280.369 383.039C266.939 422.461 214.527 576.312 94.6667 453.32C31.5556 388.56 60.7778 323.8 175.653 304.249C109.933 315.434 36.0535 296.954 15.7778 224.501C9.94525 203.659 0 75.2916 0 57.9464C0 -28.9064 76.1345 -1.61183 123.121 33.6637Z"/>
+						</svg>
+					</div>
+				</a>
+				<a href="https://patreon.com/phlixfer" target="_blank" id="patreon-social-button" class="social-button">
+					<div>
+						<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 1080 1080" style="enable-background:new 0 0 1080 1080;" xml:space="preserve">
+							<path class="st0"    d="M1033.05,324.45c-0.19-137.9-107.59-250.92-233.6-291.7c-156.48-50.64-362.86-43.3-512.28,27.2C106.07,145.41,49.18,332.61,47.06,519.31c-1.74,153.5,13.58,557.79,241.62,560.67c169.44,2.15,194.67-216.18,273.07-321.33c55.78-74.81,127.6-95.94,216.01-117.82C929.71,603.22,1033.27,483.3,1033.05,324.45z"/>
+						</svg>
+					</div>
+				</a>
+			</div>
 		</main>
+		<script type="module" src="/scripts/assemble-navbar.js"></script>
+		<script type="text/javascript" src="/scripts/cables/libs.core.js"></script>
+	    <script type="text/javascript" src="/scripts/cables/cables.js"></script>
+	    <script type="text/javascript" src="/scripts/cables/opening-illustration/ops.js"></script>
+		<script type="text/javascript" src="/scripts/cables/vargetset.js"></script>
+		<script type="text/javascript" src="/scripts/cables/opening-illustration/subpatchop.js"></script>
+		<script type="text/javascript" src="/scripts/cables/opening-illustration/cgl_shadermodifier.js"></script>
+		<script type="text/javascript" src="/scripts/cables/opening-illustration/cgl_wireframes.js"></script>
+		
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.12.2/lottie.min.js"></script>
+		
+	    <script type="text/javascript">
+	        function showError(initiator,...args){CABLES.logErrorConsole("[" + initiator + "]", ...args);}
+	        function patchInitialized(patch)
+	        {
+	            openingIllustrationPatch.setVariable("shiftPosition", 1);
+	        }
+			let openingIllustrationPatch = null;
+	        document.addEventListener("CABLES.jsLoaded", function (event)
+	        {
+	            openingIllustrationPatch = new CABLES.Patch({
+					patchFile: '/scripts/cables/opening-illustration/dreary_egg.json',
+	                "prefixAssetPath": "",
+	                "assetPath": "/media/",
+	                "jsPath": "/scripts/",
+	                "glCanvasId": "illustration-canvas",
+	                "glCanvasResizeToParent": true,
+	                "onError": showError,
+	                "onPatchLoaded": patchInitialized,
+	                "canvas": {"alpha":true, "premultipliedAlpha":true } // make canvas transparent
+	            });
+	        });
+			
+			let body = document.documentElement;
+			let openingIllustration = document.getElementById("opening-illustration-container");
+			let openingText = document.getElementById("opening-text-container");
+			let scrollPercentage = null;
+			
+			document.addEventListener("scroll", (event) => {
+				scrollPercentage = Math.min(Math.max((body.scrollTop - window.innerHeight*0.1) / (window.innerHeight), 0), 1);
+				openingIllustration.style.filter = `blur(${scrollPercentage * 60}px)`;
+				openingIllustration.style.transform = `translateY(${(scrollPercentage) * -500}px)`;
+				openingText.style.filter = `blur(${scrollPercentage * 60}px)`;
+				openingText.style.transform = `translateY(${(scrollPercentage) * -200}px)`;
+			});
+	    </script>
 	</body>
 </html>

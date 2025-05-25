@@ -2,18 +2,22 @@
 <html lang="en">
 	<head>
 		<meta charset="UTF-8"/>
+		<meta name="viewport-fit" content="contain"/>
 		<meta name="theme-color" content="#bdcb93" media="(prefers-color-scheme: light)"/>
 		<meta name="color-scheme" content="light"/>
+		<meta name="robots" content="noindex"/>
 		<link href="/styles/base.css" rel="stylesheet" />
-		<link href="/styles/loading-screen.css" rel="stylesheet" />
 		<link rel="icon" href="/media/favicon.png" />
 		<link rel="apple-touch-icon" href="/media/apple-touch-icon@3x.png" />
-		<script blocking="render" async src="https://cdn.jsdelivr.net/npm/p5@1.11.1/lib/p5.min.js"></script>
-		<title>phlixfer</title>
+		<title>test page - phlixfer</title>
 	</head>
 	<body>
+		<div id="navbar-container">
+			<div id="navbar"></div>
+		</div>
 		<main>
-			<script src="./scripts/tmp-waiting-screen.js"></script>
+			<p>hallo, welt!</p>
 		</main>
+		<script type="module" src="/scripts/assemble-navbar.js"></script>
 	</body>
 </html>

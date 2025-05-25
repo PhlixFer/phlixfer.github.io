@@ -1,0 +1,46 @@
+{
+	"pages_en": [
+		{ 
+			"title": "home",
+			"url": "/en/",
+			"displayTitle": "phlixfer"
+		},
+		{
+			"title": "portfolio",
+			"url": "/en/portfolio/",
+			"displayTitle": "portfolio - phlixfer"
+		},
+		{
+			"title": "commissions",
+			"url": "/en/commissions/",
+			"displayTitle": "commissioning - phlixfer"
+		},
+		{
+			"title": "about me",
+			"url": "/en/about/",
+			"displayTitle": "about phlixfer"
+		}
+	],
+	"pages_de": [
+		{
+			"title": "startseite",
+			"url": "/de/",
+			"displayTitle": "phlixfer"
+		},
+		{
+			"title": "portefeuille",
+			"url": "/de/portefeuille/",
+			"displayTitle": "portefeuille von phlixfer"
+		},
+		{
+			"title": "auftrag",
+			"url": "/de/auftrag/",
+			"displayTitle": "beauftrag mich - phlixfer"
+		},
+		{
+			"title": "über mich",
+			"url": "/de/uber/",
+			"displayTitle": "über phlixfer"
+		}
+	]
+}

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8"/>
+		<meta name="viewport-fit" content="contain"/>
+		<meta name="theme-color" content="#bdcb93" media="(prefers-color-scheme: light)"/>
+		<meta name="color-scheme" content="light"/>
+		<link href="/styles/base.css" rel="stylesheet" />
+		<link rel="icon" href="/media/favicon.png" />
+		<link rel="apple-touch-icon" href="/media/apple-touch-icon@3x.png" />
+		<title>404! — phlixfer</title>
+		<style>
+			#error-indicator {
+				width: stretch;
+				height: calc(100vh - env(safe-area-inset-top) - env(safe-area-inset-bottom));
+				display: flex;
+				flex-direction: column;
+				gap: 10px;
+				justify-content: center;
+				align-items: center;
+				padding: 20px;
+			}
+			#error-indicator * {
+				margin: 0;
+				max-width: 580px;
+				text-align: center;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="navbar-container">
+			<div id="navbar" class="navbar-closed translucent-box-medium"></div>
+		</div>
+		<main>
+			<div id="error-indicator">
+				<h1>404</h1>
+				<p id="error-text">
+					it looks like you're lost! would you like to return home?
+				</p>
+				<a href="/" class="rounded-button">
+					<div id="return-button">return home</div>
+				</a>
+			</div>
+		</main>
+		<script type="module" src="/scripts/assemble-navbar.js"></script>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.12.2/lottie.min.js"></script>
+		<script type="text/javascript">
+			window.onload = (event) => {
+				if (navigator.language == "de-DE" || "de") {
+					document.getElementById("error-text").innerHTML = "es scheint, dass du dich verlaufen hast! würdest du nach Hause zurückkehren?";
+					document.getElementById("return-button").innerHTML = "nach Hause zurückgehen";
+				} else {
+					document.getElementById("error-text").innerHTML = "it looks like you're lost! would you like to return home?";
+					document.getElementById("return-button").innerHTML = "return home";
+				}
+			};
+			function goHome() {
+				window.location.replace("/");
+			}
+		</script>
+	</body>
+</html>

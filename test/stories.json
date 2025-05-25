@@ -1,0 +1,54 @@
+{
+  "spaziergang": [
+    {
+      "eventDescription": "you wake up; a splitting headache ravages your perception as your eyes open. a deep sense of dread befalls your entire being. eventually, though, you come to your senses. you find yourself in a pitch-black forest— the buzzing and chirping of bugs and critters fills the air. as you push yourself up onto your feet, you find yourself covered in leaves and muck. your bones ache as if you had been asleep for a thousand years. you see ahead an opening in the trees, with faint rays of moonlight shining through the leaves. on the ground to your left, you find a backpack soaked in dew and covered in mud.",
+      "validActions": [
+        {
+          "key": "get backpack",
+          "newIndex": 1
+        },
+        {
+          "key": "go to opening",
+          "newIndex": 2
+        }
+      ]
+    },
+    {
+      "eventDescription": "you grab the backpack. pulling it up from the mud and muck leaves a gap in the softened earth. feeling the pack past the grime, you guess that there isn’t much in it, but checking has never hurt, right?",
+      "validActions": [
+        {
+          "key": "open backpack",
+          "newIndex": 3
+        },
+        {
+          "key": "go to opening",
+          "newIndex": 2
+        }
+      ]
+    },
+    {
+      "eventDescription": "you make your way past the trees into the opening in the forest. you observe that the outline of the opening of the trees is oddly circular. in the center you find…",
+      "validActions": [
+        {
+          "key": "open backpack",
+          "newIndex": 5
+        }
+      ]
+    },
+    {
+      "eventDescription": "in the backpack, you find a small shovel and…",
+      "validActions": [
+        {
+          "key": "go to opening",
+          "newIndex": 4
+        }
+      ]
+    }
+  ],
+  "hallways": [
+
+  ],
+  "cavern": [
+
+  ]
+}

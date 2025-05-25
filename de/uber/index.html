@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8"/>
+		<meta name="theme-color" content="#bdcb93" media="(prefers-color-scheme: light)"/>
+		<meta name="color-scheme" content="light"/>
+		<link href="/styles/base.css" rel="stylesheet" />
+		<link href="/styles/about-page.css" rel="stylesheet" />
+		<link rel="icon" href="/media/favicon.png" />
+		<link rel="apple-touch-icon" href="/media/apple-touch-icon@3x.png" />
+		<title>about phlixfer</title>
+	</head>
+	<body>
+		<div id="navbar-container">
+			<div id="navbar" class="navbar-closed"></div>
+		</div>
+		<main>
+			<div id="about-text-container">
+				<div id="about-text">
+					<h1>who am i?</h1>
+					<p>hello, i'm <span id="name-text">Chloé,</span> and welcome to my site! i'm a multimedia artist with works spanning visual and auditory mediums, reaching into time-based interactive mediums. i've been making music for 8 years and sketching away for 5. i'm looking for work, so if you're hiring: spare a moment and see my <a href="/en/portfolio/">portfolio</a>!</br>
+						otherwise, if you'd like to support me, have a look at my patreon page.
+					</p>
+					<canvas id="cursor-confetti" style="position:absolute;pointer-events:none;"></canvas>
+				</div>
+			</div>
+			<div id="credit-buttons">
+				<a href="https://github.com/phlixfer/phlixfer.github.io/" target="_blank" class="rounded-button button-with-arrow">
+					<div>see the code behind the site</div>
+				</a>
+				<a href="mailto:phlixfermusic@gmail.com" class="rounded-button">
+					<div>shoot me an email</div>
+				</a>
+				<a href="https://patreon.com/phlixfer" target="_blank" class="rounded-button button-with-arrow">
+					<div>support me on patreon</div>
+				</a>
+			</div>
+			<div id="stimuli-container">
+				<div>
+					<canvas id="stimuli"></canvas>
+				</div>
+			</div>
+		</main>
+		<script type="module" src="/scripts/assemble-navbar.js"></script>
+		<script type="text/javascript" src="/scripts/cables/libs.core.js"></script>
+    	<script type="text/javascript" src="/scripts/cables/cables.js"></script>
+		<script type="text/javascript" src="/scripts/cables/cursor-confetti/ops.js"></script>
+    	<script type="text/javascript" src="/scripts/cables/vargetset.js"></script>
+		<script type="text/javascript" src="/scripts/cables/cursor-confetti/cgl_copytexture.js"></script>
+		<script type="text/javascript" src="/scripts/cables/about-page-stimuli/ops.js"></script>
+		<script type="text/javascript" src="/scripts/cables/about-page-stimuli/perlin.js"></script>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.12.2/lottie.min.js"></script>
+		<script type="text/javascript">
+			let nameText = document.getElementById("name-text");
+			let incrementorValue = 0;
+			nameText.addEventListener("mousedown", (event) => {
+				//console.log("hello");
+				incrementorValue++;
+				cursorPatch.setVariable("incrementorTrigger", incrementorValue);
+				console.log(incrementorValue);
+			});
+
+			function showError(initiator,...args)
+	        {
+	            CABLES.logErrorConsole("[" + initiator + "]", ...args);
+	        }
+		
+			let cursorPatch = null;
+			let stimuliPatch = null;
+			document.addEventListener("CABLES.jsLoaded", (event) => {
+				cursorPatch = new CABLES.Patch({
+					patchFile: '/scripts/cables/cursor-confetti/cursor_confetti.json',
+					"prefixAssetPath": '',
+					"jsPath": '/scripts/',
+					"glCanvasId": 'cursor-confetti',
+					"glCanvasResizeToParent": true,
+					"canvas": {"alpha":true, "premultipliedAlpha":true },
+					"onError": showError
+				});
+				stimuliPatch = new CABLES.Patch({
+					patchFile: '/scripts/cables/about-page-stimuli/creepy_direction.json',
+					"prefixAssetPath": '',
+					"jsPath": '/scripts/',
+					"glCanvasId": 'stimuli',
+					"glCanvasResizeToParent": true,
+					"canvas": {"alpha":true, "premultipliedAlpha":true },
+					"onError": showError
+				});
+			});
+			//document.getElementById('stimuli').addEventListener('touchmove', (e)=>{ e.preventDefault(); }, false);
+		</script>
+	</body>
+</html>

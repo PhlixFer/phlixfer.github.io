@@ -2,18 +2,134 @@
 <html lang="en">
 	<head>
 		<meta charset="UTF-8"/>
+		<meta name="viewport-fit" content="cover"/>
 		<meta name="theme-color" content="#bdcb93" media="(prefers-color-scheme: light)"/>
 		<meta name="color-scheme" content="light"/>
 		<link href="/styles/base.css" rel="stylesheet" />
-		<link href="/styles/loading-screen.css" rel="stylesheet" />
+		<link href="/styles/portfolio-browser.css" rel="stylesheet" />
 		<link rel="icon" href="/media/favicon.png" />
 		<link rel="apple-touch-icon" href="/media/apple-touch-icon@3x.png" />
-		<script blocking="render" async src="https://cdn.jsdelivr.net/npm/p5@1.11.1/lib/p5.min.js"></script>
-		<title>phlixfer</title>
+		<title>portfolio - phlixfer</title>
+		<meta name="description" content="see phlixfer's works"/>
 	</head>
 	<body>
+		<div id="navbar-container">
+			<div id="navbar" class="navbar-closed translucent-box-medium">
+			</div>
+		</div>
+		<dialog id="window-control-alert-container"></dialog>
+		<dialog id="preview-modal-container">
+			<div id="preview-modal">
+			</div>
+			<div id="preview-modal-controls">
+				<button class="rounded-button" onclick="closeModal();">close</button>
+				<div id="preview-image-info" class="translucent-box-inverse-thin"></div>
+			</div>
+		</dialog>
 		<main>
-			<script src="./scripts/tmp-waiting-screen.js"></script>
+			<div id="portfolio-browser-container">
+				<div id="portfolio-browser">
+					<div id="portfolio-browser-sidebar">
+						<div id="portfolio-browser-window-controls">
+							<svg width="106" height="64" viewBox="0 0 106 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path onclick="windowControlAlert('close');" d="M34 32C34 35.866 30.866 39 27 39C23.134 39 20 35.866 20 32C20 28.134 23.134 25 27 25C30.866 25 34 28.134 34 32Z"/>
+								<path onclick="windowControlAlert('minimize');" d="M60 32C60 35.866 56.866 39 53 39C49.134 39 46 35.866 46 32C46 28.134 49.134 25 53 25C56.866 25 60 28.134 60 32Z"/>
+								<path onclick="windowControlAlert('fullscreen');" d="M86 32C86 35.866 82.866 39 79 39C75.134 39 72 35.866 72 32C72 28.134 75.134 25 79 25C82.866 25 86 28.134 86 32Z"/>
+							</svg>
+						</div>
+						<div id="portfolio-browser-sidebar-content">
+							<h1>portfolio browser</h1>
+						</div>
+					</div>
+					<div id="portfolio-browser-window">
+						<div id="portfolio-browser-window-toolbar">
+							<svg width="38" height="54" viewBox="0 0 38 54" fill="none" xmlns="http://www.w3.org/2000/svg" id="back-button" class="back-button-chevron toolbar-item" onclick="animateBackButton();">
+								<path d="M21.3428 17.2461C21.7591 16.8832 22.391 16.9265 22.7539 17.3428C23.1168 17.759 23.0735 18.391 22.6572 18.7539L13.4951 26.7412L22.6807 35.2666L22.752 35.3408C23.0864 35.7214 23.0855 36.3013 22.7334 36.6807C22.3812 37.0601 21.8029 37.1041 21.3984 36.7988L21.3193 36.7334L11.7269 27.8296C11.0739 27.2235 11.0901 26.1851 11.7616 25.5996L21.3428 17.2461Z"/>
+							</svg>
+							<p id="window-toolbar-title" class="toolbar-item">home</p>
+						</div>
+						<div id="portfolio-browser-list-container"></div>
+					</div>
+				</div>
+			</div>
 		</main>
+		<script type="module" src="/scripts/assemble-navbar.js"></script>
+		<script type="text/javascript" src="/scripts/portfolio-lists.js"></script>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.12.2/lottie.min.js"></script>
+		<script type="text/javascript">
+			let backFeedbackAnimation = [
+				{ transform: "translateX(0) scale(1)" },
+				{ transform: "translateX(2px) scale(0.9)" },
+				{ transform: "translateX(-4px) scale(1)" },
+				{ transform: "translateX(-3px) scale(1)" },
+				{ transform: "translateX(-1px) scale(1)" },
+				{ transform: "translateX(0) scale(1)" }
+			];
+			
+			function animateBackButton()
+			{
+				let backButton = document.getElementById("back-button");
+				backButton.animate(backFeedbackAnimation, {duration: 300, iterations: 1});
+				navigateBack();
+			}
+			
+			document.querySelector("#portfolio-browser-window").addEventListener("scroll", (event) => {
+				if (document.querySelector("#portfolio-browser-window").scrollTop > 0) {
+					document.querySelector("#portfolio-browser-window-toolbar").setAttribute("class", "translucent-box-medium");
+				} else {
+					document.querySelector("#portfolio-browser-window-toolbar").setAttribute("class", "");
+				}
+			});
+			
+			let imageInfo = document.querySelector("#preview-image-info");
+			let imageInfoDisplayed = false;
+			
+			imageInfo.addEventListener("click", (event) => {
+				imageInfoDisplayed = !imageInfoDisplayed;
+				for (const item of Array.from(imageInfo.children).slice(1)) {
+					item.style.display = imageInfoDisplayed ? "block" : "none";
+				}
+			});
+			
+			// window control buttons easter egg
+			function windowControlAlert(type) {
+				let windowControlAlertsContainer = document.getElementById("window-control-alert-container");
+				
+				if (type == "close" && "minimize" && (document.fullscreenElement == null)) {
+					let windowsInstanceDelay = [0, 1200, 2400, 3500, 3600, 3700, 3800, 3900, 4000];
+					for (const delay of windowsInstanceDelay) {
+						setTimeout(() => {
+							windowControlAlertsContainer.appendChild(createAlertWindow(delay));
+						}, delay);
+					}
+					windowControlAlertsContainer.showModal();
+				} else if (document.fullscreenElement == null) {
+					document.getElementById("portfolio-browser").requestFullscreen();
+				} else if (document.fullscreenElement) {
+					document.exitFullscreen();
+				}
+			}
+			
+			function windowControlAlertClose() {
+				let windowControlAlertsContainer = document.getElementById("window-control-alert-container");
+				for (const child of Array.from(windowControlAlertsContainer.children)) {
+					child.remove();
+				}
+				windowControlAlertsContainer.close();
+			}
+			
+			function createAlertWindow(delay) {
+				let alert = document.createElement("div");
+				alert.setAttribute("class", "window-control-alert-window translucent-box-thick");
+				alert.innerHTML = `
+				<h2>oh no!</h2>
+				<p>it looks like you've encountered a crash. click below to report this error.</p>
+				<button class="rounded-button" onclick="windowControlAlertClose();">ok</button>`;
+				alert.style.position = "absolute";
+				alert.style.left = delay != 0 ? `${Math.random() * (window.innerWidth - 300)}px` : "calc(50vw - 150px)";
+				alert.style.top = delay != 0 ? `${Math.random() * (window.innerHeight - 300)}px` : `calc(50vh - 120px)`;
+				return alert;
+			}
+		</script>
 	</body>
 </html>

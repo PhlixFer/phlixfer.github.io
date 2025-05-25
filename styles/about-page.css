@@ -1,0 +1,157 @@
+#about-text-container {
+	position: static;
+	display: flex;
+	width: 100%;
+	margin-top: 80px;
+}
+
+#about-text {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	max-width: 600px;
+	margin: 0 80px;
+	z-index: 100;
+}
+
+#about-text *:not(canvas) {
+	z-index: inherit;
+}
+
+#about-text p {
+	hyphens: manual;
+	margin-top: 0;
+}
+
+#about-text canvas {
+	max-height: 350px;
+}
+
+p a {
+	text-decoration: underline;
+	color: inherit;
+	transition: font-weight 0.3s;
+}
+
+p a:hover {
+	font-weight: 600;
+}
+
+#credit-buttons {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	margin-left: 80px;
+}
+
+#credit-buttons a:not(:last-child) {
+	margin-bottom: 6px;
+}
+
+#credit-buttons a:first-child div::before {
+	content: "";
+	background-image: url("/media/icons/github-mark-white.svg");
+	background-size: contain;
+	background-repeat: no-repeat;
+	position: relative;
+	top: 0.2em;
+	display: inline-block;
+	width: 1em;
+	height: 1em;
+	margin-right: 8px;
+	opacity: 60%;
+}
+
+#credit-buttons a:last-child div::before {
+	content: "";
+	background-image: url("/media/icons/patreon-logo.svg");
+	background-size: contain;
+	background-repeat: no-repeat;
+	position: relative;
+	top: 0.2em;
+	display: inline-block;
+	width: 1em;
+	height: 1em;
+	margin-right: 8px;
+	opacity: 60%;
+}
+
+/* little link arrow animation */
+
+p a::after, p a::before {
+	display: inline-block;
+	position: absolute;
+	content: ">";
+	font-weight: normal;
+	opacity: 0%;
+	transition: all 0.3s;
+}
+
+p a::before {
+	transform: translateX(4em);
+	transition: all 0.3s 0.05s;
+}
+
+p a:hover::after, p a:hover::before {
+	font-weight: 1000;
+	opacity: 100%;
+	transform: translateX(0.5em);
+}
+
+p a:hover::before {
+	transform: translateX(5em);
+}
+
+/* little animation to hide the confetti while it loads */
+
+#cursor-confetti {
+	opacity: 0%;
+	animation: hideOnLoad 0.1s 1.5s forwards;
+}
+
+@keyframes hideOnLoad {
+	to {
+		opacity: 100%;
+	}
+}
+
+/* a bit of stimulus in the corner of the about screen */
+
+#stimuli-container {
+	width: 100vw;
+	height: auto;
+	position: static;
+	display: flex;
+	justify-content: end;
+	margin-top: calc(-350px * clamp(1, 100vw / 100vh, 1.8));
+}
+
+#stimuli-container div {
+	width: 75vw;
+	height: 75vw;
+}
+
+@media screen and (max-width: 700px) {
+	#stimuli-container {
+		height: 700px;
+		margin-top: -600px;
+		justify-content: center;
+		overflow: hidden;
+	}
+	#stimuli-container div {
+		width: 100%;
+		height: 1500px;
+	}
+}
+
+/* mobile layout rules */
+
+@media screen and (max-width: 480px) {
+	#about-text {
+		margin: 0 20px;
+	}
+	#credit-buttons {
+		margin-left: 20px;
+	}
+}
