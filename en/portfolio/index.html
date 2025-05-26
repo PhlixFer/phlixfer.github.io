@@ -103,7 +103,7 @@
 			function windowControlAlert(type) {
 				let windowControlAlertsContainer = document.getElementById("window-control-alert-container");
 				
-				if (type == "close" && "minimize" && (document.fullscreenElement == null)) {
+				if (type == "close" || type == "minimize" && document.fullscreenElement == null) {
 					let windowsInstanceDelay = [0, 1200, 2400, 3500, 3600, 3700, 3800, 3900, 4000];
 					for (const delay of windowsInstanceDelay) {
 						setTimeout(() => {
