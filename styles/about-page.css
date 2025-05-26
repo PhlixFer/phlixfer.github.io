@@ -49,7 +49,7 @@ p a:hover {
 	margin-bottom: 6px;
 }
 
-#credit-buttons a:first-child div::before {
+#credit-buttons #github-button div::before {
 	content: "";
 	background-image: url("/media/icons/github-mark-white.svg");
 	background-size: contain;
@@ -63,7 +63,7 @@ p a:hover {
 	opacity: 60%;
 }
 
-#credit-buttons a:last-child div::before {
+#credit-buttons #patreon-button div::before {
 	content: "";
 	background-image: url("/media/icons/patreon-logo.svg");
 	background-size: contain;
