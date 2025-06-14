@@ -25,7 +25,7 @@
 			<div id="navbar" class="navbar-closed translucent-box-medium"></div>
 		</div>
 		<main>
-			<div id="commissions-title-card" style="transform:translateY(0px);">
+			<section id="commissions-title-card" style="transform:translateY(0px);">
 				<div id="pencil-drawing"></div>
 				<img src="/media/com-page-icons/message-bubble.svg" id="message-bubble" />
 				<div id="mouse">
@@ -33,12 +33,12 @@
 				</div>
 				<img src="/media/com-page-icons/torus.svg" id="torus" />
 				<div id="title-card-text">
-					<h1>commission me!</h1>
+					<h1 id="split-text-target">commission me!</h1>
 				</div>
 				<div id="speaker"></div>
 				<img src="/media/com-page-icons/crescent-moon.svg" id="crescent-moon" />
-			</div>
-			<div id="commissions-form-container">
+			</section>
+			<section id="commissions-form-container">
 				<h1>let me work for you</h1>
 				<div id="commissions-form">
 					<div id="commissions-form-preamble">
@@ -68,18 +68,41 @@
 						</a>
 					</div>
 				</div>
-			</div>
+			</section>
 		</main>
 		<script type="module" src="/scripts/assemble-navbar.js"></script>
 		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.12.2/lottie.min.js"></script>
+		<script type="text/javascript" src="/scripts/per-character-modding.js">
+			console.log('hello');
+		</script>
 		<script type="text/javascript">
+			let splitTextTarget = document.querySelector('#split-text-target');
+			splitElementText(splitTextTarget);
+			window.onload = () => {
+				setTimeout(() => {
+					splittedElementTextDance(splitTextTarget, 50);
+				}, 500);
+			}
+			
+			let pencilDrawing = document.querySelector('#pencil-drawing');
+			
+			calculateAssetPositioning();
+			window.onresize = () => {
+				calculateAssetPositioning();
+			}
+			function calculateAssetPositioning() {
+				pencilDrawing.style.right = `${splitTextTarget.offsetLeft - 120}px`;
+				pencilDrawing.style.bottom = `${splitTextTarget.offsetTop - 140}px`;
+			}
+			
 			function sendMailForm()
 			{
 				let mailMessage = document.getElementById("email-body").value;
 				let mailSubject = document.getElementById("email-title").value;
 				document.location.href= `mailto:phlixfermusic@gmail.com?subject=${encodeURIComponent(mailSubject)}&body=${encodeURIComponent(mailMessage)}`;
 			}
-			let pencilDrawing = document.getElementById("pencil-drawing");
+			
+			// handles lottie animations
 			let pencilDrawingAnim = lottie.loadAnimation({
 				container: pencilDrawing,
 				renderer: 'svg',
