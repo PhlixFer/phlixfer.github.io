@@ -1,85 +1,132 @@
 [
-  [
-    {
-      "eventDescription": "you wake up; a splitting headache ravages your perception as your eyes open. a deep sense of dread befalls your entire being. eventually, though, you come to your senses. you find yourself in a pitch-black forest— the buzzing and chirping of bugs and critters fills the air. as you push yourself up onto your feet, you find yourself covered in leaves and muck. your bones ache as if you had been asleep for a thousand years. you see ahead an opening in the trees, with faint rays of moonlight shining through the leaves. on the ground to your left, you find a backpack soaked in dew and covered in mud.",
-      "validActions": [
-        {
-          "key": "get the backpack",
-          "newIndex": 1
-        },
-        {
-          "key": "go to the opening",
-          "newIndex": 2
-        }
-      ]
-    },
-    {
-      "eventDescription": "you grab the backpack. pulling it up from the mud and muck leaves a deep indent in the softened earth. feeling the pack past the grime, you guess that there isn’t much in it, but checking has never hurt, right?",
-      "validActions": [
-        {
-          "key": "open the backpack",
-          "newIndex": 3
-        },
-        {
-          "key": "go to the opening",
-          "newIndex": 2
-        }
-      ]
-    },
-    {
-      "eventDescription": "you make your way past the trees into the opening in the forest. you observe that the outline of the opening of the trees is oddly circular. in the center you find a hole that leads to a pitch black tunnel.",
-      "validActions": [
-        {
-          "key": "enter the tunnel",
-          "newIndex": 5
-        },
-        {
-          "key": "return to backpack",
-          "newIndex": 1
-        }
-      ]
-    },
-    {
-      "eventDescription": "in the backpack, you find a small shovel and a wind-up flashlight. an oddly convenient set of tools.",
-      "validActions": [
-        {
-          "key": "pocket items and go to the opening",
-          "newIndex": 4
-        }
-      ]
-    },
-    {
-      "eventDescription": "you make your way past the trees into the opening in the forest. you observe that the outline of the opening of the trees is oddly circular. in the center you find a hole that leads to a pitch black tunnel.",
-      "validActions": [
-        {
-          "key": "enter the tunnel",
-          "newIndex": 6
-        }
-      ]
-    },
-    {
-      "eventDescription": "you enter the dark tunnel. without a source of light, you are left to fumble around in the dark.",
-      "validActions": [
-        {
-          "key": "continue blindly wandering",
-          "newIndex": 7
-        }
-      ]
-    },
-    {
-      "eventDescription": "you enter the dark tunnel. winding up your flashlight, you manage to make out the dirt walls stretching out to what seems like infinity.",
-      "validActions": [
-        {
-          "key": "enter the tunnel",
-          "newIndex": 8
-        }
-      ]
-    }
-  ],
-  [
+  {
+    "title": "spazieren",
+    "narrative": [
+      {
+        "eventDescription": "you wake up; a splitting headache ravages your perception as your eyes open. a deep sense of dread befalls your entire being. eventually, though, you come to your senses. you find yourself in a pitch-black forest— the buzzing and chirping of bugs and critters fills the air. as you push yourself up onto your feet, you find yourself covered in leaves and muck. your bones ache as if you had been asleep for a thousand years. you see ahead an opening in the trees, with faint rays of moonlight shining through the leaves. on the ground to your left, you find a backpack soaked in dew and covered in mud.",
+        "validActions": [
+          {
+            "key": "get the backpack",
+            "newIndex": 1
+          },
+          {
+            "key": "go to the opening",
+            "newIndex": 2
+          }
+        ]
+      },
+      {
+        "eventDescription": "you grab the backpack. pulling it up from the mud and muck leaves a deep indent in the softened earth. feeling the pack past the grime, you guess that there isn’t much in it, but checking has never hurt, right?",
+        "validActions": [
+          {
+            "key": "open the backpack",
+            "newIndex": 3
+          },
+          {
+            "key": "go to the opening",
+            "newIndex": 2
+          }
+        ]
+      },
+      {
+        "eventDescription": "you make your way past the trees into the opening in the forest. you observe that the outline of the opening of the trees is oddly circular. in the center you find a hole that leads to a pitch black tunnel.",
+        "validActions": [
+          {
+            "key": "enter the tunnel",
+            "newIndex": 5
+          },
+          {
+            "key": "return to backpack",
+            "newIndex": 1
+          }
+        ]
+      },
+      {
+        "eventDescription": "in the backpack, you find a small shovel and a wind-up flashlight. an oddly convenient set of tools.",
+        "validActions": [
+          {
+            "key": "pocket items and go to the opening",
+            "newIndex": 4
+          }
+        ]
+      },
+      {
+        "eventDescription": "you make your way past the trees into the opening in the forest. you observe that the outline of the opening of the trees is oddly circular. in the center you find a hole that leads to a pitch black tunnel.",
+        "validActions": [
+          {
+            "key": "enter the tunnel",
+            "newIndex": 6
+          }
+        ]
+      },
+      {
+        "eventDescription": "you enter the dark tunnel. without a source of light, you are left to fumble around in the dark.",
+        "validActions": [
+          {
+            "key": "continue blindly wandering",
+            "newIndex": 7
+          }
+        ]
+      },
+      {
+        "eventDescription": "you enter the dark tunnel. winding up your flashlight, you manage to make out the dirt walls stretching out to what seems like infinity.",
+        "validActions": [
+          {
+            "key": "enter the tunnel",
+            "newIndex": 8
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "girl",
+    "narrative": [
+      {
+        "eventDescription": "<i>bzzz! bzzz! bzzz!</i></br></br>this irritating buzz from your nightstand forces your eyes to begrudgingly open. heaving your heavy head up off of your incredibly soft and springy memory-foam pillow takes an almost insurmountable amount of energy. your eyes feel like they are wired shut and should never open. with a push that almost winds you, you leap onto your feet.</br>you are a mess.</br>your once silky long hair that reaches a third of the way down your torso is now a matted, tangled mess. your soft pajamas somehow has creases from the awkward angles you slept in. even though you stay home all day, you really feel the need to freshen up and change.",
+        "validActions": [
+          {
+            "key": "go to the bathroom",
+            "newIndex": 2
+          },
+          {
+            "key": "leave the bedroom",
+            "newIndex": 1
+          }
+        ]
+      },
+      {
+        "eventDescription": "surrendering to your lazy instincts and telling yourself you’ll “do it later,” you leave your bedroom and enter your apartment’s main hallway. as you do, your body appears to remember how to function as your stomach rumbles with immense hunger.",
+        "validActions": [
+          {
+            "key": "go to the kitchen",
+            "newIndex": 3
+          },
+          {
+            "key": "return to the bedroom",
+            "newIndex": 4
+          }
+        ]
+      },
+      {
+        "eventDescription": "stepping on the tiles of your bathroom feels as if you were stepping on glacial ice. you step in front of the sink and gaze into the mirror to see an incredibly exhausted mess of a girl. the dark bags under your eyes makes it look as if you never slept at all.",
+        "validActions": [
+          {
+            "key": "wash your face",
+            "newIndex": 3
+          },
+          {
+            "key": "take a shower",
+            "newIndex": 4
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "warm hands",
+    "narrative": [
 
-  ],
-  [
-
-  ]
+    ]
+  }
 ]

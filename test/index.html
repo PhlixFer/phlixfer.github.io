@@ -44,11 +44,11 @@
 				});
 			function progressStory(page, story) {
 				let narratorText = storyMachineContainer.querySelector('#story-machine-narrator').querySelector('p');
-				narratorText.innerHTML = story[page].eventDescription;
+				narratorText.innerHTML = story.narrative[page].eventDescription;
 				
 				let choicesContainer = storyMachineContainer.querySelector('#story-machine-choices-container');
 				while (choicesContainer.firstChild) {choicesContainer.removeChild(choicesContainer.firstChild)}
-				for (const actions of story[page].validActions) {
+				for (const actions of story.narrative[page].validActions) {
 					let choiceButton = document.createElement('button');
 					choiceButton.innerText = actions.key;
 					choiceButton.onclick = (event) => {
