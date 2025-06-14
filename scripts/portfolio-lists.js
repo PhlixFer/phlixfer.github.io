@@ -294,7 +294,7 @@ function showItemPreview(name, path, comments, date, type)
 		
 	} else {
 		
-		console.log("this is not a valid file type");
+		throw new Error(`The targeted file is not a valid file!`);
 		
 	}
 	previewModalContainer.removeAttribute("closed");
@@ -319,8 +319,8 @@ function closeModal()
 	modalCloseAnimation.play();
 	modalCloseAnimation.addEventListener("finish", (event) => {
 		previewModalContainer.close();
-		previewAudio
-		previewAudio.pause();
+		
+		if (previewAudio) { previewAudio.pause(); }
 	});
 	modalCloseAnimation.removeEventListener("finish", event);
 }
