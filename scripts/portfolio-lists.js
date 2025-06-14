@@ -63,18 +63,13 @@ function parseDir() {
 	let i = 0;
 	for (const index of folderPathArray)
 	{
-		// ensures the first goaround of the loop doesn't break on the top directory
-		if (i == 0) {
-			currentDirectory = currentDirectory.topDirs[index];
-		} else {
-			currentDirectory = currentDirectory.subDirs[index];
-		}
+		currentDirectory = currentDirectory.directories[index];
 		i++;
 	}
 	
+	parseFolders(currentDirectory.directories);
+	parseItems(currentDirectory.items);
 	if (folderPathArray.length == 0) {
-		parseFolders(portfolioItems.topDirs);
-		parseItems(portfolioItems.items);
 		browserName.innerHTML = "home";
 		// disables the back button when at the root directory
 		toolbarBackButton.setAttribute("class", `${toolbarBackButton.getAttribute("class")} toolbar-item-disabled`);
@@ -95,8 +90,6 @@ function parseDir() {
 		];
 		loadLottieAnimations(customIconTargets);
 	} else {
-		parseFolders(currentDirectory.subDirs);
-		parseItems(currentDirectory.items);
 		browserName.innerHTML = currentDirectory.dirName;
 		toolbarBackButton.setAttribute("class", `${toolbarBackButton.getAttribute("class").replace(" toolbar-item-disabled","")}`);
 	}

@@ -1,15 +1,15 @@
 {
-	"topDirs": [
+	"directories": [
 		{
 			"dirName": "visual_portfolio",
 			"customId": "visual-portfolio-item",
 			"hasCustomIcon": true,
-			"subDirs": [
+			"directories": [
 				{
 					"dirName": "older_works",
 					"customId": "",
 					"hasCustomIcon": false,
-					"subDirs": [],
+					"directories": [],
 					"items": [
 						{
 							"name": "context.txt",
@@ -261,12 +261,12 @@
 			"dirName": "aural_portfolio",
 			"customId": "aural-portfolio-item",
 			"hasCustomIcon": true,
-			"subDirs": [
+			"directories": [
 				{
 					"dirName": "unfinished_scrap",
 					"customId": "",
 					"hasCustomIcon": false,
-					"subDirs": [],
+					"directories": [],
 					"items": [
 						{
 							"name": "a figment of my imagination",
@@ -342,7 +342,7 @@
 			"dirName": "reels_and_interactives",
 			"customId": "reels-portfolio-item",
 			"hasCustomIcon": true,
-			"subDirs": [],
+			"directories": [],
 			"items": [
 				{
 					"name": "disclaimer.txt",
