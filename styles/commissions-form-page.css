@@ -169,6 +169,9 @@
 	#crescent-moon {
 		top: 3vh;
 	}
+	#speaker {
+		left: 15vw;
+	}
 }
 
 /* form styles */
