@@ -322,6 +322,7 @@ ul *, ol * {
 	#navbar-container #navbar:is(.navbar-closed) {
 		width: 38px !important;
 		height: 38px !important;
+		overflow: clip;
 	}
 	#navbar-container #navbar:is(.navbar-closed) .navbar-item {
 		opacity: 0%;
