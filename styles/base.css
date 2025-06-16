@@ -375,37 +375,35 @@ dialog[open] {
 	}
 }
 
-dialog:not([closed])::backdrop {
-	animation: 0.4s ease-out blur-gradually;
-	animation-fill-mode: both;
+dialog::backdrop {
+	animation: 0.4s ease-out forwards blur-gradually;
 }
-
 dialog[closed]::backdrop {
-	animation: 0.4s ease-out unblur-gradually;
-	animation-fill-mode: both;
+	animation: 0.4s ease-out forwards unblur-gradually;
 }
 
 @keyframes blur-gradually {
-	0% {
+	from {
 		background-color: #00000000;
 		backdrop-filter: blur(0);
 	}
-	100% {
+	to {
 		background-color: #0000004d;
 		backdrop-filter: blur(10px);
 	}
 }
 
 @keyframes unblur-gradually {
-	0% {
+	from {
 		background-color: #0000004d;
 		backdrop-filter: blur(10px);
 	}
-	100% {
+	to {
 		background-color: #00000000;
 		backdrop-filter: blur(0);
 	}
 }
+
 
 /* footer style rules */
 
