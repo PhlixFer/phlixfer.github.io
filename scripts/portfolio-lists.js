@@ -1,3 +1,8 @@
+let modalHandler;
+import("/scripts/modal-handler.js").then((response) => {
+	modalHandler = response;
+});
+
 let portfolioItems = null;
 let firstTimeLoad = false;
 
@@ -297,32 +302,13 @@ function showItemPreview(name, path, comments, date, type)
 		throw new Error(`The targeted file is not a valid file!`);
 		
 	}
-	previewModalContainer.removeAttribute("closed");
-	previewModalContainer.showModal();
-}
-
-function closeModal()
-{
-	let animationKeyframes = new KeyframeEffect(previewModalContainer,
-		[
-			{ transform: "translateY(0)" },
-			{ transform: "translateY(100vh)" }
-		],
-		{
-			duration: 400,
-			iterations: 1,
-			easing: "cubic-bezier(0.2, 0.1, 0.1, 1)"
-		}
-	);
-	let modalCloseAnimation = new Animation(animationKeyframes);
-	previewModalContainer.setAttribute("closed", "");
-	modalCloseAnimation.play();
-	modalCloseAnimation.addEventListener("finish", (event) => {
-		previewModalContainer.close();
-		
-		if (previewAudio) { previewAudio.pause(); }
+	
+	let previewModalCloseButton = document.querySelector('#preview-modal-close-button');
+	previewModalCloseButton.addEventListener("click", () => {
+		modalHandler.toggleModal(previewModalContainer, previewAudio);
 	});
-	modalCloseAnimation.removeEventListener("finish", event);
+	
+	modalHandler.toggleModal(previewModalContainer);
 }
 
 function addAudioControls(id, targetAudio) {

@@ -219,12 +219,30 @@ textarea {
 	color: #0000004d;
 }
 
-#commissions-mail-form button {
+#commissions-mail-form fieldset button {
 	margin-top: 8px;
 }
 
 #commissions-mail-form #form-button {
 	margin-top: 16px;
+}
+
+#form-modal {
+	padding: 0;
+	max-width: 800px;
+}
+
+#form-modal button {
+	margin: 0 0 20px 20px;
+}
+
+#form-modal iframe {
+	border-radius: 16px;
+	width: 90vw;
+	max-width: 800px;
+	height: 80vh;
+	mask: linear-gradient(to bottom, #fff, #fff 90%, transparent);
+	-webkit-mask: linear-gradient(to bottom, #fff, #fff 90%, transparent);
 }
 
 @media screen and (max-width: 700px) {
@@ -238,5 +256,14 @@ textarea {
 
 @media screen and (max-width: 480px) {
 	#commissions-form-container {
+	}
+	#form-modal iframe {
+		width: 100vw;
+		height: calc(100vh - 32px);
+	}
+	#form-modal button {
+		position: fixed;
+		bottom: 20px;
+		left: 20px;
 	}
 }

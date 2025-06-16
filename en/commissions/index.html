@@ -63,19 +63,22 @@
 							<textarea placeholder="i'd like…" id="email-body" rows="8" autocomplete="off"></textarea>
 							<button class="rounded-button button-with-arrow" type="button" onclick="sendMailForm();">send</button>
 						</fieldset>
-						<a href="https://forms.gle/TFqAxC6nSyu58Gb57" target="_blank" id="form-button" class="rounded-button button-with-arrow">
-							<div>want to fill out a form instead?</div>
-						</a>
+						<button id="form-button" class="rounded-button">want to fill out a form instead?</button>
 					</div>
 				</div>
 			</section>
 		</main>
+		
+		<dialog id="form-modal">
+			<iframe id="comm-form" src="https://docs.google.com/forms/d/e/1FAIpQLScEOkhpJrt-89Za8UPZOLfY8pgiK3VjM0eOo0BI2l31sNiprg/viewform?embedded=true" loading="lazy" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+			<button id="modal-close-button" class="rounded-button">close</button>
+		</dialog>
+		
 		<script type="module" src="/scripts/assemble-navbar.js"></script>
 		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.12.2/lottie.min.js"></script>
-		<script type="text/javascript" src="/scripts/per-character-modding.js">
-			console.log('hello');
-		</script>
+		<script type="text/javascript" src="/scripts/per-character-modding.js"></script>
 		<script type="text/javascript">
+			// handle text animation
 			let splitTextTarget = document.querySelector('#split-text-target');
 			splitElementText(splitTextTarget);
 			window.onload = () => {
@@ -84,6 +87,7 @@
 				}, 500);
 			}
 			
+			// handle asset positioning
 			let pencilDrawing = document.querySelector('#pencil-drawing');
 			
 			calculateAssetPositioning();
@@ -95,6 +99,7 @@
 				pencilDrawing.style.bottom = `${splitTextTarget.offsetTop - 140}px`;
 			}
 			
+			// handle mail form
 			function sendMailForm()
 			{
 				let mailMessage = document.getElementById("email-body").value;
@@ -132,6 +137,20 @@
 				titleCard.style.filter = `blur(${Math.pow(scrollPercentage,2)/2 * 60}px)`;
 				titleCard.style.transform = `translateY(${Math.pow(scrollPercentage,2)/2 * -200}px)`;
 			});
+			
+			let modalHandler;
+			import('/scripts/modal-handler.js').then((response) => {
+				modalHandler = response;
+			});
+			
+			// handle showing and hiding the form embed modal
+			document.querySelector('#form-button').onclick = () => {
+				modalHandler.toggleModal(document.querySelector('#form-modal'));
+			}
+			
+			document.querySelector('#modal-close-button').onclick = () => {
+				modalHandler.toggleModal(document.querySelector('#form-modal'));
+			}
 		</script>
 	</body>
 </html>

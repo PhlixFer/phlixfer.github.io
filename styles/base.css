@@ -184,7 +184,7 @@ ul *, ol * {
 	display: inline;
 	position: relative;
 	font-weight: 1000;
-	margin-left: -1rem;
+	margin-left: -0.8rem;
 	opacity: 0;
 	transition: opacity 0.3s, margin-left 0.3s;
 }
@@ -329,6 +329,81 @@ ul *, ol * {
 	#navbar-container #navbar:not(.navbar-closed) #navbar-toggle {
 		background-color: #ffffff59;
 		padding: 4px;
+	}
+}
+
+/* modal styles */
+
+dialog {
+	border-radius: 32px;
+	border: 4px solid var(--text-col-primary);
+	background-color: var(--bg-col);
+	overflow: scroll;
+	padding: 0;
+}
+
+dialog h1, dialog p {margin: 0}
+dialog h1 {line-height: 1em}
+
+@media screen and (max-width: 480px) {
+	dialog {
+		position: fixed;
+		border: none;
+		border-radius: 20px 20px 0 0;
+		width: 100vw;
+		max-width: none;
+		height: 100vh;
+		max-height: none!important;
+		margin: 32px 0 0 0;
+		padding: 32px 0 env(safe-area-inset-bottom, 32px) 0;
+		box-shadow: 0 0 20px #0000004d;
+	}
+}
+
+/* modal backdrop animation */
+
+dialog[open] {
+	animation: 0.5s var(--snappy-ease-out) slide-up;
+}
+
+@keyframes slide-up {
+	0% {
+		transform: translateY(100vh);
+	}
+	100% {
+		transform: translateY(0);
+	}
+}
+
+dialog:not([closed])::backdrop {
+	animation: 0.4s ease-out blur-gradually;
+	animation-fill-mode: both;
+}
+
+dialog[closed]::backdrop {
+	animation: 0.4s ease-out unblur-gradually;
+	animation-fill-mode: both;
+}
+
+@keyframes blur-gradually {
+	0% {
+		background-color: #00000000;
+		backdrop-filter: blur(0);
+	}
+	100% {
+		background-color: #0000004d;
+		backdrop-filter: blur(10px);
+	}
+}
+
+@keyframes unblur-gradually {
+	0% {
+		background-color: #0000004d;
+		backdrop-filter: blur(10px);
+	}
+	100% {
+		background-color: #00000000;
+		backdrop-filter: blur(0);
 	}
 }
 
