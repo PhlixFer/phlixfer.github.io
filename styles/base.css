@@ -124,7 +124,7 @@ p, a:not(#navbar > a), button {
 	font-size: 24px;
 }
 
-p small {
+p small, p s, li s {
 	color: var(--text-col-secondary);
 }
 
