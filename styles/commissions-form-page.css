@@ -72,7 +72,9 @@
 	padding: 20px;
 	margin: 0;
 	border-radius: 28px;
+	width: fit-content;
 	height: fit-content;
+	text-align: center;
 }
 #speaker {
 	width: 423.1982627579px;
@@ -151,6 +153,9 @@
 	#title-card-text {
 		height: 90vh;
 	}
+	#title-card-text h1 {
+		width: min-content;
+	}
 	#torus {
 		display: none;
 	}
@@ -177,16 +182,24 @@
 /* form styles */
 
 #commissions-form-container {
-	display: grid;
-	grid: auto auto / auto-flow dense;
+	display: flex;
+	flex-direction: column;
 	padding: 0 80px;
 	z-index: 75;
 }
 
-#commissions-form-container #commissions-form {
-	display: grid;
-	grid: auto-flow dense / 2fr 3fr;
+#commissions-form {
+	display: flex;
+	flex-direction: row;
 	gap: 16px;
+}
+
+#commissions-form-preamble {
+	flex: 1;
+}
+
+#commissions-mail-form {
+	flex: 1.5;
 }
 
 #commissions-mail-form fieldset {
@@ -212,6 +225,7 @@
 	border-radius: 16px;
 	font: inherit;
 	color: var(--text-col-primary);
+	width: calc(100% - 28px);
 }
 
 textarea {
@@ -252,8 +266,11 @@ textarea {
 	#commissions-form-container {
 		padding: 0 20px;
 	}
-	#commissions-form-container #commissions-form {
-		grid: auto auto / auto-flow dense;
+	#commissions-form {
+		flex-direction: column;
+	}
+	#commissions-mail-form {
+		margin: auto -10px auto -10px;
 	}
 }
 
