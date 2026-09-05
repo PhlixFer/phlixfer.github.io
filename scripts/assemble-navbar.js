@@ -128,7 +128,7 @@ function assembleFooter(sitemapPagesList) {
 	let footerPostscriptList = [
 		{"element": "p", "content": "written and designed by chloé from phlixfer <3"},
 		{"element": "a", "content": "phlixfermusic@gmail.com", "url": "mailto:phlixfermusic@gmail.com"},
-		{"element": "p", "content": "schaff gute dinge, bitte"}
+		{"element": "p", "content": "schaff schöne dinge, bitte"}
 	];
 	let footerPostscriptText = document.createElement("div");
 	for (const item of footerPostscriptList) {
